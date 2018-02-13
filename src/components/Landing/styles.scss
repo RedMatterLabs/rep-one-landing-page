@@ -1,0 +1,15 @@
+
+@import '../../shared-styles/variables';
+@import '../../shared-styles/styles';
+
+
+
+.section {
+	background-color:$c2;
+}
+
+.section h1 {
+	font-size:3.3em;
+	margin:0;
+	color:$c1;
+}

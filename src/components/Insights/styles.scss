@@ -1,0 +1,16 @@
+
+@import '../../shared-styles/variables';
+@import '../../shared-styles/styles';
+
+.section {
+    align-items: start;
+}
+
+.video {
+	width:100%;
+	padding-top:5em;
+}
+
+.video button {
+	display: none;
+} 

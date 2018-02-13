@@ -1,0 +1,16 @@
+
+@import '../../shared-styles/variables';
+@import '../../shared-styles/styles';
+
+.section {
+    align-items: start;
+}
+
+.section {
+	background-color:$c2;
+}
+
+.section h1,  .section h2{
+	color:$c1;
+}
+
