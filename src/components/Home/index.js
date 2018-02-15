@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './styles.scss';
-import Landing from '../Landing/index.js'
-import Analytics from '../Analytics/index.js'
-import Platform from '../Platform/index.js'
-import Insights from '../Insights/index.js'
-import Manage from '../Manage/index.js'
-import Teams from '../Teams/index.js'
-import Pricing from '../Pricing/index.js'
-import CTA from '../CTA/index.js'
+import Landing from 'src/components/Sections/Landing/index.js'
+import Analytics from 'src/components/Sections/Analytics/index.js'
+import Platform from 'src/components/Sections/Platform/index.js'
+import Insights from 'src/components/Sections/Insights/index.js'
+import Manage from 'src/components/Sections/Manage/index.js'
+import Teams from 'src/components/Sections/Teams/index.js'
+import Pricing from 'src/components/Sections/Pricing/index.js'
+import CTA from 'src/components/Sections/CTA/index.js'
 
 
 function Home() {

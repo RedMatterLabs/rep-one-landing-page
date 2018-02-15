@@ -1,7 +1,7 @@
 import React from 'react';
 import Route from 'react-router/lib/Route';
 import IndexRoute from 'react-router/lib/IndexRoute';
-import App from '../components/App';
+import App from 'src/components/App';
 
 // Webpack 2 supports ES2015 `import()` by auto-
 // chunking assets. Check out the following for more:
