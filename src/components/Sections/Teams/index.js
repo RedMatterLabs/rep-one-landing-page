@@ -41,24 +41,13 @@ const images = [
   require('src/images/teams/35.png'),
 ];
 
-function makekey() {
-  let text = '';
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-  for (let i = 0; i < 5; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
-}
-
 function Teams() {
   return (
     <div className={styles.section} id="teams">
       <div className={styles.main}>
         <h1> RepOne tech powers the best teams</h1>
         <div className={styles.teamlogocontainer}>
-          {images.map(image =>
-            <img key={makekey()} className={styles.teamlogo} src={image} alt="logo" />
-          )}
+          {images.map(image => <img className={styles.teamlogo} src={image} alt="logo" />)}
         </div>
       </div>
     </div>

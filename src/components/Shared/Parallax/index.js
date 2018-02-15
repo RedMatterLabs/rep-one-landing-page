@@ -2,26 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
-class Parallax extends React.Component {
-  render() {
-    const children = React.Children.map(this.props.children, child =>
-      <Stickybox>
-        {child}
-      </Stickybox>
-    );
-
-    return (
-      <div className={styles.parallax}>
-        {children}
-      </div>
-    );
-  }
-}
-
 const SCROLL_TIMEOUT = 240;
 const CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
 
-class Stickybox extends React.Component {
+class Parallax extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,18 +15,66 @@ class Stickybox extends React.Component {
     };
   }
 
+  // attach scroll events to window
   componentDidMount() {
-    console.log('mounted');
-    window.addEventListener('scroll', this.onScroll.bind(this), false);
-    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
     this.scrolling = false;
     this.active = false;
     this.className = styles.parallaxcontainer;
     this.updateTopPosition();
+    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
+    window.addEventListener('scroll', this.onScroll.bind(this), false);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll.bind(this), false);
+  }
+
+  // track scrolled value in this components state
+  shouldComponentUpdate() {
+    if (this.isFrozen() && !this.active) {
+      this.active = true;
+      return false;
+    }
+    return true;
+  }
+
+  getState() {
+    return this.state;
+  }
+
+  handleScroll() {
+    this.updateTopPosition();
+  }
+
+  updateTopPosition() {
+    const box = this.node.getBoundingClientRect();
+    this.setState({
+      top: box.top,
+      height: box.height,
+    });
+  }
+  onScroll() {
+    if (!this.scrolling) {
+      this.scrolling = true;
+      this.onScrollStart();
+    }
+
+    this.lastScrollTime = Date.now();
+    this.proxiedScroll();
+  }
+
+  onScrollStart() {
+    this.setState({ scrolling: true });
+    this.handleScroll();
+  }
+
+  onScrollEnd() {
+    this.setState({ scrolling: false });
+    this.handleScroll();
+  }
+
+  onScrollProxy() {
+    this.handleScroll();
   }
 
   checkScroll() {
@@ -59,79 +91,20 @@ class Stickybox extends React.Component {
     }
   }
 
-  onScroll() {
-    if (!this.scrolling) {
-      this.scrolling = true;
-      this.onScrollStart();
-    }
-
-    this.lastScrollTime = Date.now();
-    this.proxiedScroll();
-  }
-
-  handleScroll() {
-    this.updateTopPosition();
-  }
-
-  updateTopPosition() {
-    const box = this.node.getBoundingClientRect();
-    this.setState({
-      top: box.top,
-      height: box.height,
-    });
-  }
-
-  onScrollStart() {
-    this.setState({ scrolling: true });
-    this.handleScroll();
-  }
-
-  onScrollProxy() {
-    this.handleScroll();
-  }
-
-  shouldComponentUpdate() {
-    if (this.isFrozen() && !this.active) {
-      this.active = true;
-      return false;
-    }
-    return true;
-  }
-
-  onScrollEnd() {
-    this.setState({ scrolling: false });
-    this.handleScroll();
-  }
-
-  getState() {
-    return this.state;
-  }
-
-  isFrozen() {
-    if (this.node) {
-      const rect = this.node.parentElement.parentElement.getBoundingClientRect();
-      return rect.top < 1 && rect.top + rect.height > 1;
-    }
-
-    return false;
-  }
-
-  setClassName() {
-    if (this.node) {
-      if (this.isFrozen()) {
-        if (!this.node.className) {
-          this.node.className = styles.frozen;
-        }
-      } else {
-        this.node.className = '';
-      }
-    }
+  getChildContext() {
+    //  exposes one property "parallaxstate", any of the components
+    // in its sub-hierarchy will be able to access it
+    return { parallaxstate: this.state };
   }
 
   render() {
-    this.setClassName();
     return (
-      <div ref={node => (this.node = node)} style={{ height: this.state.height }}>
+      <div
+        ref={node => {
+          this.node = node;
+        }}
+        className={styles.parallax}
+      >
         {this.props.children}
       </div>
     );
@@ -140,6 +113,10 @@ class Stickybox extends React.Component {
 
 Parallax.propTypes = {
   children: PropTypes.node.isRequired,
+};
+
+Parallax.childContextTypes = {
+  parallaxstate: React.PropTypes.object,
 };
 
 export default Parallax;

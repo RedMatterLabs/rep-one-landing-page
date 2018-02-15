@@ -617,26 +617,10 @@ module.exports = {
 
 
 
-class Parallax extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-  render() {
-    const children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.map(this.props.children, child => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      Stickybox,
-      null,
-      child
-    ));
-
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'div',
-      { className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallax },
-      children
-    );
-  }
-}
-
 const SCROLL_TIMEOUT = 240;
 const CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
 
-class Stickybox extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+class Parallax extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -646,18 +630,66 @@ class Stickybox extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
     };
   }
 
+  // attach scroll events to window
   componentDidMount() {
-    console.log('mounted');
-    window.addEventListener('scroll', this.onScroll.bind(this), false);
-    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
     this.scrolling = false;
     this.active = false;
     this.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallaxcontainer;
     this.updateTopPosition();
+    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
+    window.addEventListener('scroll', this.onScroll.bind(this), false);
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll.bind(this), false);
+  }
+
+  // track scrolled value in this components state
+  shouldComponentUpdate() {
+    if (this.isFrozen() && !this.active) {
+      this.active = true;
+      return false;
+    }
+    return true;
+  }
+
+  getState() {
+    return this.state;
+  }
+
+  handleScroll() {
+    this.updateTopPosition();
+  }
+
+  updateTopPosition() {
+    const box = this.node.getBoundingClientRect();
+    this.setState({
+      top: box.top,
+      height: box.height
+    });
+  }
+  onScroll() {
+    if (!this.scrolling) {
+      this.scrolling = true;
+      this.onScrollStart();
+    }
+
+    this.lastScrollTime = Date.now();
+    this.proxiedScroll();
+  }
+
+  onScrollStart() {
+    this.setState({ scrolling: true });
+    this.handleScroll();
+  }
+
+  onScrollEnd() {
+    this.setState({ scrolling: false });
+    this.handleScroll();
+  }
+
+  onScrollProxy() {
+    this.handleScroll();
   }
 
   checkScroll() {
@@ -674,80 +706,21 @@ class Stickybox extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
     }
   }
 
-  onScroll() {
-    if (!this.scrolling) {
-      this.scrolling = true;
-      this.onScrollStart();
-    }
-
-    this.lastScrollTime = Date.now();
-    this.proxiedScroll();
-  }
-
-  handleScroll() {
-    this.updateTopPosition();
-  }
-
-  updateTopPosition() {
-    const box = this.node.getBoundingClientRect();
-    this.setState({
-      top: box.top,
-      height: box.height
-    });
-  }
-
-  onScrollStart() {
-    this.setState({ scrolling: true });
-    this.handleScroll();
-  }
-
-  onScrollProxy() {
-    this.handleScroll();
-  }
-
-  shouldComponentUpdate() {
-    if (this.isFrozen() && !this.active) {
-      this.active = true;
-      return false;
-    }
-    return true;
-  }
-
-  onScrollEnd() {
-    this.setState({ scrolling: false });
-    this.handleScroll();
-  }
-
-  getState() {
-    return this.state;
-  }
-
-  isFrozen() {
-    if (this.node) {
-      const rect = this.node.parentElement.parentElement.getBoundingClientRect();
-      return rect.top < 1 && rect.top + rect.height > 1;
-    }
-
-    return false;
-  }
-
-  setClassName() {
-    if (this.node) {
-      if (this.isFrozen()) {
-        if (!this.node.className) {
-          this.node.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.frozen;
-        }
-      } else {
-        this.node.className = '';
-      }
-    }
+  getChildContext() {
+    //  exposes one property "parallaxstate", any of the components
+    // in its sub-hierarchy will be able to access it
+    return { parallaxstate: this.state };
   }
 
   render() {
-    this.setClassName();
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { ref: node => this.node = node, style: { height: this.state.height } },
+      {
+        ref: node => {
+          this.node = node;
+        },
+        className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallax
+      },
       this.props.children
     );
   }
@@ -755,6 +728,10 @@ class Stickybox extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
 
 Parallax.propTypes = {
   children: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.node.isRequired
+};
+
+Parallax.childContextTypes = {
+  parallaxstate: __WEBPACK_IMPORTED_MODULE_0_react___default.a.PropTypes.object
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Parallax);
@@ -983,15 +960,6 @@ module.exports = {
 // todo: expand to an array of object with team name and image data use team name to create alt text for seo alt = 'team name uses rep one technology'
 const images = [__webpack_require__(41), __webpack_require__(42), __webpack_require__(43), __webpack_require__(44), __webpack_require__(45), __webpack_require__(46), __webpack_require__(47), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53), __webpack_require__(54), __webpack_require__(55), __webpack_require__(56), __webpack_require__(57), __webpack_require__(58), __webpack_require__(59), __webpack_require__(60), __webpack_require__(61), __webpack_require__(62), __webpack_require__(63), __webpack_require__(64), __webpack_require__(65), __webpack_require__(66), __webpack_require__(67), __webpack_require__(68), __webpack_require__(69), __webpack_require__(70), __webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(74), __webpack_require__(75)];
 
-function makekey() {
-  let text = '';
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-  for (let i = 0; i < 5; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
-}
-
 function Teams() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
@@ -1007,7 +975,7 @@ function Teams() {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogocontainer },
-        images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { key: makekey(), className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' }))
+        images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' }))
       )
     )
   );
