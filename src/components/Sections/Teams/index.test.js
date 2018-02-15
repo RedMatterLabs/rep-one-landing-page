@@ -4,5 +4,5 @@ import Teams from './';
 
 it('Test example', () => {
   const wrapper = shallow(<Teams />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });

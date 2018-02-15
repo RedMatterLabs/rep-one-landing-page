@@ -4,5 +4,5 @@ import Analytics from './';
 
 it('Test example', () => {
   const wrapper = shallow(<Analytics />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });

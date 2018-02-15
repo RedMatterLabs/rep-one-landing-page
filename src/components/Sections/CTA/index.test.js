@@ -4,5 +4,5 @@ import CTA from './';
 
 it('Test example', () => {
   const wrapper = shallow(<CTA />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });

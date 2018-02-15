@@ -1,181 +1,145 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
-var WindowScrollMixin = {
-    componentDidMount: function() {
-        window.addEventListener('scroll', this.onScroll, false);
-    },
-    componentWillUnmount: function() {
-        window.removeEventListener('scroll', this.onScroll, false);
+class Parallax extends React.Component {
+  render() {
+    const children = React.Children.map(this.props.children, child =>
+      <Stickybox>
+        {child}
+      </Stickybox>
+    );
+
+    return (
+      <div className={styles.parallax}>
+        {children}
+      </div>
+    );
+  }
+}
+
+const SCROLL_TIMEOUT = 240;
+const CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
+
+class Stickybox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      top: 1,
+      height: -1,
+      scrolling: false,
+    };
+  }
+
+  componentDidMount() {
+    console.log('mounted');
+    window.addEventListener('scroll', this.onScroll.bind(this), false);
+    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
+    this.scrolling = false;
+    this.active = false;
+    this.className = styles.parallaxcontainer;
+    this.updateTopPosition();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll.bind(this), false);
+  }
+
+  checkScroll() {
+    if (Date.now() - this.lastScrollTime > SCROLL_TIMEOUT && this.scrolling) {
+      this.scrolling = false;
+      this.onScrollEnd();
     }
-};
+  }
 
-var SCROLL_TIMEOUT = 240;
-var CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
-
-var PageScrollMixin = {
-
-    mixins: [WindowScrollMixin],
-
-    checkInterval: null,
-    scrolling: false,
-    proxiedScrollTime: Date.now(),
-
-    componentDidMount: function() {
-        this.checkInterval = window.setInterval(this.checkScroll, CHECK_INTERVAL);
-        this.scrolling = false;
-    },
-
-    componentWillUnmount: function() {
-        window.clearInterval(this.checkInterval);
-    },
-
-    checkScroll: function() {
-        if (Date.now() - this.lastScrollTime > SCROLL_TIMEOUT && this.scrolling) {
-            this.scrolling = false;
-            this.onScrollEnd();
-        }
-    },
-
-    proxiedScroll: function() {
-        if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
-            this.proxiedScrollTime = Date.now();
-            this.onScrollProxy();
-        }
-    },
-
-    onScroll: function() {
-        if (!this.scrolling) {
-            this.scrolling = true;
-            this.onScrollStart();
-        }
-
-        this.lastScrollTime = Date.now();
-        this.proxiedScroll();
+  proxiedScroll() {
+    if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
+      this.proxiedScrollTime = Date.now();
+      this.onScrollProxy();
     }
-};
+  }
 
-
-/**
- * Stickybox React component
- * @class
- */
-var Parallax = React.createClass({
-    render: function() {
-        var children = React.Children.map(
-            this.props.children,
-            function(child) {
-                return React.createElement(Stickybox, { className: 'card' }, child);
-            }
-        );
-        return React.createElement('div', { className: styles.parallax }, children);
+  onScroll() {
+    if (!this.scrolling) {
+      this.scrolling = true;
+      this.onScrollStart();
     }
-});
 
+    this.lastScrollTime = Date.now();
+    this.proxiedScroll();
+  }
 
-/**
- * Stickybox React component
- * @class
- */
-var Stickybox = React.createClass({
+  handleScroll() {
+    this.updateTopPosition();
+  }
 
-    mixins: [PageScrollMixin],
+  updateTopPosition() {
+    const box = this.node.getBoundingClientRect();
+    this.setState({
+      top: box.top,
+      height: box.height,
+    });
+  }
 
-    node: null,
+  onScrollStart() {
+    this.setState({ scrolling: true });
+    this.handleScroll();
+  }
 
-    getInitialState: function() {
-        return {
-            top: 1,
-            height: -1,
-            scrolling: false
-        };
-    },
+  onScrollProxy() {
+    this.handleScroll();
+  }
 
-    componentDidMount: function() {
-        this.node = ReactDOM.findDOMNode(this);
-        this.active = false;
-        this.className = styles.parallaxcontainer;
-        this.updateTopPosition();
-    },
+  shouldComponentUpdate() {
+    if (this.isFrozen() && !this.active) {
+      this.active = true;
+      return false;
+    }
+    return true;
+  }
 
-    handleScroll: function() {
-        this.updateTopPosition();
-    },
+  onScrollEnd() {
+    this.setState({ scrolling: false });
+    this.handleScroll();
+  }
 
-    updateTopPosition: function() {
-        var box = this.node.getBoundingClientRect();
-        this.setState({
-            top: box.top,
-            height: box.height
-        });
-    },
+  getState() {
+    return this.state;
+  }
 
-    onScrollStart: function() {
-        this.setState({ scrolling: true });
-        this.handleScroll();
-    },
+  isFrozen() {
+    if (this.node) {
+      const rect = this.node.parentElement.parentElement.getBoundingClientRect();
+      return rect.top < 1 && rect.top + rect.height > 1;
+    }
 
-    onScrollProxy: function() {
-        this.handleScroll();
-    },
+    return false;
+  }
 
-    shouldComponentUpdate: function() {
-        if (this.isFrozen() && (!this.active)) {
-            this.active = true;
-            return false;
-        } else {
-            return true;
+  setClassName() {
+    if (this.node) {
+      if (this.isFrozen()) {
+        if (!this.node.className) {
+          this.node.className = styles.frozen;
         }
-
-    },
-
-    onScrollEnd: function() {
-        this.setState({ scrolling: false });
-        this.handleScroll();
-    },
-
-    getState: function() {
-        return this.state;
-    },
-
-    isFrozen: function() {
-        if (this.node) {
-            var rect = this.node.parentElement.parentElement.getBoundingClientRect()
-            return (rect.top < 1 && (rect.top + rect.height > 1));
-        }
-    },
-
-    setClassName: function() {
-        if (this.node) {
-
-        if (this.isFrozen()) {
-            if (!this.node.className) {
-                this.node.className = styles.frozen;
-            }
-
-        } else {
-            this.node.className = '';
-        }
+      } else {
+        this.node.className = '';
       }
-    },
-
-    /**
-     * Render
-     * @returns {ReactElement} react element
-     */
-    render: function() {
-        var args = {},
-            isFrozen = this.isFrozen();
-        this.setClassName();
-        args.style = {
-            height: isFrozen ? this.state.height : 'auto',
-        };
-        return React.createElement('div', args,
-            this.props.children);
     }
-});
+  }
 
+  render() {
+    this.setClassName();
+    return (
+      <div ref={node => (this.node = node)} style={{ height: this.state.height }}>
+        {this.props.children}
+      </div>
+    );
+  }
+}
 
+Parallax.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Parallax;

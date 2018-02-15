@@ -4,5 +4,5 @@ import Platform from './';
 
 it('Test example', () => {
   const wrapper = shallow(<Platform />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });

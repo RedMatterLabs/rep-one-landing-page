@@ -4,5 +4,5 @@ import Landing from './';
 
 it('Test example', () => {
   const wrapper = shallow(<Landing />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });

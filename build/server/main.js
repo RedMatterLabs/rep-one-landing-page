@@ -467,25 +467,25 @@ module.exports = {
 
 
 function Logo() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.logo },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronorbit },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electron }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.nucleus })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'label',
-            null,
-            'RepOne'
-        )
-    );
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.logo },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronoutline }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronorbit },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electron }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.nucleus })
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'label',
+      null,
+      'RepOne'
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Logo);
@@ -521,67 +521,67 @@ module.exports = {
 
 
 function Analytics() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'analytics' },
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'analytics' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.barbelltrack },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_src_components_Shared_Parallax_index_js__["a" /* default */],
+        null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.barbelltrack },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_src_components_Shared_Parallax_index_js__["a" /* default */],
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.barbellcontainer },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(28), alt: 'RepOne Barbell' })
-                )
-            )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                null,
-                'Analytics platform for strength coaches'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
-                null,
-                'Team management and analytics, powered by a fleet of extraordinarily accurate, portable devices.'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.devicecontainertouch },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(2), alt: 'RepOne coaching Live' })
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.reponecontainer },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'figure',
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' })
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.devicecontainerdesktop },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'figure',
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(29), alt: 'RepOne app on laptop' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(30), alt: 'RepOne app on phone' })
-                )
-            )
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.barbellcontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(28), alt: 'RepOne Barbell' })
         )
-    );
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        'Analytics platform for strength coaches'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'Team management and analytics, powered by a fleet of extraordinarily accurate, portable devices.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.devicecontainertouch },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(2), alt: 'RepOne coaching Live' })
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.reponecontainer },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'figure',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(1), alt: 'RepOne device' })
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.devicecontainerdesktop },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'figure',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(29), alt: 'RepOne app on laptop' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(30), alt: 'RepOne app on phone' })
+        )
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Analytics);
@@ -609,183 +609,153 @@ module.exports = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
 
 
 
 
-var WindowScrollMixin = {
-    componentDidMount: function () {
-        window.addEventListener('scroll', this.onScroll, false);
-    },
-    componentWillUnmount: function () {
-        window.removeEventListener('scroll', this.onScroll, false);
+class Parallax extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  render() {
+    const children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.map(this.props.children, child => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Stickybox,
+      null,
+      child
+    ));
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallax },
+      children
+    );
+  }
+}
+
+const SCROLL_TIMEOUT = 240;
+const CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
+
+class Stickybox extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      top: 1,
+      height: -1,
+      scrolling: false
+    };
+  }
+
+  componentDidMount() {
+    console.log('mounted');
+    window.addEventListener('scroll', this.onScroll.bind(this), false);
+    this.checkInterval = window.setInterval(this.checkScroll.bind(this), CHECK_INTERVAL);
+    this.scrolling = false;
+    this.active = false;
+    this.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallaxcontainer;
+    this.updateTopPosition();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll.bind(this), false);
+  }
+
+  checkScroll() {
+    if (Date.now() - this.lastScrollTime > SCROLL_TIMEOUT && this.scrolling) {
+      this.scrolling = false;
+      this.onScrollEnd();
     }
+  }
+
+  proxiedScroll() {
+    if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
+      this.proxiedScrollTime = Date.now();
+      this.onScrollProxy();
+    }
+  }
+
+  onScroll() {
+    if (!this.scrolling) {
+      this.scrolling = true;
+      this.onScrollStart();
+    }
+
+    this.lastScrollTime = Date.now();
+    this.proxiedScroll();
+  }
+
+  handleScroll() {
+    this.updateTopPosition();
+  }
+
+  updateTopPosition() {
+    const box = this.node.getBoundingClientRect();
+    this.setState({
+      top: box.top,
+      height: box.height
+    });
+  }
+
+  onScrollStart() {
+    this.setState({ scrolling: true });
+    this.handleScroll();
+  }
+
+  onScrollProxy() {
+    this.handleScroll();
+  }
+
+  shouldComponentUpdate() {
+    if (this.isFrozen() && !this.active) {
+      this.active = true;
+      return false;
+    }
+    return true;
+  }
+
+  onScrollEnd() {
+    this.setState({ scrolling: false });
+    this.handleScroll();
+  }
+
+  getState() {
+    return this.state;
+  }
+
+  isFrozen() {
+    if (this.node) {
+      const rect = this.node.parentElement.parentElement.getBoundingClientRect();
+      return rect.top < 1 && rect.top + rect.height > 1;
+    }
+
+    return false;
+  }
+
+  setClassName() {
+    if (this.node) {
+      if (this.isFrozen()) {
+        if (!this.node.className) {
+          this.node.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.frozen;
+        }
+      } else {
+        this.node.className = '';
+      }
+    }
+  }
+
+  render() {
+    this.setClassName();
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { ref: node => this.node = node, style: { height: this.state.height } },
+      this.props.children
+    );
+  }
+}
+
+Parallax.propTypes = {
+  children: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.node.isRequired
 };
-
-var SCROLL_TIMEOUT = 240;
-var CHECK_INTERVAL = SCROLL_TIMEOUT / 6;
-
-var PageScrollMixin = {
-
-    mixins: [WindowScrollMixin],
-
-    checkInterval: null,
-    scrolling: false,
-    proxiedScrollTime: Date.now(),
-
-    componentDidMount: function () {
-        this.checkInterval = window.setInterval(this.checkScroll, CHECK_INTERVAL);
-        this.scrolling = false;
-    },
-
-    componentWillUnmount: function () {
-        window.clearInterval(this.checkInterval);
-    },
-
-    checkScroll: function () {
-        if (Date.now() - this.lastScrollTime > SCROLL_TIMEOUT && this.scrolling) {
-            this.scrolling = false;
-            this.onScrollEnd();
-        }
-    },
-
-    proxiedScroll: function () {
-        if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
-            this.proxiedScrollTime = Date.now();
-            this.onScrollProxy();
-        }
-    },
-
-    onScroll: function () {
-        if (!this.scrolling) {
-            this.scrolling = true;
-            this.onScrollStart();
-        }
-
-        this.lastScrollTime = Date.now();
-        this.proxiedScroll();
-    }
-};
-
-/**
- * Stickybox React component
- * @class
- */
-var Parallax = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
-    displayName: 'Parallax',
-
-    render: function () {
-        var children = __WEBPACK_IMPORTED_MODULE_0_react___default.a.Children.map(this.props.children, function (child) {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Stickybox, { className: 'card' }, child);
-        });
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallax }, children);
-    }
-});
-
-/**
- * Stickybox React component
- * @class
- */
-var Stickybox = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
-    displayName: 'Stickybox',
-
-
-    mixins: [PageScrollMixin],
-
-    node: null,
-
-    getInitialState: function () {
-        return {
-            top: 1,
-            height: -1,
-            scrolling: false
-        };
-    },
-
-    componentDidMount: function () {
-        this.node = __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.findDOMNode(this);
-        this.active = false;
-        this.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.parallaxcontainer;
-        this.updateTopPosition();
-    },
-
-    handleScroll: function () {
-        this.updateTopPosition();
-    },
-
-    updateTopPosition: function () {
-        var box = this.node.getBoundingClientRect();
-        this.setState({
-            top: box.top,
-            height: box.height
-        });
-    },
-
-    onScrollStart: function () {
-        this.setState({ scrolling: true });
-        this.handleScroll();
-    },
-
-    onScrollProxy: function () {
-        this.handleScroll();
-    },
-
-    shouldComponentUpdate: function () {
-        if (this.isFrozen() && !this.active) {
-            this.active = true;
-            return false;
-        } else {
-            return true;
-        }
-    },
-
-    onScrollEnd: function () {
-        this.setState({ scrolling: false });
-        this.handleScroll();
-    },
-
-    getState: function () {
-        return this.state;
-    },
-
-    isFrozen: function () {
-        if (this.node) {
-            var rect = this.node.parentElement.parentElement.getBoundingClientRect();
-            return rect.top < 1 && rect.top + rect.height > 1;
-        }
-    },
-
-    setClassName: function () {
-        if (this.node) {
-
-            if (this.isFrozen()) {
-                if (!this.node.className) {
-                    this.node.className = __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.frozen;
-                }
-            } else {
-                this.node.className = '';
-            }
-        }
-    },
-
-    /**
-     * Render
-     * @returns {ReactElement} react element
-     */
-    render: function () {
-        var args = {},
-            isFrozen = this.isFrozen();
-        this.setClassName();
-        args.style = {
-            height: isFrozen ? this.state.height : 'auto'
-        };
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', args, this.props.children);
-    }
-});
 
 /* harmony default export */ __webpack_exports__["a"] = (Parallax);
 
@@ -829,48 +799,54 @@ module.exports = "http://localhost:3001/Group-3-86cbfec66c74904e94fa60180d1d4dc0
 
 
 function Platform() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'platform' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' The most advance training techniques at your fingertips'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'RepOne streamlines autoregulation and individualized coaching.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'Implement top training methodologies, right away, for your whole team'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'platform' },
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.appscontainer },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                null,
-                ' The most advance training techniques at your fingertips'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
-                null,
-                'RepOne streamlines autoregulation and individualized coaching.'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
-                null,
-                'Implement top training methodologies, right away, for your whole team'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.appscontainer },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(2), alt: 'RepOne coaching Live' })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(33), alt: 'RepOne coaching Programs' })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(34), alt: 'RepOne coaching Dashboard' })
-                )
-            )
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(2), alt: 'RepOne coaching Live' })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
+            src: __webpack_require__(33),
+            alt: 'RepOne coaching Programs'
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.ipadcontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
+            src: __webpack_require__(34),
+            alt: 'RepOne coaching Dashboard'
+          })
         )
-    );
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Platform);
@@ -912,24 +888,25 @@ module.exports = "http://localhost:3001/R1 Coach - Dashboard-3770950d4918c37fce9
 
 
 function Insights() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'insights' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                null,
-                ' Insights you can only get with RepOne'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
-                null,
-                ' Industry-leading inductive 3D sensing gives you new ways to measure and enhance performance.'
-            )
-        )
-    );
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'insights' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' Insights you can only get with RepOne'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        ' ',
+        'Industry-leading inductive 3D sensing gives you new ways to measure and enhance performance.'
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Insights);
@@ -958,24 +935,24 @@ module.exports = {
 
 
 function Manage() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'manage' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                null,
-                ' RepOne helps you manage your team, your way.'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
-                null,
-                'The RepOne device fits the equipment you already have, and the flexible athlete management software works with your routine.'
-            )
-        )
-    );
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'manage' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' RepOne helps you manage your team, your way.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'The RepOne device fits the equipment you already have, and the flexible athlete management software works with your routine.'
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Manage);
@@ -1004,36 +981,36 @@ module.exports = {
 
 // I couldn't find a better way to include these :/
 // todo: expand to an array of object with team name and image data use team name to create alt text for seo alt = 'team name uses rep one technology'
-var images = [__webpack_require__(41), __webpack_require__(42), __webpack_require__(43), __webpack_require__(44), __webpack_require__(45), __webpack_require__(46), __webpack_require__(47), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53), __webpack_require__(54), __webpack_require__(55), __webpack_require__(56), __webpack_require__(57), __webpack_require__(58), __webpack_require__(59), __webpack_require__(60), __webpack_require__(61), __webpack_require__(62), __webpack_require__(63), __webpack_require__(64), __webpack_require__(65), __webpack_require__(66), __webpack_require__(67), __webpack_require__(68), __webpack_require__(69), __webpack_require__(70), __webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(74), __webpack_require__(75)];
+const images = [__webpack_require__(41), __webpack_require__(42), __webpack_require__(43), __webpack_require__(44), __webpack_require__(45), __webpack_require__(46), __webpack_require__(47), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53), __webpack_require__(54), __webpack_require__(55), __webpack_require__(56), __webpack_require__(57), __webpack_require__(58), __webpack_require__(59), __webpack_require__(60), __webpack_require__(61), __webpack_require__(62), __webpack_require__(63), __webpack_require__(64), __webpack_require__(65), __webpack_require__(66), __webpack_require__(67), __webpack_require__(68), __webpack_require__(69), __webpack_require__(70), __webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(74), __webpack_require__(75)];
 
 function makekey() {
-		var text = "";
-		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let text = '';
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-		for (var i = 0; i < 5; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
+  for (let i = 0; i < 5; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-		return text;
+  return text;
 }
 
 function Teams() {
-		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				'div',
-				{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'teams' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'h1',
-								null,
-								' RepOne tech powers the best teams'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogocontainer },
-								images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { key: makekey(), className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' }))
-						)
-				)
-		);
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'teams' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' RepOne tech powers the best teams'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogocontainer },
+        images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { key: makekey(), className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' }))
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Teams);
@@ -1272,70 +1249,70 @@ module.exports = "http://localhost:3001/35-54279c47868500a4948f2b1c54ca24d1.png"
 
 
 function Pricing() {
-				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'landing_zone' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-												'div',
-												{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'h1',
-																null,
-																' Pricing'
-												),
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'div',
-																{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.pricing, id: 'front' },
-																__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																				'ul',
-																				null,
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'Hardware Up Front $349'
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'349 per unit'
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'Starting at $99 monthly'
-																				)
-																)
-												),
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'div',
-																{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.pricing, id: 'monthly' },
-																__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																				'ul',
-																				null,
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'Hardware Monthly'
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'20+ units'
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'499+ monthly'
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'li',
-																								null,
-																								'24mo contract'
-																				)
-																)
-												)
-								)
-				);
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'landing_zone' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' Pricing'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.pricing, id: 'front' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'ul',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            'Hardware Up Front $349'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            '349 per unit'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            'Starting at $99 monthly'
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.pricing, id: 'monthly' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'ul',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            'Hardware Monthly'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            '20+ units'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            '499+ monthly'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            null,
+            '24mo contract'
+          )
+        )
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Pricing);
@@ -1364,34 +1341,34 @@ module.exports = {
 
 
 function CTA() {
-				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'cta' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-												'div',
-												{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'h1',
-																null,
-																' Be the first to get RepOne'
-												),
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'a',
-																{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.btn },
-																'Reserve Now'
-												),
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'h1',
-																null,
-																' Get in touch'
-												),
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'a',
-																{ className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.btn },
-																'Email Us'
-												)
-								)
-				);
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'cta' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' Be the first to get RepOne'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.btn },
+        'Reserve Now'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        ' Get in touch'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.btn },
+        'Email Us'
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (CTA);
@@ -1417,7 +1394,7 @@ module.exports = {"1.png":"http://localhost:3001/1-e9ff91718ead8a6f5781d81c68fa8
 /* 81 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-dom");
+module.exports = require("prop-types");
 
 /***/ })
 /******/ ]);

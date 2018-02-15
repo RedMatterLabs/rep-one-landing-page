@@ -1,16 +1,15 @@
-
-@import 'src/shared-styles/variables';
-@import 'src/shared-styles/styles';
-
-.section {
-    align-items: start;
-}
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
 
 .section {
-	background-color:$c2;
+  align-items: start;
 }
 
-.section h1,  .section h2{
-	color:$c1;
+.section {
+  background-color: $c2;
 }
 
+.section h1,
+.section h2 {
+  color: $c1;
+}

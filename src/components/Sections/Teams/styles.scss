@@ -1,14 +1,11 @@
-
-
-@import 'src/shared-styles/variables';
-@import 'src/shared-styles/styles';
-
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
 .main {
-	position: absolute;
-	top: 0;
-	max-width: none;
+  position: absolute;
+  top: 0;
+  max-width: none;
 }
 
-.teamlogo{
-	margin: 2.5em;
+.teamlogo {
+  margin: 2.5em;
 }

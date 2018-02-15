@@ -4,5 +4,5 @@ import Pricing from './';
 
 it('Test example', () => {
   const wrapper = shallow(<Pricing />);
-  expect(wrapper.is('section')).toBeTruthy();
+  expect(wrapper.is('div')).toBeTruthy();
 });
