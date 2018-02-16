@@ -8,7 +8,7 @@ import App from 'src/components/App';
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  import(/* webpackChunkName: "home" */ '../components/Home')
+  import(/* webpackChunkName: "home" */ 'src/components/App/Routes/Home')
     .then(module => cb(null, module.default))
     .catch(e => {
       throw e;
@@ -27,7 +27,7 @@ const routes = (
 // routes so we need to require them here as a workaround.
 // https://github.com/gaearon/react-hot-loader/issues/288
 if (module.hot) {
-  require('../components/Home'); // eslint-disable-line global-require
+  require('src/components/App/Routes/Home'); // eslint-disable-line global-require
 }
 
 export default routes;

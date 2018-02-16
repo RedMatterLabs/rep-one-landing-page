@@ -30,22 +30,6 @@ class Parallax extends React.Component {
   }
 
   // track scrolled value in this components state
-  shouldComponentUpdate() {
-    if (this.isFrozen() && !this.active) {
-      this.active = true;
-      return false;
-    }
-    return true;
-  }
-
-  getState() {
-    return this.state;
-  }
-
-  handleScroll() {
-    this.updateTopPosition();
-  }
-
   updateTopPosition() {
     const box = this.node.getBoundingClientRect();
     this.setState({
@@ -53,6 +37,7 @@ class Parallax extends React.Component {
       height: box.height,
     });
   }
+
   onScroll() {
     if (!this.scrolling) {
       this.scrolling = true;
@@ -68,13 +53,19 @@ class Parallax extends React.Component {
     this.handleScroll();
   }
 
-  onScrollEnd() {
-    this.setState({ scrolling: false });
-    this.handleScroll();
+  proxiedScroll() {
+    if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
+      this.proxiedScrollTime = Date.now();
+      this.onScrollProxy();
+    }
   }
 
   onScrollProxy() {
     this.handleScroll();
+  }
+
+  handleScroll() {
+    this.updateTopPosition();
   }
 
   checkScroll() {
@@ -84,17 +75,19 @@ class Parallax extends React.Component {
     }
   }
 
-  proxiedScroll() {
-    if (Date.now() - this.proxiedScrollTime > CHECK_INTERVAL && this.scrolling) {
-      this.proxiedScrollTime = Date.now();
-      this.onScrollProxy();
-    }
+  onScrollEnd() {
+    this.setState({ scrolling: false });
+    this.handleScroll();
   }
 
   getChildContext() {
     //  exposes one property "parallaxstate", any of the components
     // in its sub-hierarchy will be able to access it
     return { parallaxstate: this.state };
+  }
+
+  getState() {
+    return this.state;
   }
 
   render() {

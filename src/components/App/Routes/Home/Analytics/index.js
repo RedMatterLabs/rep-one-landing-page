@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import Parallax from 'src/components/Shared/Parallax/index.js';
+import Parallax from 'src/components/App/Shared/Parallax/index.js';
 
 function Analytics() {
   return (
