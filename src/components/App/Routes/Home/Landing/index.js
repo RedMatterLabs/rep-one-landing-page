@@ -11,7 +11,7 @@ class Landing extends React.Component {
           <Video
             scrollable
             src="http://demo.vmg.nyc/foxnews/d/underarmour-gc/v1/video/demovid.mp4"
-            duration={240}
+            duration={318}
           />
         </div>
         <div className={styles.main}>
