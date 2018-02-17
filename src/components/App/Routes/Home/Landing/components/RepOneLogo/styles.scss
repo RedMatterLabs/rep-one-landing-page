@@ -1,5 +1,6 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
+
 .electronorbit,
 .electron,
 .nucleus {
@@ -27,11 +28,11 @@
   width: 7em;
   height: 7em;
   border: 0.25em solid $c1;
-  background-color: $c2;
+  background-color: black;
 }
 
 .electronoutline:nth-of-type(4) {
-  border: 0.45em solid $c2;
+  border: 0.45em solid black;
   margin: -0.225em 0.1em;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .electronoutline:nth-of-type(2) {
-  border: 0.45em solid $c2;
+  border: 0.45em solid black;
   margin: -0.425em -0.2em;
 }
 
@@ -57,7 +58,7 @@
   height: 7em;
   border: 0.25em solid $c1;
   display: flex;
-  background-color: $c2;
+  background-color: black;
   animation: orbit 10s infinite linear;
 }
 
@@ -77,6 +78,7 @@
 
 .logo {
   width: 8em;
+  mix-blend-mode: lighten;
   text-align: center;
 }
 

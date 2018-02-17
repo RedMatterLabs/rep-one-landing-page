@@ -1,15 +1,20 @@
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
 
-@import 'src/shared-styles/variables';
-@import 'src/shared-styles/styles';
-
-
-
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .section {
-	background-color:$c2;
+  background-color: $c2;
+  height: 56vw;
 }
 
 .section h1 {
-	font-size:3.3em;
-	margin:0;
-	color:$c1;
+  font-size: 3.3em;
+  margin: 0;
+  color: $c1;
 }

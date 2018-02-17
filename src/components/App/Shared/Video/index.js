@@ -7,68 +7,75 @@ class Video extends React.Component {
     super(props);
 
     this.state = {
+      duration: props.duration,
       playing: false,
-      duration: 0,
       playbacktime: 0,
       timeremaing: 0,
-      height: 0,
+      top: 0,
       width: 0,
       scrollable: props.scrollable,
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.node.play();
 
-  componentWillUnmount() {}
+    window.onscroll = () => {
+      this.node.pause();
+    };
 
-  update() {
-    const box = this.node.getBoundingClientRect();
-    const videoupdate = {
-        duration: this.node.getDuration(),
-    }
-
-    this.setState({
-      top: box.top,
-      height: box.height,
-      timeremaing:  videoupdate.timeremaing,
-      duration: videoupdate.duration,
-      playing: videoupdate.playing,
-    });
-
-
+    if (this.props.scrollable) {
+      this.updatetop();
+      this.checkInterval = setInterval(() => {
+        this.updatetop();
+        this.scrubvideo();
+      }, 40);
     }
   }
 
-  seekvideo() {
-    const scrolltop = this.props.parallax.top;
-    const height = this.state.height;
-    const thistop = this.state.top;
+  componentWillUnmount() {
+    clearInterval(this.checkInterval);
+  }
+
+  updatetop() {
+    const noderect = this.node.getBoundingClientRect();
+    const parentrect = this.node.parentElement.getBoundingClientRect();
+    const nodetop = noderect.top;
+    const parenttop = parentrect.top;
+    const relativetop = nodetop - parenttop;
+    this.setState({
+      top: relativetop,
+    });
+  }
+
+  scrubvideo() {
     const duration = this.state.duration;
-    let seekto = duration * ((scrolltop - ))
-    this.node.video.seek(seekto);
+    const nodetop = this.state.top;
+    const scrubtime = (duration - nodetop) / 25;
+    console.log(duration, nodetop);
+    this.node.currentTime = scrubtime;
   }
 
   render() {
-    update();
-    if (this.props.parallax && this.state.scrollable) {
-        seekvideo(;)
-    }
     return (
-      <video
-        ref={node => {
-          this.node = node;
-        }}
-      >
-        {this.props.sources.map(source =>
-          <source className={styles.teamlogo} src={source} alt="logo" />
-        )}
-      </video>
+      <div className={styles.videocontainer}>
+        <div className={styles.videoscrollbuffer}>
+          <video
+            ref={node => {
+              this.node = node;
+            }}
+          >
+            <source src={this.props.src} />
+          </video>
+        </div>
+      </div>
     );
   }
 }
 
 Video.propTypes = {
-  sources: PropTypes.video.isRequired,
   scrollable: PropTypes.bool.isRequired,
+  duration: PropTypes.number.isRequired,
+  src: PropTypes.string.isRequired,
 };
 export default Video;

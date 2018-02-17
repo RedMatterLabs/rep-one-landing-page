@@ -8,21 +8,18 @@ import Manage from 'src/components/App/Routes/Home/Manage/index.js';
 import Teams from 'src/components/App/Routes/Home/Teams/index.js';
 import Pricing from 'src/components/App/Routes/Home/Pricing/index.js';
 import CTA from 'src/components/App/Routes/Home/CTA/index.js';
-import Parallax from 'src/components/App/Shared/Parallax/index.js';
 
 function Home() {
   return (
     <div className={styles.container}>
-      <Parallax>
-        <Landing />
-        <Analytics />
-        <Platform />
-        <Insights />
-        <Manage />
-        <Teams />
-        <Pricing />
-        <CTA />
-      </Parallax>
+      <Landing />
+      <Analytics />
+      <Platform />
+      <Insights />
+      <Manage />
+      <Teams />
+      <Pricing />
+      <CTA />
     </div>
   );
 }
