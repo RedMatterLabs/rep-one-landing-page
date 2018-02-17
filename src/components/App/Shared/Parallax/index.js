@@ -80,17 +80,17 @@ class Parallax extends React.Component {
     this.handleScroll();
   }
 
-  getChildContext() {
-    //  exposes one property "parallaxstate", any of the components
-    // in its sub-hierarchy will be able to access it
-    return { parallaxstate: this.state };
-  }
-
   getState() {
     return this.state;
   }
 
   render() {
+    // push state to children as prop can use state changes
+    // as events to update on scroll
+    const childrenWithProps = React.Children.map(this.props.children, child =>
+      React.cloneElement(child, { parallax: this.getState() })
+    );
+
     return (
       <div
         ref={node => {
@@ -98,7 +98,7 @@ class Parallax extends React.Component {
         }}
         className={styles.parallax}
       >
-        {this.props.children}
+        {childrenWithProps}
       </div>
     );
   }
