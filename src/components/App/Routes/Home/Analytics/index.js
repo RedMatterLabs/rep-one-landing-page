@@ -4,10 +4,14 @@ import styles from './styles.scss';
 class Analytics extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
+  }
+
+  componentWillReceiveProps(props) {
+    console.log(props);
   }
 
   render() {
-    this.updateparallax();
     return (
       <div content="test" className={styles.section} id="analytics">
         <div className={styles.barbelltrack}>
