@@ -2,15 +2,6 @@ import React from 'react';
 import styles from './styles.scss';
 
 class Analytics extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(this.props);
-  }
-
-  componentWillReceiveProps(props) {
-    console.log(props);
-  }
-
   render() {
     return (
       <div content="test" className={styles.section} id="analytics">

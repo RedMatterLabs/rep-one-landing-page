@@ -11,9 +11,3 @@ Thumbs.db
 # NPM Modules #
 ###############
 node_modules
-
-
-
-# Build folder #
-###############
-Build
