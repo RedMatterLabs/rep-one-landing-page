@@ -552,12 +552,12 @@ class Landing_Landing extends Landing___WEBPACK_IMPORTED_MODULE_0_react___defaul
         Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
-          ' Win in the weight room.'
+          ' Win in the weight room\uD83C\uDFCB\uFE0F'
         ),
         Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
-          'Win on the field.'
+          'Win on the field\uD83C\uDFCB\uFE0F'
         ),
         Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(RepOneLogo_defaultExport, null)
       )
