@@ -537,15 +537,7 @@ class Landing_Landing extends Landing___WEBPACK_IMPORTED_MODULE_0_react___defaul
     return Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section },
-      Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.bg },
-        Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Video_defaultExport, {
-          scrollable: true,
-          src: 'http://demo.vmg.nyc/foxnews/d/underarmour-gc/v1/video/demovid.mp4',
-          duration: 318
-        })
-      ),
+      Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.bg }),
       Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
@@ -943,4 +935,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-d8cfb660db438ac40d4e.js.map
+//# sourceMappingURL=home-a67e2b8e9aa72807dc17.js.map

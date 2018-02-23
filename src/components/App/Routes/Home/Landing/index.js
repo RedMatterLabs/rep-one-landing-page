@@ -8,11 +8,6 @@ class Landing extends React.Component {
     return (
       <div className={styles.section}>
         <div className={styles.bg}>
-          <Video
-            scrollable
-            src="http://demo.vmg.nyc/foxnews/d/underarmour-gc/v1/video/demovid.mp4"
-            duration={318}
-          />
         </div>
         <div className={styles.main}>
           <h1> Win in the weight room🏋️</h1>

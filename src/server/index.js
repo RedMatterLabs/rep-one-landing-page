@@ -11,7 +11,7 @@ import template from './template';
 import routes from '../routes';
 
 const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
-const port = process.env.PORT;
+const port = (process.env.PORT) ? process.env.PORT : 3000;
 const app = express();
 
 // Remove annoying Express header addition.
@@ -22,6 +22,12 @@ app.use(compression());
 
 // Setup the public directory so that we can server static assets.
 app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
+
+// Tell bots not to load any of our pages.
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
 
 // Setup server side routing.
 app.get('*', (request, response) => {
@@ -49,6 +55,10 @@ app.get('*', (request, response) => {
     }
   });
 });
+
+
+
+
 
 app.listen(port, () => {
   console.log(`✅  server started on port: ${port}`); // eslint-disable-line no-console
