@@ -4,36 +4,31 @@ import styles from './styles.scss';
 class Analytics extends React.Component {
   render() {
     return (
-      <div content="test" className={styles.section} id="analytics">
-        <div className={styles.barbelltrack}>
-          <div className={styles.barbellcontainer}>
-            <img src={require('src/images/RepOneBarbell.png')} alt="RepOne Barbell" />
-          </div>
-        </div>
+      <div className={styles.section} id="analytics">
         <div className={styles.main}>
           <h1>Analytics platform for strength coaches</h1>
-          <h2>
-            Team management and analytics, powered by a fleet of extraordinarily accurate, portable
-            devices.
-          </h2>
-          <div className={styles.devicecontainertouch}>
-            <div className={styles.ipadcontainer}>
-              <img src={require('src/images/R1 Coach - Live.png')} alt="RepOne coaching Live" />
+          <div className={styles.subcontainer}>
+            <div className={styles.subsection}>
+              <div className={styles.placeholder} />
+              <h2>Motion Sensors</h2>
+              <p>Our platform is powered by a fleet of extraordinarily portable devices.</p>
             </div>
-          </div>
-
-          <div className={styles.reponecontainer}>
-            <figure>
-              <img src={require('src/images/RepOne.png')} alt="RepOne device" />
-              <img src={require('src/images/RepOne.png')} alt="RepOne device" />
-              <img src={require('src/images/RepOne.png')} alt="RepOne device" />
-            </figure>
-          </div>
-          <div className={styles.devicecontainerdesktop}>
-            <figure>
-              <img src={require('src/images/Group-2.png')} alt="RepOne app on laptop" />
-              <img src={require('src/images/Group-3.png')} alt="RepOne app on phone" />
-            </figure>
+            <div className={styles.subsection}>
+              <div className={styles.placeholder} />
+              <h2>Coaching Portal</h2>
+              <p>
+                Coaches can write programs remotely and monitor their athletes' performance in
+                realtime using our unique metrics
+              </p>
+            </div>
+            <div className={styles.subsection}>
+              <div className={styles.placeholder} />
+              <h2>Motion Sensors</h2>
+              <p>
+                Individual or group programs are given to each athlete -- even multiple athletes on
+                the same rack!
+              </p>
+            </div>
           </div>
         </div>
       </div>

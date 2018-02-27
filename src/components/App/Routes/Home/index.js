@@ -6,7 +6,6 @@ import Platform from 'src/components/App/Routes/Home/Platform/index.js';
 import Insights from 'src/components/App/Routes/Home/Insights/index.js';
 import Manage from 'src/components/App/Routes/Home/Manage/index.js';
 import Teams from 'src/components/App/Routes/Home/Teams/index.js';
-import Pricing from 'src/components/App/Routes/Home/Pricing/index.js';
 import CTA from 'src/components/App/Routes/Home/CTA/index.js';
 
 function Home() {
@@ -18,7 +17,6 @@ function Home() {
       <Insights />
       <Manage />
       <Teams />
-      <Pricing />
       <CTA />
     </div>
   );

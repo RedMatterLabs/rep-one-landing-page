@@ -8,9 +8,14 @@
   bottom: 0;
   right: 0;
 }
+
+.main {
+  max-width: none;
+}
+
 .section {
   background-color: $c2;
-  height: 56vw;
+  height: 100vh;
 }
 
 .section h1 {

@@ -6,6 +6,10 @@ function Insights() {
     <div className={styles.section} id="insights">
       <div className={styles.main}>
         <h1> Insights you can only get with RepOne</h1>
+        <div className={styles.diagram}>
+          <div className={styles.explosioncontainer} />
+          <div className={styles.diagramcontainer} />
+        </div>
         <h2>
           {' '}Industry-leading inductive 3D sensing gives you new ways to measure and enhance
           performance.

@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Pricing from './';
+import Header from './';
 
 it('Test example', () => {
-  const wrapper = shallow(<Pricing />);
+  const wrapper = shallow(<Header />);
   expect(wrapper.is('div')).toBeTruthy();
 });

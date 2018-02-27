@@ -12,7 +12,6 @@ class Landing extends React.Component {
         <div className={styles.main}>
           <h1> Win in the weight room</h1>
           <h1>Win on the field</h1>
-          <Logo />
         </div>
       </div>
     );

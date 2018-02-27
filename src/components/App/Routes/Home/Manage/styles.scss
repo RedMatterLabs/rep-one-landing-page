@@ -5,11 +5,24 @@
   align-items: start;
 }
 
-.section {
-  background-color: $c2;
+.main {
+  max-width: none;
 }
 
-.section h1,
-.section h2 {
-  color: $c1;
+.main h1,
+.main h2 {
+  margin-bottom: 2em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.placeholder {
+  margin: 0.5em;
+  height: 50vh;
+  width: 50%;
+  background-color: $c4;
+  border: 1px solid #ccc;
 }

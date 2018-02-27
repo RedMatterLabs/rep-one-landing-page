@@ -10,6 +10,11 @@ function Manage() {
           The RepOne device fits the equipment you already have, and the flexible athlete management
           software works with your routine.
         </h2>
+        <div className={styles.container}>
+          <div className={styles.placeholder} />
+
+          <div className={styles.placeholder} />
+        </div>
       </div>
     </div>
   );
