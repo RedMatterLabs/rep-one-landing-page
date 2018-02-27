@@ -575,6 +575,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.filter }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.bg }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -605,6 +606,7 @@ module.exports = {
 	"section": "styles-section--REPrO",
 	"main": "styles-main--28EZO",
 	"button": "styles-button--27StL",
+	"filter": "styles-filter--OKkZS",
 	"bg": "styles-bg--3XkJh"
 };
 
