@@ -11,7 +11,15 @@ class Landing extends React.Component {
         <div className={styles.bg} />
         <div className={styles.main}>
           <h1> Win in the weight room</h1>
-          <h1>Win on the field</h1>
+          <h1 className={styles.rolotext}>
+            <span>Win</span>
+
+            <ul className={styles.rolotextlist}>
+              <li className={styles.rolotextli}>&nbsp;on the field</li>
+              <li className={styles.rolotextli}>&nbsp;on the court</li>
+              <li className={styles.rolotextli}>&nbsp;in the bed</li>
+            </ul>
+          </h1>
         </div>
       </div>
     );
