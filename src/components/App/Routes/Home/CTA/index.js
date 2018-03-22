@@ -8,16 +8,7 @@ function CTA() {
     <div className={styles.section} id="cta">
       <div className={styles.main}>
         <h1>Be the first to get RepOne</h1>
-        <div className={styles.labeledselect}>
-          <span className={styles.selectleft}>For Teams</span>
-          <label className={styles.switch}>
-            <input type="checkbox" checked />
-            <span className={styles.slider} />
-          </label>
-          <span className={styles.selectright}>For Individuals</span>
-          <EmailForm />
-          <Pricing />
-        </div>
+        <a className={styles.button}>Contact Us</a>
       </div>
     </div>
   );

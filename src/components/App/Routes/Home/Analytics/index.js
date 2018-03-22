@@ -9,25 +9,30 @@ class Analytics extends React.Component {
           <h1>Analytics platform for strength coaches</h1>
           <div className={styles.subcontainer}>
             <div className={styles.subsection}>
-              <div className={styles.placeholder} />
-              <h2>Motion Sensors</h2>
-              <p>Our platform is powered by a fleet of extraordinarily portable devices.</p>
+              <div className={styles.placeholder}>
+                <img src={require('src/images/repone_render.png')} />
+              </div>
+              <h2>RepOne Devices</h2>
+              <p>
+                Our platform is powered by a fleet of extraordinarily accurate, portable devices.
+              </p>
             </div>
             <div className={styles.subsection}>
-              <div className={styles.placeholder} />
+              <div className={styles.placeholder}>
+                <img src={require('src/images/coaching_portal.jpg')} />
+              </div>
               <h2>Coaching Portal</h2>
               <p>
-                Coaches can write programs remotely and monitor their athletes' performance in
-                realtime using our unique metrics
+                Full-roster capabilities and athlete performance monitoring in real-time using our
+                unique metrics
               </p>
             </div>
             <div className={styles.subsection}>
-              <div className={styles.placeholder} />
-              <h2>Motion Sensors</h2>
-              <p>
-                Individual or group programs are given to each athlete -- even multiple athletes on
-                the same rack!
-              </p>
+              <div className={styles.placeholder}>
+                <img src={require('src/images/athlete_portal.png')} />
+              </div>
+              <h2>Athlete Kiosk App</h2>
+              <p>Athlete identification and autoregulated training for your whole team</p>
             </div>
           </div>
         </div>

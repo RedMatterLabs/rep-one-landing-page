@@ -15,7 +15,6 @@ function Home() {
       <Analytics />
       <Platform />
       <Insights />
-      <Manage />
       <Teams />
       <CTA />
     </div>
