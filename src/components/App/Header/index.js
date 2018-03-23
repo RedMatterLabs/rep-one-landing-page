@@ -26,8 +26,10 @@ class Header extends React.Component {
           ? styles.scrolled
           : styles.notscrolled}`}
       >
-        <h1>RepOne</h1>
-        <button className={styles.button}>Get yours today</button>
+        <div className={styles.main}>
+          <h1>RepOne</h1>
+          <button className={styles.button}>Get yours today</button>
+        </div>
       </div>
     );
   }

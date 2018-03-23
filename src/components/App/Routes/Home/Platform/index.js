@@ -6,28 +6,52 @@ class Platform extends React.Component {
     return (
       <div className={styles.section} id="platform">
         <div className={styles.main}>
-          <h1>The most advanced training techniques at your fingertips</h1>
-          <div className={styles.flexleft}>
-            <div className={styles.placeholder}>
-              <img src={require('src/images/live_ipad_1024.png')} alt="autoregulation" />
+          <div className={styles.container}>
+            <div className={`${styles.image} ${styles.left}`}>
+              <img
+                src={require('src/images/screenshot_athlete_tablet_short.png')}
+                alt="autoregulation"
+              />
             </div>
-            <div className={styles.rel}>
-              <h2>RepOne streamlines autoregulation and individualized coaching.</h2>
+            <div className={`${styles.textcontainer} ${styles.left}`}>
+              <div className={styles.text}>
+                <h2>Autoregulation</h2>
+                <p>RepOne streamlines autoregulation and individualized coaching.</p>
+              </div>
             </div>
           </div>
-          <div className={styles.flexright}>
-            <h2>Implement top training methodologies, right away, for your whole team.</h2>
-            <div className={styles.placeholder}>
-              <img src={require('src/images/athlete_program_ipad_1024.png')} alt="autoregulation" />
+
+          <div className={styles.container}>
+            <div className={`${styles.textcontainer} ${styles.left}`}>
+              <div className={styles.text}>
+                <h2>Updates In Real-Time</h2>
+                <p>Implement top training methodologies, right away, for your whole team.</p>
+              </div>
+            </div>
+            <div className={`${styles.image} ${styles.left}`}>
+              <img
+                src={require('src/images/repone_screenshot_live_browser.png')}
+                alt="autoregulation"
+              />
             </div>
           </div>
-          <div className={styles.flexleft}>
-            <div className={styles.placeholder}>
-              <img src={require('src/images/dashboard_ipad_1024.png')} alt="autoregulation" />
+
+          <div className={styles.container}>
+            <div className={`${styles.image} ${styles.left}`}>
+              <img
+                src={require('src/images/repone_screenshot_dashboard_browser.png')}
+                alt="autoregulation"
+              />
             </div>
-            <h2>
-              Keep track of your teams overall performance in real-time using our unique metrics.
-            </h2>
+            <div className={`${styles.textcontainer} ${styles.left}`}>
+              <div className={styles.text}>
+                <h2>Performance Metrics</h2>
+                <p>
+                  Keep track of your teams overall performance in real-time using our unique
+                  metrics.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

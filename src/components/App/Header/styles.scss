@@ -4,7 +4,6 @@
 .header {
   position: fixed;
   background-color: transparent;
-  color: #fff;
   font-size: 1.25em;
   padding: 1em;
   font-weight: 600;
@@ -14,8 +13,19 @@
   display: flex;
   justify-content: space-between;
   z-index: 9999;
+  background-color: #fff;
   border-bottom: 1px solid #fff;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  color: #222;
   transition: all 0.3s;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+  width: 100%;
 }
 
 .header h1 {
@@ -24,20 +34,14 @@
 
 .header .button {
   margin-right: 1em;
-}
-
-.scrolled.header {
-  background-color: #fff;
-  border-bottom: 1px solid #fff;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
-  color: #222;
+  float: right;
 }
 
 .button {
   text-transform: uppercase;
   font-weight: 100;
-  opacity: 0;
+  color: #222;
+  border: 1px solid #222;
   display: inline-block;
   position: relative;
   line-height: 32px;
@@ -45,14 +49,6 @@
   border-radius: 2px;
   font-size: 0.9em;
   background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
   box-shadow: none;
   transition: all 0.5s;
-}
-
-.scrolled .button {
-  opacity: 1;
-  color: #5cffc4;
-  border: 1px solid #5cffc4;
 }
