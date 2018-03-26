@@ -14,7 +14,7 @@ class Landing extends React.Component {
         </div>
         <div className={styles.main}>
           <h1>
-            Win in the weight room<br /> Win on the field
+            Win in the weight room<br /> Win on the field.
           </h1>
         </div>
       </div>

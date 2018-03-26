@@ -12,11 +12,18 @@
 .button {
   font-weight: 100;
   color: #222;
-  border: 1px solid #222;
-  font-size: 2em;
+  border: 2px solid #222;
+  font-size: 1.2em;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.button:hover {
+  color: #fff;
+  border: 2px solid #1abc9c;
+  background-color:#1abc9c;
 }
 
 .main {
