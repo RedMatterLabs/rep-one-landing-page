@@ -3,7 +3,57 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd.otf");
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-UltLt.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Th.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Lt.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Md.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Roman.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Bd.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Hv.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("http://www.redloungenj.com/fonts/HelveticaNeueLTStd-Blk.otf");
+  font-weight: 800;
+}
+
+
+
 
 .container {
   display: block;
@@ -12,7 +62,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 .section {
@@ -49,7 +99,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #222;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 .section h2 {
