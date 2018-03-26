@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
+import Logo from './components/ReponeLogo/index.js'
 
 class Header extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Header extends React.Component {
           : styles.notscrolled}`}
       >
         <div className={styles.main}>
-          <h1>RepOne</h1>
+          <h1><Logo />RepOne</h1>
           <button className={styles.button}>Get yours today</button>
         </div>
       </div>

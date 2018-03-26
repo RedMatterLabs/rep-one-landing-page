@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"c270a28e1d9d8485ef4a"}[chunkId] + ".js");
+/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"64739c9846487967b477"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -140,15 +140,38 @@ const getDeferScript = src => src ? `<script defer src="${src}"></script>` : '';
 </html>
 
 `);
-// CONCATENATED MODULE: ./src/components/App/Header/index.js
+// CONCATENATED MODULE: ./src/components/App/Header/components/ReponeLogo/index.js
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
 
-class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+function Logo() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.logo },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronorbit },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electron }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.nucleus })
+    )
+  );
+}
+
+/* harmony default export */ var ReponeLogo_defaultExport = (Logo);
+// CONCATENATED MODULE: ./src/components/App/Header/index.js
+/* harmony import */ var Header___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var Header___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Header___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var Header___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(12);
+/* harmony import */ var Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Header___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+
+class Header_Header extends Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -167,22 +190,23 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     window.onscroll = this.scrollFunction.bind(this);
   }
   render() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    return Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       {
-        className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.header}  ${this.state.scrolled ? __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.scrolled : __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.notscrolled}`
+        className: `${Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.header}  ${this.state.scrolled ? Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.scrolled : Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.notscrolled}`
       },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        { className: Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+        Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
+          Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ReponeLogo_defaultExport, null),
           'RepOne'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        Header___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.button },
+          { className: Header___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.button },
           'Get yours today'
         )
       )
@@ -190,11 +214,11 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ var Header_defaultExport = (Header);
+/* harmony default export */ var Header_defaultExport = (Header_Header);
 // CONCATENATED MODULE: ./src/components/App/Footer/index.js
 /* harmony import */ var Footer___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Footer___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Footer___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(13);
+/* harmony import */ var Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(14);
 /* harmony import */ var Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -341,7 +365,7 @@ App.propTypes = {
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 41)).then(module => cb(null, module.default)).catch(e => {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 43)).then(module => cb(null, module.default)).catch(e => {
     throw e;
   });
 };
@@ -391,7 +415,7 @@ if (false) {
 
 
 
-const clientAssets = __webpack_require__(14); // eslint-disable-line import/no-dynamic-require
+const clientAssets = __webpack_require__(15); // eslint-disable-line import/no-dynamic-require
 const port = process.env.PORT ? process.env.PORT : 3000;
 const app = __WEBPACK_IMPORTED_MODULE_0_express___default.a();
 
@@ -518,6 +542,23 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
+	"container": "styles-container--18fWF",
+	"section": "styles-section--1znTc",
+	"main": "styles-main--lt9ZG",
+	"button": "styles-button--2yT8g",
+	"electronorbit": "styles-electronorbit--2v3Q7",
+	"electron": "styles-electron--2x7ux",
+	"nucleus": "styles-nucleus--jGXBY",
+	"electronoutline": "styles-electronoutline--HyCTM",
+	"orbit": "styles-orbit--IFFIf",
+	"logo": "styles-logo--3R_a5"
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = {
 	"container": "styles-container--2QShP",
 	"section": "styles-section--5nq-m",
 	"main": "styles-main--1ctYf",
@@ -528,13 +569,12 @@ module.exports = {
 };
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-279ee3a816acaa54e5c7e3bde31bd7e4.png","3.png":"/3-5e77cf02cc000d637ca690d39ca6e44b.png","4.png":"/4-feaddec9b679fc9204bb764daa0d47f0.png","5.png":"/5-8f154d22d9f3521f3bdd87425c191d5b.png","6.png":"/6-2a417d318977abda1e0d9c816811d17a.png","athlete_portal.png":"/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-18fa90a3c05736bb3e81.js","home.js.map":"/home-6a3a4000f25d1e85c3a4.js.map","main.css":"/main-d7d638e679b019fe026af8684f73f365.css","main.css.map":"/main-d7d638e679b019fe026af8684f73f365.css.map","main.js":"/main-48c1761a4c03c651f941.js","main.js.map":"/main-3dca27c7b73972ce25d4.js.map","manifest.js":"/manifest-b294abe70be82f0f7833.js","manifest.js.map":"/manifest-a32af4bf22da54e11e3b.js.map","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","repone_screenshot_dashboard_browser.png":"/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png","repone_screenshot_live_browser.png":"/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png","screenshot_athlete_tablet_short.png":"/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
+module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-279ee3a816acaa54e5c7e3bde31bd7e4.png","3.png":"/3-5e77cf02cc000d637ca690d39ca6e44b.png","4.png":"/4-feaddec9b679fc9204bb764daa0d47f0.png","5.png":"/5-8f154d22d9f3521f3bdd87425c191d5b.png","6.png":"/6-2a417d318977abda1e0d9c816811d17a.png","athlete_portal.png":"/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-abf6bf6cb252d38e7345.js","home.js.map":"/home-11f589ecb6d72e9b9b7e.js.map","main.css":"/main-3c340321f589a5ac5cf9ad22f959b7f9.css","main.css.map":"/main-3c340321f589a5ac5cf9ad22f959b7f9.css.map","main.js":"/main-aca740a0ee446bf39863.js","main.js.map":"/main-69b2e5d64ea7b23ac537.js.map","manifest.js":"/manifest-c7e4d330e40b536c9831.js","manifest.js.map":"/manifest-0e2f4e628184fd3803dd.js.map","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","repone_screenshot_dashboard_browser.png":"/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png","repone_screenshot_live_browser.png":"/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png","screenshot_athlete_tablet_short.png":"/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
 
 /***/ }),
-/* 15 */,
 /* 16 */,
 /* 17 */,
 /* 18 */,
@@ -561,7 +601,9 @@ module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-
 /* 39 */,
 /* 40 */,
 /* 41 */,
-/* 42 */
+/* 42 */,
+/* 43 */,
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");

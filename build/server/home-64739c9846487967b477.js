@@ -15,7 +15,8 @@ exports.modules = [
 /* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -44,7 +45,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -61,7 +62,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -70,7 +71,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -84,25 +85,25 @@ module.exports = {
 };
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = "/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png";
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = "/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg";
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = "/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png";
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -118,25 +119,25 @@ module.exports = {
 };
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = "/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png";
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = "/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png";
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = "/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png";
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -152,13 +153,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = "/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg";
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -174,7 +175,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -186,7 +187,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -199,43 +200,43 @@ module.exports = {
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = "/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png";
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = "/2-279ee3a816acaa54e5c7e3bde31bd7e4.png";
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = "/3-5e77cf02cc000d637ca690d39ca6e44b.png";
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = "/4-feaddec9b679fc9204bb764daa0d47f0.png";
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = "/5-8f154d22d9f3521f3bdd87425c191d5b.png";
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = "/6-2a417d318977abda1e0d9c816811d17a.png";
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -248,7 +249,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -270,7 +271,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -285,7 +286,24 @@ module.exports = {
 };
 
 /***/ }),
-/* 41 */
+/* 42 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"container": "styles-container--1_YQv",
+	"section": "styles-section--3OX5t",
+	"main": "styles-main--1q0La",
+	"button": "styles-button--tQ0_0",
+	"electronorbit": "styles-electronorbit--1tBTE",
+	"electron": "styles-electron--3YVfF",
+	"nucleus": "styles-nucleus--1JxK3",
+	"logo": "styles-logo--2SAzP",
+	"electronoutline": "styles-electronoutline--fK8H1",
+	"orbit": "styles-orbit--25Mdb"
+};
+
+/***/ }),
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -294,7 +312,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Landing/components/RepOneLogo/index.js
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -325,9 +343,9 @@ function Logo() {
 // CONCATENATED MODULE: ./src/components/App/Shared/Video/index.js
 /* harmony import */ var Video___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Video___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Video___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
 
 
@@ -417,7 +435,7 @@ Video.propTypes = {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Landing/index.js
 /* harmony import */ var Landing___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Landing___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Landing___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(16);
+/* harmony import */ var Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(17);
 /* harmony import */ var Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Landing___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -457,7 +475,7 @@ class Landing extends Landing___WEBPACK_IMPORTED_MODULE_0_react___default.a.Comp
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Analytics/index.js
 /* harmony import */ var Analytics___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Analytics___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Analytics___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(19);
+/* harmony import */ var Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(20);
 /* harmony import */ var Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -489,7 +507,7 @@ class Analytics extends Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.placeholder },
-              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(20) })
+              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(21) })
             ),
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'h2',
@@ -508,7 +526,7 @@ class Analytics extends Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.placeholder },
-              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(21) })
+              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(22) })
             ),
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'h2',
@@ -527,7 +545,7 @@ class Analytics extends Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.placeholder },
-              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(22) })
+              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(23) })
             ),
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'h2',
@@ -550,7 +568,7 @@ class Analytics extends Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Platform/index.js
 /* harmony import */ var Platform___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Platform___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Platform___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(23);
+/* harmony import */ var Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(24);
 /* harmony import */ var Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -570,7 +588,7 @@ class Platform extends Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Co
             'div',
             { className: `${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
             Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(24),
+              src: __webpack_require__(25),
               alt: 'autoregulation'
             })
           ),
@@ -618,7 +636,7 @@ class Platform extends Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Co
             'div',
             { className: `${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
             Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(25),
+              src: __webpack_require__(26),
               alt: 'autoregulation'
             })
           )
@@ -630,7 +648,7 @@ class Platform extends Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Co
             'div',
             { className: `${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${Platform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
             Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(26),
+              src: __webpack_require__(27),
               alt: 'autoregulation'
             })
           ),
@@ -662,7 +680,7 @@ class Platform extends Platform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Co
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Insights/index.js
 /* harmony import */ var Insights___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Insights___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Insights___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Insights___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(27);
+/* harmony import */ var Insights___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(28);
 /* harmony import */ var Insights___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Insights___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -690,7 +708,7 @@ function Insights() {
         Insights___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: Insights___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.diagramcontainer },
-          Insights___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(28) })
+          Insights___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(29) })
         )
       )
     )
@@ -701,7 +719,7 @@ function Insights() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Exploded/index.js
 /* harmony import */ var Exploded___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Exploded___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Exploded___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Exploded___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(29);
+/* harmony import */ var Exploded___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(30);
 /* harmony import */ var Exploded___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Exploded___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -734,7 +752,7 @@ function Exploded() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Manage/index.js
 /* harmony import */ var Manage___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Manage___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Manage___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Manage___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(30);
+/* harmony import */ var Manage___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(31);
 /* harmony import */ var Manage___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Manage___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -770,14 +788,14 @@ function Manage() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Teams/index.js
 /* harmony import */ var Teams___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Teams___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Teams___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Teams___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(31);
+/* harmony import */ var Teams___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(32);
 /* harmony import */ var Teams___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Teams___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
 
 // I couldn't find a better way to include these :/
 // todo: expand to an array of object with team name and image data use team name to create alt text for seo alt = 'team name uses rep one technology'
-const images = [__webpack_require__(32), __webpack_require__(33), __webpack_require__(34), __webpack_require__(35), __webpack_require__(36), __webpack_require__(37)];
+const images = [__webpack_require__(33), __webpack_require__(34), __webpack_require__(35), __webpack_require__(36), __webpack_require__(37), __webpack_require__(38)];
 
 function Teams() {
   return Teams___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -799,7 +817,7 @@ function Teams() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/components/emailform/index.js
 /* harmony import */ var emailform___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var emailform___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(emailform___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var emailform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(39);
+/* harmony import */ var emailform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(40);
 /* harmony import */ var emailform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(emailform___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -874,7 +892,7 @@ function EmailForm() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/components/pricing/index.js
 /* harmony import */ var pricing___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var pricing___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(pricing___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var pricing___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(40);
+/* harmony import */ var pricing___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(41);
 /* harmony import */ var pricing___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(pricing___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -983,11 +1001,34 @@ function Pricing() {
 }
 
 /* harmony default export */ var pricing_defaultExport = (Pricing);
+// CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/components/ReponeLogo/index.js
+/* harmony import */ var ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(42);
+/* harmony import */ var ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+function ReponeLogo_Logo() {
+  return ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.logo },
+    ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electronorbit },
+      ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.electron }),
+      ReponeLogo___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: ReponeLogo___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.nucleus })
+    )
+  );
+}
+
+/* harmony default export */ var ReponeLogo_defaultExport = (ReponeLogo_Logo);
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/index.js
 /* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(CTA___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(38);
+/* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(39);
 /* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
 
 
 
@@ -1018,7 +1059,7 @@ function CTA() {
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/index.js
 /* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Home___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(15);
+/* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(16);
 /* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Home___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -1049,4 +1090,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-c270a28e1d9d8485ef4a.js.map
+//# sourceMappingURL=home-64739c9846487967b477.js.map
