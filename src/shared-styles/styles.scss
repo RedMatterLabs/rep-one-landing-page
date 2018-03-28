@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./helvetica";
+
 * {
   box-sizing: border-box;
 }
@@ -38,14 +40,6 @@ body {
   z-index: 10;
 }
 
-
-.modal h1 {
-  position: relative;
-  font-size: 3.5em;
-  line-height: 1.3em;
-  font-weight: 600;
-  z-index: 10;
-}
 
 .main h1 {
   display: inline-block;

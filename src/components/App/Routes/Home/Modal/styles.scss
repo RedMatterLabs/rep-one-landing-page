@@ -31,25 +31,25 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #222;
-  font-family: "Helvetica Neue LT Std", sans-serif;
 }
 
 .modal p {
   display: inline-block;
   text-align: center;
   position: relative;
+  margin: 0 auto;
   font-size: 1em;
   line-height: 1.2em;
-  font-weight: 400;
+  font-weight: 100;
   z-index: 9;
 }
 
 .modal a {
-  display: inline-block;
+  display: block;
   position: relative;
   color: #222;
   text-align: center;
-  margin: 20px;
+  margin: 20px auto;
   text-decoration: none;
 }
 
