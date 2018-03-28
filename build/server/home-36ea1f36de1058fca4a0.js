@@ -23,6 +23,7 @@ module.exports = {
 	"container": "styles-container--2EMsY",
 	"section": "styles-section--1EFYD",
 	"main": "styles-main--3_9Z8",
+	"modal": "styles-modal--mFiyg",
 	"button": "styles-button--3v_u5"
 };
 
@@ -34,6 +35,7 @@ module.exports = {
 	"container": "styles-container--3r-XT",
 	"section": "styles-section--REPrO",
 	"main": "styles-main--28EZO",
+	"modal": "styles-modal--1EEWl",
 	"button": "styles-button--27StL",
 	"filter": "styles-filter--OKkZS",
 	"bg": "styles-bg--3XkJh",
@@ -52,6 +54,7 @@ module.exports = {
 	"container": "styles-container--QTYDU",
 	"section": "styles-section--1fAna",
 	"main": "styles-main--3uBCb",
+	"modal": "styles-modal--3-odU",
 	"button": "styles-button--2bIJX",
 	"electronorbit": "styles-electronorbit--2Sh4K",
 	"electron": "styles-electron--1OHOw",
@@ -78,6 +81,7 @@ module.exports = {
 	"container": "styles-container--Kn0Rx",
 	"section": "styles-section--2EfO1",
 	"main": "styles-main--3ytPE",
+	"modal": "styles-modal--11hiY",
 	"button": "styles-button--1KYpr",
 	"subsection": "styles-subsection--pPyLO",
 	"subcontainer": "styles-subcontainer--3gkHy",
@@ -110,6 +114,7 @@ module.exports = {
 	"container": "styles-container--3l6R5",
 	"section": "styles-section--3Ic3m",
 	"main": "styles-main--2WqtH",
+	"modal": "styles-modal--3PaaF",
 	"button": "styles-button--17ecM",
 	"image": "styles-image--2Qsxp",
 	"textcontainer": "styles-textcontainer--3MEDt",
@@ -144,6 +149,7 @@ module.exports = {
 	"container": "styles-container--1wUyM",
 	"section": "styles-section--2LXgi",
 	"main": "styles-main--XNtXj",
+	"modal": "styles-modal--3jYMs",
 	"button": "styles-button--3oi4z",
 	"diagramcontainer": "styles-diagramcontainer--2Dilh",
 	"explosioncontainer": "styles-explosioncontainer--btCEF",
@@ -166,6 +172,7 @@ module.exports = {
 	"container": "styles-container--1sd5l",
 	"section": "styles-section--3_GZD",
 	"main": "styles-main--1uV7X",
+	"modal": "styles-modal--crn30",
 	"button": "styles-button--2JVOz",
 	"diagramcontainer": "styles-diagramcontainer--igWdu",
 	"explosioncontainer": "styles-explosioncontainer--Q0-P2",
@@ -182,6 +189,7 @@ module.exports = {
 	"container": "styles-container--tXpBS",
 	"section": "styles-section--18T0a",
 	"main": "styles-main--2v33e",
+	"modal": "styles-modal--1Ra6l",
 	"button": "styles-button--128uC",
 	"placeholder": "styles-placeholder--CHoJ6"
 };
@@ -194,6 +202,7 @@ module.exports = {
 	"container": "styles-container--qkU_9",
 	"section": "styles-section--2zhc1",
 	"main": "styles-main--3Odib",
+	"modal": "styles-modal--1OvZd",
 	"button": "styles-button--2Opq9",
 	"teamlogocontainer": "styles-teamlogocontainer--pMkqy",
 	"teamlogo": "styles-teamlogo--39qbP"
@@ -243,6 +252,7 @@ module.exports = {
 	"container": "styles-container--1u53v",
 	"section": "styles-section--2ilPY",
 	"main": "styles-main--2R38f",
+	"modal": "styles-modal--1amcR",
 	"button": "styles-button--1EyEm",
 	"switch": "styles-switch--3BLD5",
 	"slider": "styles-slider--3nH1V"
@@ -256,6 +266,7 @@ module.exports = {
 	"container": "styles-container--1AhVN",
 	"section": "styles-section--2EtVw",
 	"main": "styles-main--3PU0i",
+	"modal": "styles-modal--1LET4",
 	"button": "styles-button--3HHyK",
 	"row": "styles-row--3wX-F",
 	"roundedcorners": "styles-roundedcorners--1Ejg0",
@@ -278,6 +289,7 @@ module.exports = {
 	"container": "styles-container--N97Tp",
 	"section": "styles-section--2uffX",
 	"main": "styles-main--3L1FD",
+	"modal": "styles-modal--9_Bin",
 	"button": "styles-button--138zI",
 	"flexrow": "styles-flexrow--2ivW2",
 	"roundedcorners": "styles-roundedcorners--ZkloY",
@@ -293,6 +305,7 @@ module.exports = {
 	"container": "styles-container--1_YQv",
 	"section": "styles-section--3OX5t",
 	"main": "styles-main--1q0La",
+	"modal": "styles-modal--21gAj",
 	"button": "styles-button--tQ0_0",
 	"electronorbit": "styles-electronorbit--1tBTE",
 	"electron": "styles-electron--3YVfF",
@@ -304,6 +317,19 @@ module.exports = {
 
 /***/ }),
 /* 43 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"container": "styles-container--4eHc2",
+	"section": "styles-section--1LWL7",
+	"main": "styles-main--2XKCU",
+	"modal": "styles-modal--2o2D4",
+	"button": "styles-button--3Oc_a",
+	"modalcontainer": "styles-modalcontainer--1IaF1"
+};
+
+/***/ }),
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -343,7 +369,7 @@ function Logo() {
 // CONCATENATED MODULE: ./src/components/App/Shared/Video/index.js
 /* harmony import */ var Video___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Video___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Video___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
@@ -1056,6 +1082,53 @@ function CTA() {
 }
 
 /* harmony default export */ var CTA_defaultExport = (CTA);
+// CONCATENATED MODULE: ./src/components/App/Routes/Home/Modal/index.js
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(43);
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+class Modal extends Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+    this.state = {
+      top: 1,
+      height: -1,
+      scrolling: false
+    };
+  }
+
+  render() {
+    return Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.modalcontainer },
+      Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.modal },
+        Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          null,
+          this.props.title
+        ),
+        Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          this.props.message
+        ),
+        Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'a',
+          { href: this.props.link },
+          this.props.linktext
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ var Modal_defaultExport = (Modal);
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/index.js
 /* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Home___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Home___WEBPACK_IMPORTED_MODULE_0_react__);
@@ -1072,10 +1145,12 @@ function CTA() {
 
 
 
+
 function Home() {
   return Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: Home___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
+    Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Modal_defaultExport, { link: 'https://www.youtube.com/watch?v=uWIAo2XFcX4', linktext: 'Check out this tech demonstration for our new 3D sensing.', title: 'Hi there!', message: 'This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do.' }),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Analytics_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Platform_defaultExport, null),
@@ -1090,4 +1165,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-64739c9846487967b477.js.map
+//# sourceMappingURL=home-36ea1f36de1058fca4a0.js.map

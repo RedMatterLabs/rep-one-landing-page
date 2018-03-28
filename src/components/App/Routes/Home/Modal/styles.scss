@@ -1,0 +1,59 @@
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
+
+.modalcontainer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.modal {
+  min-width: 320px;
+  color: #222;
+  max-width: 50%;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.modal h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #222;
+  font-family: "Helvetica Neue LT Std", sans-serif;
+}
+
+.modal p {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: 400;
+  z-index: 9;
+}
+
+.modal a {
+  display: inline-block;
+  position: relative;
+  color: #222;
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+}
+
+
+.modal a:hover {
+  color: #1abc9c;
+}

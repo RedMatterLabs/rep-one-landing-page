@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"64739c9846487967b477"}[chunkId] + ".js");
+/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"36ea1f36de1058fca4a0"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -365,7 +365,7 @@ App.propTypes = {
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 43)).then(module => cb(null, module.default)).catch(e => {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 44)).then(module => cb(null, module.default)).catch(e => {
     throw e;
   });
 };
@@ -533,6 +533,7 @@ module.exports = {
 	"container": "styles-container--omZoF",
 	"section": "styles-section--2AtxK",
 	"main": "styles-main--3lRdS",
+	"modal": "styles-modal--O7CvN",
 	"button": "styles-button--3-N3I",
 	"header": "styles-header--42xaK"
 };
@@ -545,6 +546,7 @@ module.exports = {
 	"container": "styles-container--18fWF",
 	"section": "styles-section--1znTc",
 	"main": "styles-main--lt9ZG",
+	"modal": "styles-modal--2xLyP",
 	"button": "styles-button--2yT8g",
 	"electronorbit": "styles-electronorbit--2v3Q7",
 	"electron": "styles-electron--2x7ux",
@@ -562,6 +564,7 @@ module.exports = {
 	"container": "styles-container--2QShP",
 	"section": "styles-section--5nq-m",
 	"main": "styles-main--1ctYf",
+	"modal": "styles-modal--31Ei4",
 	"button": "styles-button--3kosb",
 	"footer": "styles-footer--1kKw0",
 	"footerSocialIcons": "styles-footerSocialIcons--2KxL5",
@@ -572,7 +575,7 @@ module.exports = {
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-279ee3a816acaa54e5c7e3bde31bd7e4.png","3.png":"/3-5e77cf02cc000d637ca690d39ca6e44b.png","4.png":"/4-feaddec9b679fc9204bb764daa0d47f0.png","5.png":"/5-8f154d22d9f3521f3bdd87425c191d5b.png","6.png":"/6-2a417d318977abda1e0d9c816811d17a.png","athlete_portal.png":"/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-4e2f0b222c2d39ce124f.js","home.js.map":"/home-11f589ecb6d72e9b9b7e.js.map","main.css":"/main-57a3e177e548ed9f4394bc0dd7a86e86.css","main.css.map":"/main-57a3e177e548ed9f4394bc0dd7a86e86.css.map","main.js":"/main-aca740a0ee446bf39863.js","main.js.map":"/main-69b2e5d64ea7b23ac537.js.map","manifest.js":"/manifest-b06e585dadcfd48c18e3.js","manifest.js.map":"/manifest-0e2f4e628184fd3803dd.js.map","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","repone_screenshot_dashboard_browser.png":"/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png","repone_screenshot_live_browser.png":"/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png","screenshot_athlete_tablet_short.png":"/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
+module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-279ee3a816acaa54e5c7e3bde31bd7e4.png","3.png":"/3-5e77cf02cc000d637ca690d39ca6e44b.png","4.png":"/4-feaddec9b679fc9204bb764daa0d47f0.png","5.png":"/5-8f154d22d9f3521f3bdd87425c191d5b.png","6.png":"/6-2a417d318977abda1e0d9c816811d17a.png","athlete_portal.png":"/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-5a48d560f16f640914ec.js","home.js.map":"/home-ddb9f3e736e7a9fe5174.js.map","main.css":"/main-107bd69777de2add9dc039df6b6861fd.css","main.css.map":"/main-107bd69777de2add9dc039df6b6861fd.css.map","main.js":"/main-ef74cb54deacf9e4461a.js","main.js.map":"/main-dbeb4ce59697a23ff6cf.js.map","manifest.js":"/manifest-b4b1760794f429630b2b.js","manifest.js.map":"/manifest-63218df7c51c23fb347d.js.map","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","repone_screenshot_dashboard_browser.png":"/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png","repone_screenshot_live_browser.png":"/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png","screenshot_athlete_tablet_short.png":"/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
 
 /***/ }),
 /* 16 */,
@@ -603,7 +606,8 @@ module.exports = {"1.png":"/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"/2-
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */
+/* 44 */,
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
