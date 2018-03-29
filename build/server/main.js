@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"c27c3a2778e57fb1d2fa"}[chunkId] + ".js");
+/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"22a765d072b558501077"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -343,7 +343,7 @@ App.propTypes = {
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 45)).then(module => cb(null, module.default)).catch(e => {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 46)).then(module => cb(null, module.default)).catch(e => {
     throw e;
   });
 };
@@ -540,7 +540,7 @@ module.exports = {
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"/3-55aff29752ab76572d2b27318775b25f.png","4.png":"/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_portal.png":"/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-6c7d7d6008a8784f185b.js","home.js.map":"/home-0c1945eb585a8aec9cd9.js.map","main.css":"/main-1e588b6c80ddc6d8b7bbc951ee9eaf36.css","main.css.map":"/main-1e588b6c80ddc6d8b7bbc951ee9eaf36.css.map","main.js":"/main-cd80b3045815627152b7.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-1ecb92ccc31c6dc99894.js","manifest.js.map":"/manifest-73bc9ec000062437151d.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
+module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"/3-55aff29752ab76572d2b27318775b25f.png","4.png":"/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_kiosk.jpg":"/athlete_kiosk-1e3958dba1c56ae657d1adc432f1b7b1.jpg","coach_portal.jpg":"/coach_portal-4b44850aa4f91ac66b4a44c9736f4ce9.jpg","deadlift_guy.001.jpg":"/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","home.js":"/home-b0837a86b47be0881991.js","home.js.map":"/home-070f098d1aa0855f209b.js.map","main.css":"/main-849c105b3f03352165116f6d4f50b52d.css","main.css.map":"/main-849c105b3f03352165116f6d4f50b52d.css.map","main.js":"/main-cd80b3045815627152b7.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-ba97a1929e666ba23948.js","manifest.js.map":"/manifest-32fc3c43ee57e9998e74.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map","weightroom.jpg":"/weightroom-962feb66bb082c5289de1af9060099c0.jpg"}
 
 /***/ }),
 /* 16 */,
@@ -573,7 +573,8 @@ module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-
 /* 43 */,
 /* 44 */,
 /* 45 */,
-/* 46 */
+/* 46 */,
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");

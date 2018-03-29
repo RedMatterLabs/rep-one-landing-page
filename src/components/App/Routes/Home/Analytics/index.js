@@ -25,7 +25,7 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/coaching_portal.jpg')} />
+                <img src={require('src/images/coach_portal.jpg')} />
               </div>
               <div className={styles.textcontainer}>
                 <div>
@@ -39,7 +39,7 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/athlete_portal.png')} />
+                <img src={require('src/images/athlete_kiosk.jpg')} />
               </div>
               <div className={styles.textcontainer}>
                 <div>
@@ -50,6 +50,11 @@ class Analytics extends React.Component {
             </div>
           </div>
         </div>
+        <div className={styles.weightroom}>
+          <div>
+          <img src={require('src/images/weightroom.jpg')} />
+          </div>
+          </div>
       </div>
     );
   }

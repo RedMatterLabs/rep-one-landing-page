@@ -9,7 +9,7 @@
   border-bottom: 2px solid #a8acb1;
   transition: 0.3s all;
   overflow: hidden;
-  border: 1px solid #f2f2f2;
+  border-radius: 2px;
 }
 
 .main h1 {
@@ -36,7 +36,7 @@
 .subcontainer {
   justify-content: space-between;
   padding: 0;
-  margin: 0px auto 100px auto;
+  margin: 0px auto 300px auto;
   list-style: none;
   display: flex;
   width: 100%;
@@ -48,7 +48,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 0.25em;
+  margin-bottom: 5px;
   font-weight: 700;
   letter-spacing: .1em;
 }
@@ -63,9 +63,10 @@
 }
 
 .placeholder {
-  background-color: #fff;
+  background-color: #a8acb1;
   width: 300px;
   height: 300px;
+  overflow: hidden;
 }
 
 .placeholder > img {
@@ -80,11 +81,36 @@
 
 .textcontainer {
   float: left;
-  height: 110px;
   display: flex;
+  padding: 30px 20px;
   align-items: center;
 }
 
 .textcontainer > div {
   display: inline;
+}
+
+.weightroom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.weightroom div {
+  position: absolute;
+  top: -2.5vw;
+  overflow: hidden;
+  height: 100px;
+  width: 100vw;
+}
+
+.weightroom img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  mix-blend-mode: multiply;
 }
