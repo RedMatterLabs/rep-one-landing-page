@@ -1313,6 +1313,7 @@ function Home() {
   return Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: Home___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
+    Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Modal_defaultExport, { link: 'https://www.youtube.com/watch?v=uWIAo2XFcX4', linktext: 'Check out this tech demonstration for our new 3D sensing.', title: 'Hi there!', message: 'This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do.' }),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Analytics_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Platform_defaultExport, null),
@@ -1327,4 +1328,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-22a765d072b558501077.js.map
+//# sourceMappingURL=home-60ce3a0a06d1ecc7bba9.js.map
