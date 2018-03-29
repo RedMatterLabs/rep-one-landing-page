@@ -52,11 +52,11 @@
 }
 
 .right .text {
-  padding-left: 40px;
+  padding-left: 60px;
 }
 
 .left .text {
-  padding-right: 40px;
+  padding-right: 60px;
 }
 
 .logo {
@@ -68,7 +68,7 @@
 }
 
 .section ul {
-  list-style: disc;
+  list-style: none;
   text-align: left;
   font-weight: 100;
   font-size: 14px;
@@ -80,7 +80,12 @@
   margin-top: 5px;
 }
 
+.section ul li:nth-last-of-type(1), .section ul li:nth-last-of-type(2) {
+  margin-top: 15px;
+}
+
 .textcontainer h2 {
+  color: rgb(100,100,100);
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
