@@ -1,17 +1,19 @@
 {
-  "1.png": "http://localhost:3001/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png",
-  "2.png": "http://localhost:3001/2-279ee3a816acaa54e5c7e3bde31bd7e4.png",
-  "3.png": "http://localhost:3001/3-5e77cf02cc000d637ca690d39ca6e44b.png",
-  "4.png": "http://localhost:3001/4-feaddec9b679fc9204bb764daa0d47f0.png",
-  "5.png": "http://localhost:3001/5-8f154d22d9f3521f3bdd87425c191d5b.png",
-  "6.png": "http://localhost:3001/6-2a417d318977abda1e0d9c816811d17a.png",
+  "1.jpg": "http://localhost:3001/1-53d3c210f4f1600fdc603e0ccdb196e3.jpg",
+  "1.png": "http://localhost:3001/1-41aa42702fd9932246a9371c5dfbb0f7.png",
+  "2.png": "http://localhost:3001/2-654a85dcc680ed22d8c2eb6159b2132c.png",
+  "3.png": "http://localhost:3001/3-55aff29752ab76572d2b27318775b25f.png",
+  "4.png": "http://localhost:3001/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png",
+  "5.png": "http://localhost:3001/5-346ee073ccef60fbcec7c597fd07844d.png",
+  "6.png": "http://localhost:3001/6-edb3c982da439d6b5f4c310095432a78.png",
+  "7.png": "http://localhost:3001/7-bbf89db8cac7ea9a0db70ccf5826a03c.png",
   "athlete_portal.png": "http://localhost:3001/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png",
   "coaching_portal.jpg": "http://localhost:3001/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg",
   "deadlift_guy.001.jpg": "http://localhost:3001/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg",
   "main.js": "http://localhost:3001/main.js",
   "repone.png": "http://localhost:3001/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png",
   "repone_render.png": "http://localhost:3001/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png",
-  "repone_screenshot_dashboard_browser.png": "http://localhost:3001/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png",
-  "repone_screenshot_live_browser.png": "http://localhost:3001/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png",
-  "screenshot_athlete_tablet_short.png": "http://localhost:3001/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png"
+  "screenshot_athlete.png": "http://localhost:3001/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png",
+  "screenshot_dashboard.png": "http://localhost:3001/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png",
+  "screenshot_live.png": "http://localhost:3001/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png"
 }

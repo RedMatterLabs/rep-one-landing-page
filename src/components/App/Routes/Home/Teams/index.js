@@ -10,14 +10,18 @@ const images = [
   require('src/images/teams/4.png'),
   require('src/images/teams/5.png'),
   require('src/images/teams/6.png'),
+  require('src/images/teams/7.png'),
 ];
 
 function Teams() {
   return (
     <div className={styles.section} id="teams">
       <div className={styles.main}>
+      <h1>FROM THE CREATORS OF OPENBARBELL</h1>
+        <h2>Trusted by some of the best teams in the world.</h2>
+
         <div className={styles.teamlogocontainer}>
-          {images.map(image => <img className={styles.teamlogo} src={image} alt="logo" />)}
+          {images.map(image => <div className={styles.logocontainer}><img className={styles.teamlogo} src={image} alt="logo" /></div>)}
         </div>
       </div>
     </div>

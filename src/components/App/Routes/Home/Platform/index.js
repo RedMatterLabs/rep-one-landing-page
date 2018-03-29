@@ -6,17 +6,25 @@ class Platform extends React.Component {
     return (
       <div className={styles.section} id="platform">
         <div className={styles.main}>
+          <h1>THE REPONE COACHING PORTAL</h1>
+          <h2>Your workout cards, players manual, Excel, and more. Simplified.</h2>
           <div className={styles.container}>
             <div className={`${styles.image} ${styles.left}`}>
-              <img
-                src={require('src/images/screenshot_athlete_tablet_short.png')}
-                alt="autoregulation"
-              />
+              <img src={require('src/images/screenshot_athlete.png')} alt="autoregulation" />
             </div>
-            <div className={`${styles.textcontainer} ${styles.left}`}>
+            <div className={`${styles.textcontainer} ${styles.right}`}>
               <div className={styles.text}>
-                <h2>Autoregulation</h2>
-                <p>RepOne streamlines autoregulation and individualized coaching.</p>
+                <h2>INDIVIDUALIZED TRAINING</h2>
+                <ul>
+                  <li>
+                    Our data science helps you make individualized coaching logistically possible.
+                  </li>
+                  <li>
+                    You're in control. Easily create programs for a team, then drag and drop changes
+                    for groups or individuals.
+                  </li>
+                  <li>Work around injuries and reduce recovery time.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -24,32 +32,41 @@ class Platform extends React.Component {
           <div className={styles.container}>
             <div className={`${styles.textcontainer} ${styles.left}`}>
               <div className={styles.text}>
-                <h2>Updates In Real-Time</h2>
-                <p>Implement top training methodologies, right away, for your whole team.</p>
+                <h2>UPDATES IN REAL-TIME</h2>
+                <ul>
+                  <li>
+                    Get a closer look at your athletes performance in real-time with updates from
+                    each of your training stations.
+                  </li>
+                  <li>Make modifications on the fly from across the weight room.</li>
+                  <li>
+                    Set velocity thresholds and automatic guidance to your exact specifications.
+                  </li>
+                </ul>
               </div>
             </div>
             <div className={`${styles.image} ${styles.left}`}>
-              <img
-                src={require('src/images/repone_screenshot_live_browser.png')}
-                alt="autoregulation"
-              />
+              <img src={require('src/images/screenshot_live.png')} alt="autoregulation" />
             </div>
           </div>
 
           <div className={styles.container}>
             <div className={`${styles.image} ${styles.left}`}>
-              <img
-                src={require('src/images/repone_screenshot_dashboard_browser.png')}
-                alt="autoregulation"
-              />
+              <img src={require('src/images/screenshot_dashboard.png')} alt="autoregulation" />
             </div>
-            <div className={`${styles.textcontainer} ${styles.left}`}>
+            <div className={`${styles.textcontainer} ${styles.right}`}>
               <div className={styles.text}>
-                <h2>Performance Metrics</h2>
-                <p>
-                  Keep track of your teams overall performance in real-time using our unique
-                  metrics.
-                </p>
+                <h2>PERFORMANCE METRICS</h2>
+                <ul>
+                  <li>RepOne keeps track of your team so they're ready for game day.</li>
+                  <li>
+                    See how your athletes are performing day to day, week to week, season to season.
+                  </li>
+                  <li>
+                    Time tested metrics like tonnage and fatigue recorded and compiled
+                    automatically.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

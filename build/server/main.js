@@ -107,7 +107,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-const clientAssets = __webpack_require__(63); // eslint-disable-line import/no-dynamic-require
+const clientAssets = __webpack_require__(64); // eslint-disable-line import/no-dynamic-require
 const port = process.env.PORT ? process.env.PORT : 3000;
 const app = __WEBPACK_IMPORTED_MODULE_0_express___default.a();
 
@@ -553,8 +553,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_src_components_App_Routes_Home_Exploded_index_js__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_src_components_App_Routes_Home_Manage_index_js__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_src_components_App_Routes_Home_Teams_index_js__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_App_Routes_Home_CTA_index_js__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_App_Routes_Home_Modal_index_js__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_src_components_App_Routes_Home_CTA_index_js__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_src_components_App_Routes_Home_Modal_index_js__ = __webpack_require__(62);
 
 
 
@@ -571,7 +571,6 @@ function Home() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10_src_components_App_Routes_Home_Modal_index_js__["a" /* default */], { link: 'https://www.youtube.com/watch?v=uWIAo2XFcX4', linktext: 'Check out this tech demonstration for our new 3D sensing.', title: 'Hi there!', message: 'This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do.' }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_src_components_App_Routes_Home_Landing_index_js__["a" /* default */], null),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_src_components_App_Routes_Home_Analytics_index_js__["a" /* default */], null),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_src_components_App_Routes_Home_Platform_index_js__["a" /* default */], null),
@@ -789,7 +788,7 @@ module.exports = {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
@@ -911,12 +910,12 @@ class Analytics extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
-          'The RepOne Analytics Platform'
+          'The RepOne Platform'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h2',
           null,
-          'Advanced training at your fingertips.'
+          'Weight room analytics for sports teams.'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
@@ -930,14 +929,22 @@ class Analytics extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(30) })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'h2',
-              null,
-              'RepOne Devices'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
-              'Our platform is powered by a fleet of extraordinarily accurate, portable devices.'
+              'div',
+              { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h2',
+                  null,
+                  'RepOne Devices'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'p',
+                  null,
+                  'A fleet of extraordinarily accurate, portable devices you place on each training station.'
+                )
+              )
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -949,14 +956,22 @@ class Analytics extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(31) })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'h2',
-              null,
-              'Coaching Portal'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
-              'Full-roster capabilities and athlete performance monitoring in real-time using our unique metrics'
+              'div',
+              { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h2',
+                  null,
+                  'Coaching Portal'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'p',
+                  null,
+                  'Full-roster capabilities and athlete performance monitoring in real-time using our unique metrics'
+                )
+              )
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -968,14 +983,22 @@ class Analytics extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(32) })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'h2',
-              null,
-              'Athlete Kiosk App'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
-              'Athlete identification and autoregulated training for your whole team'
+              'div',
+              { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h2',
+                  null,
+                  'Athlete Kiosk App'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'p',
+                  null,
+                  'Athlete identification and individualized training for your whole team.'
+                )
+              )
             )
           )
         )
@@ -997,7 +1020,8 @@ module.exports = {
 	"button": "styles-button--1KYpr",
 	"subsection": "styles-subsection--pPyLO",
 	"subcontainer": "styles-subcontainer--3gkHy",
-	"placeholder": "styles-placeholder--rmBbJ"
+	"placeholder": "styles-placeholder--rmBbJ",
+	"textcontainer": "styles-textcontainer--5Gli_"
 };
 
 /***/ }),
@@ -1039,31 +1063,52 @@ class Platform extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          null,
+          'THE REPONE COACHING PORTAL'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h2',
+          null,
+          'Your workout cards, players manual, Excel, and more. Simplified.'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(35),
-              alt: 'autoregulation'
-            })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(35), alt: 'autoregulation' })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
+            { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.right}` },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.text },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h2',
                 null,
-                'Autoregulation'
+                'INDIVIDUALIZED TRAINING'
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
+                'ul',
                 null,
-                'RepOne streamlines autoregulation and individualized coaching.'
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Our data science helps you make individualized coaching logistically possible.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'You\'re in control. Easily create programs for a team, then drag and drop changes for groups or individuals.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Work around injuries and reduce recovery time.'
+                )
               )
             )
           )
@@ -1080,22 +1125,33 @@ class Platform extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h2',
                 null,
-                'Updates In Real-Time'
+                'UPDATES IN REAL-TIME'
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
+                'ul',
                 null,
-                'Implement top training methodologies, right away, for your whole team.'
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Get a closer look at your athletes performance in real-time with updates from each of your training stations.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Make modifications on the fly from across the weight room.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Set velocity thresholds and automatic guidance to your exact specifications.'
+                )
               )
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(36),
-              alt: 'autoregulation'
-            })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(36), alt: 'autoregulation' })
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -1104,26 +1160,37 @@ class Platform extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.image} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-              src: __webpack_require__(37),
-              alt: 'autoregulation'
-            })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(37), alt: 'autoregulation' })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.left}` },
+            { className: `${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.textcontainer} ${__WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.right}` },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.text },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h2',
                 null,
-                'Performance Metrics'
+                'PERFORMANCE METRICS'
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
+                'ul',
                 null,
-                'Keep track of your teams overall performance in real-time using our unique metrics.'
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'RepOne keeps track of your team so they\'re ready for game day.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'See how your athletes are performing day to day, week to week, season to season.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  'Time tested metrics like tonnage and fatigue recorded and compiled automatically.'
+                )
               )
             )
           )
@@ -1146,8 +1213,9 @@ module.exports = {
 	"button": "styles-button--17ecM",
 	"image": "styles-image--2Qsxp",
 	"textcontainer": "styles-textcontainer--3MEDt",
-	"left": "styles-left--1klzJ",
+	"right": "styles-right--1NYYJ",
 	"text": "styles-text--WHbXm",
+	"left": "styles-left--1klzJ",
 	"logo": "styles-logo--38G6L"
 };
 
@@ -1155,19 +1223,19 @@ module.exports = {
 /* 35 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png";
+module.exports = "http://localhost:3001/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png";
 
 /***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png";
+module.exports = "http://localhost:3001/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png";
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png";
+module.exports = "http://localhost:3001/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png";
 
 /***/ }),
 /* 38 */
@@ -1191,12 +1259,12 @@ function Insights() {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h1',
         null,
-        'Insights you can only get with RepOne'
+        'REPONE INSIGHTS'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h2',
         null,
-        'Industry-leading inductive 3D sensing gives you new ways to measure and enhance performance.'
+        'Industry-leading 3D sensing makes the invisible, visible.'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -1356,7 +1424,7 @@ module.exports = {
 
 // I couldn't find a better way to include these :/
 // todo: expand to an array of object with team name and image data use team name to create alt text for seo alt = 'team name uses rep one technology'
-const images = [__webpack_require__(47), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52)];
+const images = [__webpack_require__(47), __webpack_require__(48), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53)];
 
 function Teams() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -1366,9 +1434,23 @@ function Teams() {
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        'FROM THE CREATORS OF OPENBARBELL'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'Trusted by some of the best teams in the world.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogocontainer },
-        images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' }))
+        images.map(image => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.logocontainer },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.teamlogo, src: image, alt: 'logo' })
+        ))
       )
     )
   );
@@ -1386,6 +1468,8 @@ module.exports = {
 	"main": "styles-main--3Odib",
 	"button": "styles-button--2Opq9",
 	"teamlogocontainer": "styles-teamlogocontainer--pMkqy",
+	"logocontainer": "styles-logocontainer--1csu4",
+	"change": "styles-change--3NDHd",
 	"teamlogo": "styles-teamlogo--39qbP"
 };
 
@@ -1393,50 +1477,56 @@ module.exports = {
 /* 47 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png";
+module.exports = "http://localhost:3001/1-41aa42702fd9932246a9371c5dfbb0f7.png";
 
 /***/ }),
 /* 48 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/2-279ee3a816acaa54e5c7e3bde31bd7e4.png";
+module.exports = "http://localhost:3001/2-654a85dcc680ed22d8c2eb6159b2132c.png";
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/3-5e77cf02cc000d637ca690d39ca6e44b.png";
+module.exports = "http://localhost:3001/3-55aff29752ab76572d2b27318775b25f.png";
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/4-feaddec9b679fc9204bb764daa0d47f0.png";
+module.exports = "http://localhost:3001/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png";
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/5-8f154d22d9f3521f3bdd87425c191d5b.png";
+module.exports = "http://localhost:3001/5-346ee073ccef60fbcec7c597fd07844d.png";
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports) {
 
-module.exports = "http://localhost:3001/6-2a417d318977abda1e0d9c816811d17a.png";
+module.exports = "http://localhost:3001/6-edb3c982da439d6b5f4c310095432a78.png";
 
 /***/ }),
 /* 53 */
+/***/ (function(module, exports) {
+
+module.exports = "http://localhost:3001/7-bbf89db8cac7ea9a0db70ccf5826a03c.png";
+
+/***/ }),
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_emailform_index_js__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_pricing_index_js__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ReponeLogo_index_js__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_emailform_index_js__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_pricing_index_js__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ReponeLogo_index_js__ = __webpack_require__(60);
 
 
 
@@ -1467,7 +1557,7 @@ function CTA() {
 /* harmony default export */ __webpack_exports__["a"] = (CTA);
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -1480,13 +1570,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -1560,7 +1650,7 @@ function EmailForm() {
 /* unused harmony default export */ var _unused_webpack_default_export = (EmailForm);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -1582,13 +1672,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -1699,7 +1789,7 @@ function Pricing() {
 /* unused harmony default export */ var _unused_webpack_default_export = (Pricing);
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -1714,13 +1804,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -1741,7 +1831,7 @@ function Logo() {
 /* unused harmony default export */ var _unused_webpack_default_export = (Logo);
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -1758,13 +1848,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -1807,10 +1897,10 @@ class Modal extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Modal);
+/* unused harmony default export */ var _unused_webpack_default_export = (Modal);
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -1823,13 +1913,13 @@ module.exports = {
 };
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"http://localhost:3001/1-6cc4c73a873aa5d64e3b7da4c56f5c0e.png","2.png":"http://localhost:3001/2-279ee3a816acaa54e5c7e3bde31bd7e4.png","3.png":"http://localhost:3001/3-5e77cf02cc000d637ca690d39ca6e44b.png","4.png":"http://localhost:3001/4-feaddec9b679fc9204bb764daa0d47f0.png","5.png":"http://localhost:3001/5-8f154d22d9f3521f3bdd87425c191d5b.png","6.png":"http://localhost:3001/6-2a417d318977abda1e0d9c816811d17a.png","athlete_portal.png":"http://localhost:3001/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"http://localhost:3001/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"http://localhost:3001/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","main.js":"http://localhost:3001/main.js","repone.png":"http://localhost:3001/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"http://localhost:3001/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","repone_screenshot_dashboard_browser.png":"http://localhost:3001/repone_screenshot_dashboard_browser-4654c44dce90ec70dd4908310a46354f.png","repone_screenshot_live_browser.png":"http://localhost:3001/repone_screenshot_live_browser-387b26d2a3ea7d84be0ddbfa76cf5afe.png","screenshot_athlete_tablet_short.png":"http://localhost:3001/screenshot_athlete_tablet_short-6bd2461c2ad976a35233e39f1ad841fa.png"}
+module.exports = {"1.jpg":"http://localhost:3001/1-53d3c210f4f1600fdc603e0ccdb196e3.jpg","1.png":"http://localhost:3001/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"http://localhost:3001/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"http://localhost:3001/3-55aff29752ab76572d2b27318775b25f.png","4.png":"http://localhost:3001/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"http://localhost:3001/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"http://localhost:3001/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"http://localhost:3001/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_portal.png":"http://localhost:3001/athlete_portal-f9f515b63e72346148bf48c2dc227b1f.png","coaching_portal.jpg":"http://localhost:3001/coaching_portal-832bd3cd2efefb515d23050172f99818.jpg","deadlift_guy.001.jpg":"http://localhost:3001/deadlift_guy.001-396092ac4388438e7243d6e63e67a85b.jpg","main.js":"http://localhost:3001/main.js","repone.png":"http://localhost:3001/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"http://localhost:3001/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"http://localhost:3001/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"http://localhost:3001/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"http://localhost:3001/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png"}
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
