@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.scss';
-import Logo from './components/ReponeLogo/index.js'
 
 class Header extends React.Component {
   constructor(props) {
@@ -9,6 +8,7 @@ class Header extends React.Component {
       scrolled: false,
     };
   }
+
   scrollFunction() {
     console.log(window.screenY);
     if (window.scrollY > 0) {
@@ -17,6 +17,7 @@ class Header extends React.Component {
       this.setState({ scrolled: false });
     }
   }
+
   componentDidMount() {
     window.onscroll = this.scrollFunction.bind(this);
   }
@@ -28,8 +29,12 @@ class Header extends React.Component {
           : styles.notscrolled}`}
       >
         <div className={styles.main}>
-          <h1><Logo />RepOne</h1>
-          <button className={styles.button}>Get yours today</button>
+          <h1>
+            <img className={styles.logo} src={require('src/images/repone.png')} />
+          </h1>
+          <a href="#cta" className={styles.button}>
+            Get in touch
+          </a>
         </div>
       </div>
     );
