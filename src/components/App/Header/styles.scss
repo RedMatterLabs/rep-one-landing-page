@@ -13,9 +13,9 @@
   display: flex;
   justify-content: space-between;
   z-index: 9999;
-  background-color: #fff;
+  background-color: $white;
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  color: #222;
+  color: $greydark;
   transition: all 0.3s;
 }
 
@@ -43,15 +43,15 @@
   display: block;
   text-transform: uppercase;
   font-weight: 100;
-  color: #222;
-  border: 1px solid #222;
+  color: $greydark;
+  border: 1px solid $greydark;
   display: inline-block;
   position: relative;
   padding: .5em 1em .5em 1em;
   border-radius: 2px;
   font-size: 0.75em;
   letter-spacing: 0.25em;
-  background-color: #fff;
+  background-color: $white;
   box-shadow: none;
   transition: all 0.3s;
   cursor: pointer;
@@ -60,9 +60,9 @@
 
 .button:hover {
   opacity:1;
-  background-color: #1abc9c;
-  color: #fff;
-  border: 1px solid #1abc9c;
+  background-color: $greydark;
+  color: $white;
+  border: 1px solid greydark;
 }
 
 .logo {

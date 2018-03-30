@@ -14,7 +14,7 @@
 
 .modal {
   min-width: 320px;
-  color: #222;
+  color: $greydark;
   max-width: 50%;
   position: relative;
   margin: 0 auto;
@@ -30,7 +30,7 @@
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #222;
+  color: $greydark;
 }
 
 .modal p {
@@ -47,7 +47,7 @@
 .modal a {
   display: block;
   position: relative;
-  color: #222;
+  color: $greydark;
   text-align: center;
   margin: 20px auto;
   text-decoration: none;
@@ -55,5 +55,5 @@
 
 
 .modal a:hover {
-  color: #1abc9c;
+  color: $red;
 }

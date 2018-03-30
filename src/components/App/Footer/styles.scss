@@ -1,15 +1,13 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 .footer {
   display: flex;
   width: 100vw;
   padding: 4em;
   justify-content: space-between;
-  background-color: $c5;
-  color: $c1;
+  background-color: $greydark;
+  color: $white;
   line-height: 1.8em;
   font-weight: 100;
   font-size: 10px;
@@ -23,7 +21,7 @@
 }
 
 a {
-  color: $c1;
+  color: $white;
 }
 
 .footer * {
@@ -54,7 +52,7 @@ a {
   display: inline;
 }
 .socialIcons a {
-  color: $c1;
+  color: $white;
   text-decoration: none;
 }
 

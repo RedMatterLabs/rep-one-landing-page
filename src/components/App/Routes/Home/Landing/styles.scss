@@ -1,17 +1,6 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
 
-.filter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-size: cover;
-  background-image: url(https://previews.123rf.com/images/okamigo/okamigo1603/okamigo160300026/54310266-small-dots-halftone-background-overlay-texture-.jpg);
-  mix-blend-mode: multiply;
-}
-
 .bg {
   position: absolute;
   top: 3em;
@@ -41,16 +30,14 @@
   font-weight: 100;
   font-size: 2.75em;
   margin: 0;
-  color: #fff;
+  color: $white;
   text-transform: none;
   letter-spacing: normal;
 }
 .rolotext {
-  overflow: hidden;
   height: 1.5em;
   line-height: 1.5em;
-  color: #ecf0f1;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .rolotext > div {
@@ -66,7 +53,8 @@
 .rolotext p {
     display: inline;
     float: left;
-    margin: 0;
+    color: $white;
+    margin: 0 0 0 66px;
 }
 
 .rolotext ul {
@@ -75,13 +63,14 @@
   display: inline-block;
   line-height: 1.5em;
   left: 0.3em;
-  color: #ecf0f1;
-  overflow: hidden;
+  color: $white;
+  overflow-y: hidden;
 }
 
 .rolotext li {
   margin-top: 0;
   text-align: left;
+  color: $white;
   list-style: none;
   animation-name: change;
   animation-duration: 30s;

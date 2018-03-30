@@ -5,16 +5,16 @@
   height: 100%;
   flex: 0 1 300px;
   margin: 0;
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #a8acb1;
+  background-color: $greylight;
+  border-bottom: 2px solid $greymedium;
   transition: 0.3s all;
   overflow: hidden;
   border-radius: 2px;
 }
 
 .main h1 {
-  margin-top: 50px;
-  color: #c4c4c4;
+  margin-top: 80px;
+  color: $greymedium;
   font-size: 1.2em;
 }
 
@@ -28,19 +28,19 @@
   height: 100%;
   flex: 0 1 300px;
   margin: 0;
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #ff0046;
+  background-color: $greylight;
+  border-bottom: 2px solid $red;
   overflow: hidden;
 }
 
 .subcontainer {
   justify-content: space-between;
   padding: 0;
-  margin: 0px auto 300px auto;
+  margin: 40px auto 300px auto;
   list-style: none;
   display: flex;
   width: 100%;
-  color: #222;
+  color:$greydark;
 }
 
 .subcontainer h2 {
@@ -48,7 +48,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 700;
   letter-spacing: .1em;
 }
@@ -57,13 +57,12 @@
   padding: 0 1em 0 1em;
   letter-spacing: 0.35px;
   line-height:1.5em;
-  margin-top: 5px;
   font-weight: 100;
   margin:0;
 }
 
 .placeholder {
-  background-color: #a8acb1;
+  background-color: $greymedium;
   width: 300px;
   height: 300px;
   overflow: hidden;

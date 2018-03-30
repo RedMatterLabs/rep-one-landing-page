@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './styles.scss';
-import EmailForm from './components/emailform/index.js';
-import Pricing from './components/pricing/index.js';
-import Logo from './components/ReponeLogo/index.js'
 
 function CTA() {
   return (

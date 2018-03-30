@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.scss';
-import Logo from './components/RepOneLogo/index.js';
 import Video from 'src/components/App/Shared/Video/index.js';
 
 class Landing extends React.Component {
@@ -21,13 +20,13 @@ class Landing extends React.Component {
                 <ul>
                   <li>on the field</li>
                   <li>on the court</li>
-                  <li>on the diamond</li>
                   <li>in the rink</li>
                   <li>on the pitch</li>
                   <li>on the track</li>
                   <li>in the pool</li>
                   <li>on the road</li>
                   <li>on the slope</li>
+                  <li>on the field</li>
                   <li>in the games</li>
                   <li>in the ring</li>
                 </ul>

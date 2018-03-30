@@ -5,8 +5,8 @@
   max-width: 80vw;
 }
 .main h1 {
-  margin-top: 50px;
-  color: #c4c4c4;
+  margin-top: 90px;
+  color: $greymedium;
   font-size: 1.2em;
 }
 
@@ -27,7 +27,6 @@
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid #dfdfdf;
   box-shadow: 10px 10px 50px rgba(0,0,0,0.3);
 }
 
@@ -47,7 +46,7 @@
 .textcontainer p {
   font-size: 1.2em;
   text-align: center;
-  color: grey;
+  color: $greydark;
   font-weight: 100;
 }
 
@@ -85,7 +84,7 @@
 }
 
 .textcontainer h2 {
-  color: rgb(100,100,100);
+  color: $greydark;
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;

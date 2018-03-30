@@ -1,12 +1,12 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
 .section {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid $greylight;
+  border-bottom: 1px solid $greylight;
 }
 .main h1 {
   margin-top: 50px;
-  color: #c4c4c4;
+  color: $greymedium;
   font-size: 1.2em;
 }
 

@@ -1,7 +1,7 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
 .section {
-  background-color: #f9f9f9;
+  background-color: $greylight;
   height: 70vh;
 }
 
@@ -11,8 +11,8 @@
 
 .button {
   font-weight: 100;
-  color: #222;
-  border: 2px solid #222;
+  color: $greydark;
+  border: 2px solid $greydark;
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -21,9 +21,9 @@
 }
 
 .button:hover {
-  color: #fff;
-  border: 2px solid #1abc9c;
-  background-color:#1abc9c;
+  color: $white;
+  border: 1px solid $greydark;
+  background-color:$greydark;
 }
 
 .main {
@@ -48,7 +48,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: $greymedium;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 34px;
@@ -61,7 +61,7 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: $white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;

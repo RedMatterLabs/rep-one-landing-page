@@ -9,17 +9,14 @@ class Analytics extends React.Component {
           <h1>The RepOne Platform</h1>
           <h2>Weight room analytics for sports teams.</h2>
           <div className={styles.subcontainer}>
-            <div className={styles.subsection}>
+          <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/repone_render.png')} />
+                <img src={require('src/images/athlete_kiosk.jpg')} />
               </div>
               <div className={styles.textcontainer}>
                 <div>
-                  <h2>RepOne Devices</h2>
-                  <p>
-                    A fleet of extraordinarily accurate, portable devices you place on each training
-                    station.
-                  </p>
+                  <h2>Athlete Kiosk App</h2>
+                  <p>Athlete identification and individualized training for your whole team.</p>
                 </div>
               </div>
             </div>
@@ -39,12 +36,15 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/athlete_kiosk.jpg')} />
+                <img src={require('src/images/repone_render.png')} />
               </div>
               <div className={styles.textcontainer}>
                 <div>
-                  <h2>Athlete Kiosk App</h2>
-                  <p>Athlete identification and individualized training for your whole team.</p>
+                  <h2>RepOne Devices</h2>
+                  <p>
+                    A fleet of extraordinarily accurate, portable devices you place on each training
+                    station.
+                  </p>
                 </div>
               </div>
             </div>
