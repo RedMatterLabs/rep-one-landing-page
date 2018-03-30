@@ -238,6 +238,35 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
+	"container": "styles-container--2jQXM",
+	"section": "styles-section--uYLz3",
+	"main": "styles-main--2KY_E",
+	"button": "styles-button--ejX7w"
+};
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+module.exports = "/simple_court-b0213b6cac3af4f5a2ebadf84509258e.svg";
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports) {
+
+module.exports = "/court_seats-58dfacc1b6b474b2b678680b4f1694dd.svg";
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+module.exports = "/stadium-f3a5d52b94d6fe16316f6e6d9ecebd2f.svg";
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports) {
+
+module.exports = {
 	"container": "styles-container--4eHc2",
 	"section": "styles-section--1LWL7",
 	"main": "styles-main--2XKCU",
@@ -247,7 +276,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -256,7 +285,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // CONCATENATED MODULE: ./src/components/App/Shared/Video/index.js
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
@@ -881,10 +910,44 @@ function CTA() {
 }
 
 /* harmony default export */ var CTA_defaultExport = (CTA);
+// CONCATENATED MODULE: ./src/components/App/Routes/Home/Price/index.js
+/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Price___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(40);
+/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Price___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+class Price extends Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  render() {
+    return Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: Price___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'platform' },
+      Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: Price___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
+        Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          null,
+          'Flexible pricing to fit your organization'
+        ),
+        Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: Price___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
+          Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(41) }),
+          Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(42) }),
+          Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(43) })
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ var Price_defaultExport = (Price);
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Modal/index.js
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(40);
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(44);
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -944,6 +1007,7 @@ class Modal extends Modal___WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
 
 
 
+
 function Home() {
   return Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
@@ -955,6 +1019,7 @@ function Home() {
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Insights_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Exploded_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Teams_defaultExport, null),
+    Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Price_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CTA_defaultExport, null)
   );
 }
@@ -963,4 +1028,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-a9f877eef911c3950b37.js.map
+//# sourceMappingURL=home-493e8fe7af19cf0ef81f.js.map

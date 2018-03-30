@@ -7,6 +7,7 @@ import Insights from 'src/components/App/Routes/Home/Insights/index.js';
 import Exploded from 'src/components/App/Routes/Home/Exploded/index.js';
 import Teams from 'src/components/App/Routes/Home/Teams/index.js';
 import CTA from 'src/components/App/Routes/Home/CTA/index.js';
+import Price from 'src/components/App/Routes/Home/Price/index.js';
 import Modal from 'src/components/App/Routes/Home/Modal/index.js';
 
 function Home() {
@@ -19,6 +20,7 @@ function Home() {
       <Insights />
       <Exploded />
       <Teams />
+      <Price />
       <CTA />
     </div>
   );
