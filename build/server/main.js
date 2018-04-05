@@ -239,8 +239,8 @@ class Footer extends Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
           Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'a',
-            { href: 'mailto:squatsandscience@gmail.com' },
-            'squatsandscience@gmail.com'
+            { href: 'mailto:sales@reponestrength.com' },
+            'sales@reponestrength.com'
           )
         ),
         Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -254,7 +254,7 @@ class Footer extends Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
               null,
               Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: '', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
+                { href: 'https://github.com/squatsandsciencelabs/', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
                 ' ',
                 Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon fa fa-github' })
               )
@@ -264,7 +264,7 @@ class Footer extends Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
               null,
               Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: '', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
+                { href: 'https://www.facebook.com/RepOneStrength', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
                 ' ',
                 Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon fa fa-facebook' })
               )
@@ -274,7 +274,7 @@ class Footer extends Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
               null,
               Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: '', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
+                { href: 'https://www.instagram.com/reponestrength/', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
                 ' ',
                 Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon fa fa-instagram' })
               )
@@ -284,7 +284,7 @@ class Footer extends Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
               null,
               Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: '', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
+                { href: 'https://twitter.com/RepOneStrength', className: Footer___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.socialIcon },
                 ' ',
                 Footer___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'icon fa fa-twitter' })
               )
@@ -540,7 +540,7 @@ module.exports = {
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"/3-55aff29752ab76572d2b27318775b25f.png","4.png":"/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_kiosk.jpg":"/athlete_kiosk-1e3958dba1c56ae657d1adc432f1b7b1.jpg","coach_portal.jpg":"/coach_portal-4b44850aa4f91ac66b4a44c9736f4ce9.jpg","court_seats.svg":"/court_seats-58dfacc1b6b474b2b678680b4f1694dd.svg","home.js":"/home-2c9bf3c0e92865416109.js","home.js.map":"/home-1ee4531f309899fb30b0.js.map","jacob.jpg":"/jacob-92100213440eb600a301382277698c2a.jpg","main.css":"/main-231f3daca248a0082d1c04f5de533e2e.css","main.css.map":"/main-231f3daca248a0082d1c04f5de533e2e.css.map","main.js":"/main-45375599560696eb0cdc.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-2ba93d914e920244c731.js","manifest.js.map":"/manifest-1b7215f7e091010780f9.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png","simple_court.svg":"/simple_court-b0213b6cac3af4f5a2ebadf84509258e.svg","stadium.svg":"/stadium-f3a5d52b94d6fe16316f6e6d9ecebd2f.svg","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map","weightroom.jpg":"/weightroom-962feb66bb082c5289de1af9060099c0.jpg"}
+module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"/3-55aff29752ab76572d2b27318775b25f.png","4.png":"/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_kiosk.jpg":"/athlete_kiosk-1e3958dba1c56ae657d1adc432f1b7b1.jpg","coach_portal.jpg":"/coach_portal-4b44850aa4f91ac66b4a44c9736f4ce9.jpg","court_seats.svg":"/court_seats-58dfacc1b6b474b2b678680b4f1694dd.svg","home.js":"/home-2c9bf3c0e92865416109.js","home.js.map":"/home-1ee4531f309899fb30b0.js.map","jacob.jpg":"/jacob-92100213440eb600a301382277698c2a.jpg","main.css":"/main-231f3daca248a0082d1c04f5de533e2e.css","main.css.map":"/main-231f3daca248a0082d1c04f5de533e2e.css.map","main.js":"/main-58c80e78bbee36a3fc30.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-547943af69497f99b27e.js","manifest.js.map":"/manifest-1b7215f7e091010780f9.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png","simple_court.svg":"/simple_court-b0213b6cac3af4f5a2ebadf84509258e.svg","stadium.svg":"/stadium-f3a5d52b94d6fe16316f6e6d9ecebd2f.svg","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map","weightroom.jpg":"/weightroom-962feb66bb082c5289de1af9060099c0.jpg"}
 
 /***/ }),
 /* 16 */,

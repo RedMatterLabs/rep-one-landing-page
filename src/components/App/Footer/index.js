@@ -14,27 +14,27 @@ class Footer extends React.Component {
               <li>United States</li>
             </ul>
             <br />
-            <a href="mailto:squatsandscience@gmail.com">squatsandscience@gmail.com</a>
+            <a href="mailto:sales@reponestrength.com">sales@reponestrength.com</a>
           </div>
           <div className={styles.footerSocialIcons}>
             <ul className={styles.socialIcons}>
               <li>
-                <a href="" className={styles.socialIcon}>
+                <a href="https://github.com/squatsandsciencelabs/" className={styles.socialIcon}>
                   {' '}<i className="icon fa fa-github" />
                 </a>
               </li>
               <li>
-                <a href="" className={styles.socialIcon}>
+                <a href="https://www.facebook.com/RepOneStrength" className={styles.socialIcon}>
                   {' '}<i className="icon fa fa-facebook" />
                 </a>
               </li>
               <li>
-                <a href="" className={styles.socialIcon}>
+                <a href="https://www.instagram.com/reponestrength/" className={styles.socialIcon}>
                   {' '}<i className="icon fa fa-instagram" />
                 </a>
               </li>
               <li>
-                <a href="" className={styles.socialIcon}>
+                <a href="https://twitter.com/RepOneStrength" className={styles.socialIcon}>
                   {' '}<i className="icon fa fa-twitter" />
                 </a>
               </li>
