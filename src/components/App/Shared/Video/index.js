@@ -73,7 +73,7 @@ class Video extends React.Component {
       this.checkInterval = setInterval(() => {
         this.updatetop();
         this.scrubvideo();
-      }, 40);
+      }, 10);
     }
   }
 

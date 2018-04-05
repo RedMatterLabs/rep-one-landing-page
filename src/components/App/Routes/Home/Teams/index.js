@@ -17,11 +17,15 @@ function Teams() {
   return (
     <div className={styles.section} id="teams">
       <div className={styles.main}>
-      <h1>FROM THE CREATORS OF OPENBARBELL</h1>
+        <h1>FROM THE CREATORS OF OPENBARBELL</h1>
         <h2>Trusted by some of the best teams in the world.</h2>
 
         <div className={styles.teamlogocontainer}>
-          {images.map(image => <div className={styles.logocontainer}><img className={styles.teamlogo} src={image} alt="logo" /></div>)}
+          {images.map((image, key) =>
+            <div key={key} className={styles.logocontainer}>
+              <img className={styles.teamlogo} src={image} alt="logo" />
+            </div>
+          )}
         </div>
       </div>
     </div>

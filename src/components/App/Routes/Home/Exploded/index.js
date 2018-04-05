@@ -1,3 +1,4 @@
+import Video from 'src/components/App/Shared/Video/index.js';
 import React from 'react';
 import styles from './styles.scss';
 
@@ -7,9 +8,16 @@ function Exploded() {
       <div className={styles.main}>
         <div className={styles.diagram}>
           <div className={styles.explosioncontainer}>
-            <video autoPlay="true" muted="true" loop="true" className={styles.video}>
-              <source src="https://demo.vmg.nyc/greg/repone/repone_large.mp4" type="video/mp4" />
-            </video>
+            <Video
+              autoPlay="true"
+              muted="true"
+              loop="true"
+              duration={2}
+              className={styles.video}
+              scrollable
+              src="https://demo.vmg.nyc/greg/repone/repone_large.mp4"
+              type="video/mp4"
+            />
           </div>
         </div>
       </div>
