@@ -90,9 +90,6 @@ class Video extends React.Component {
     if (this.props.scrollable) {
       this.addScrollListener();
       this.scrubvideo();
-      this.checkInterval = setInterval(() => {
-        this.update();
-      }, 5);
     }
   }
 
@@ -114,17 +111,11 @@ class Video extends React.Component {
   }
 
   updateScrollableState(top) {
-    if (
-      this.canvasisinview() && 
-      this.state.timeremaing) {
+    if (this.state.direction > 0 && this.canvasisinview() && this.state.timeremaing) {
       if (!this.state.preventUserScroll) {
         this.disableScroll();
       }
-    } else if (
-      this.state.direction < 0 &&
-      this.canvasisinview() &&
-      this.state.timeremaing < this.state.duration
-    ) {
+    } else if (this.state.direction < 0 && this.canvasisinview() && this.state.location > 5) {
       if (!this.state.preventUserScroll) {
         this.disableScroll();
       }
@@ -136,10 +127,9 @@ class Video extends React.Component {
   canvasisinview() {
     const direction = this.state.direction;
     let rect = this.canvas.getBoundingClientRect();
-    console.log(rect, rect.top - 65);
     if (direction > 0 && (rect.top - 65) <= 0){
       return true;
-    } else if (direction < 0 && (rect.top - 65) >= 0) {
+    } else if (direction < 0 && (rect.top - 65) >= 0 && rect.top <= rect.height + 65) {
       return true;
     }
     return false;
@@ -150,7 +140,6 @@ class Video extends React.Component {
     let location = this.state.location;
     location += direction;
     const image = Math.round(location / 100);
-    console.log(image);
     const remaining = this.state.duration - image;
     this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
     this.setState({ timeremaing: remaining, location });
