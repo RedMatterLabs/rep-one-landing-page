@@ -7,73 +7,92 @@ class Video extends React.Component {
     super(props);
 
     this.state = {
-      duration: props.duration,
-      timeremaing: props.duration,
-
+      duration: props.duration - 1,
+      timeremaing: props.duration - 1,
+      location: 0,
       scrollable: props.scrollable,
       preventUserScroll: false,
       scrolled: 0,
+      direction: 0,
+      top: 0,
+      width: 0,
+      height: 0,
     };
 
     this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
   }
 
-  preventDefault(e) {
+  scrollHandler(e) {
     e = e || window.event;
-    if (e.preventDefault) e.preventDefault();
-    e.returnValue = false;
     const newscrollposition = this.state.scrolled + e.deltaY;
-    this.setState({ scrolled: newscrollposition });
+    const direction = e.deltaY;
+    this.setState({ scrolled: newscrollposition, direction });
+    this.update();
+
+    if (this.state.preventUserScroll) {
+      if (e.preventDefault) e.preventDefault();
+      e.returnValue = false;
+      this.scrubvideo();
+    }
   }
 
-  preventDefaultForScrollKeys(e) {
+  keyHandler(e) {
     if (this.keys[e.keyCode]) {
-      this.preventDefault(e);
+      this.scrollHandler(e);
       return false;
     }
 
     return true;
   }
 
-  disableScroll() {
+  addScrollListener() {
     if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', this.preventDefault.bind(this), false);
+      window.addEventListener('DOMMouseScroll', this.scrollHandler.bind(this), false);
     }
 
-    window.onwheel = this.preventDefault.bind(this); // modern standard
-    window.onmousewheel = this.preventDefault.bind(this);
-    document.onmousewheel = this.preventDefault.bind(this); // older browsers, IE
-    window.ontouchmove = this.preventDefault.bind(this); // mobile
-    document.onkeydown = this.preventDefaultForScrollKeys.bind(this);
+    window.onwheel = this.scrollHandler.bind(this); // modern standard
+    window.onmousewheel = this.scrollHandler.bind(this);
+    document.onmousewheel = this.scrollHandler.bind(this); // older browsers, IE
+    window.ontouchmove = this.scrollHandler.bind(this); // mobile
+    document.onkeydown = this.keyHandler.bind(this);
+  }
+
+  disableScroll() {
     this.setState({ preventUserScroll: true });
   }
 
   enableScroll() {
-    if (window.removeEventListener) {
-      window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
-    }
-
-    window.onmousewheel = null;
-    document.onmousewheel = null;
-    window.onwheel = null;
-    window.ontouchmove = null;
-    document.onkeydown = null;
     this.setState({ preventUserScroll: false });
   }
 
   componentDidMount() {
-    this.videonode.play();
+    // preload images.
+    this.images = [];
 
-    window.onscroll = () => {
-      this.videonode.pause();
-    };
+    for (let i = 0; i < this.props.duration; i++) {
+      const filename = `${i}.jpg`;
+      const imageurl = `https://demo.vmg.nyc/greg/parallax/other/repone_large${i > 9
+        ? '00'
+        : '000'}${filename}`;
+      const image = new Image();
+      image.src = imageurl;
+      this.images.push(image);
+    }
 
+    // draw thumbnail
+    const width = window.innerWidth;
+    const height = window.innerWidth * .5625;
+    this.canvas.width = width;
+    this.canvas.height = height;
+    this.context.drawImage(this.images[0], 0, 0, width, height);
+   
+    // initiate scroll listeners
     if (this.props.scrollable) {
-      this.updatetop();
+      this.addScrollListener();
+      this.scrubvideo();
       this.checkInterval = setInterval(() => {
-        this.updatetop();
-        this.scrubvideo();
-      }, 10);
+        this.update();
+      }, 5);
     }
   }
 
@@ -81,10 +100,31 @@ class Video extends React.Component {
     clearInterval(this.checkInterval);
   }
 
-  updatetop() {
-    const top = this.videonode.getBoundingClientRect().top;
+  update() {
+    const width = window.innerWidth;
+    const height = .5625 * width;
 
-    if (top <= 0 && this.state.timeremaing > 0) {
+    if (width !== this.state.width) {
+      this.canvas.width = width;
+      this.canvas.height = height;
+    }
+
+    this.setState({ top, width, height });
+    this.updateScrollableState(top);
+  }
+
+  updateScrollableState(top) {
+    if (
+      this.canvasisinview() && 
+      this.state.timeremaing) {
+      if (!this.state.preventUserScroll) {
+        this.disableScroll();
+      }
+    } else if (
+      this.state.direction < 0 &&
+      this.canvasisinview() &&
+      this.state.timeremaing < this.state.duration
+    ) {
       if (!this.state.preventUserScroll) {
         this.disableScroll();
       }
@@ -93,53 +133,41 @@ class Video extends React.Component {
     }
   }
 
-  scrub() {
-    const waypoints = [{ '0,30': this.scrubvideo }, { '30,60': this.scrubcss }];
-
-    waypoints.foreach((waypoint, key) => {
-      const range = key.split(',');
-      if (this.duration >= range[0] && this.duration <= range[1]) waypoint();
-    });
+  canvasisinview() {
+    const direction = this.state.direction;
+    let rect = this.canvas.getBoundingClientRect();
+    console.log(rect, rect.top - 65);
+    if (direction > 0 && (rect.top - 65) <= 0){
+      return true;
+    } else if (direction < 0 && (rect.top - 65) >= 0) {
+      return true;
+    }
+    return false;
   }
 
   scrubvideo() {
-    const duration = this.state.duration;
-    const scrolled = this.state.scrolled;
-    const windowheight = window.innerHeight;
-    const currentTime = this.videonode.currentTime;
-    const scrubtime = (currentTime + scrolled) / windowheight;
-    console.log(scrubtime);
-    this.videonode.currentTime = scrubtime;
-    this.setState({ timeremaing: duration - currentTime });
-  }
-
-  scrubcss() {
-    const duration = this.state.duration;
-    const scrolled = this.state.scrolled;
-    const windowheight = window.innerHeight;
-    const currentTime = this.videonode.currentTime;
-    const scrubtime = (currentTime + scrolled) / windowheight;
-    console.log(scrubtime);
-    this.videonode.currentTime = scrubtime;
-    this.setState({ timeremaing: duration - currentTime });
+    const direction = this.state.direction;
+    let location = this.state.location;
+    location += direction;
+    const image = Math.round(location / 100);
+    console.log(image);
+    const remaining = this.state.duration - image;
+    this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
+    this.setState({ timeremaing: remaining, location });
   }
 
   render() {
     return (
       <div className={styles.videocontainer}>
-        <div
-          ref={cssnode => {
-            this.cssnode = cssnode;
+        <canvas
+          className={styles.canvas}
+          ref={node => {
+            if (node) {
+              this.canvas = node;
+              this.context = node.getContext('2d');
+            }
           }}
         />
-
-        <video
-          ref={videonode => {
-            this.videonode = videonode;
-          }}
-        >
-          <source src={this.props.src} />
-        </video>
       </div>
     );
   }
@@ -148,6 +176,5 @@ class Video extends React.Component {
 Video.propTypes = {
   scrollable: PropTypes.bool.isRequired,
   duration: PropTypes.number.isRequired,
-  src: PropTypes.string.isRequired,
 };
 export default Video;

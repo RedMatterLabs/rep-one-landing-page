@@ -12,7 +12,7 @@ function Exploded() {
               autoPlay="true"
               muted="true"
               loop="true"
-              duration={2}
+              duration={59}
               className={styles.video}
               scrollable
               src="https://demo.vmg.nyc/greg/repone/repone_large.mp4"
