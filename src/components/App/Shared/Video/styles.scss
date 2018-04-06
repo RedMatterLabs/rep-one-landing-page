@@ -1,12 +1,27 @@
 .videocontainer {
+  position: relative;
   display: block;
-  height: 56vw;
+  height: 112vw;
   width: 100vw;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 .videocontainer video {
   max-height: 56vw;
   width: 100vw;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0px;
+}
+
+.relative {
+  left:0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.sticky {
+  position: sticky;
 }

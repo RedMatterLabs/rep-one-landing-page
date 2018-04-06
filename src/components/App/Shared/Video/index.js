@@ -11,6 +11,7 @@ class Video extends React.Component {
       timeremaing: props.duration - 1,
       location: 0,
       scrollable: props.scrollable,
+      yoffset: 0,
       preventUserScroll: false,
       scrolled: 0,
       direction: 0,
@@ -30,8 +31,8 @@ class Video extends React.Component {
     this.update();
 
     if (this.state.preventUserScroll) {
-      if (e.preventDefault) e.preventDefault();
-      e.returnValue = false;
+      // if (e.preventDefault) e.preventDefault();
+      // e.returnValue = false;
       this.scrubvideo();
     }
   }
@@ -85,7 +86,7 @@ class Video extends React.Component {
     this.canvas.width = width;
     this.canvas.height = height;
     this.context.drawImage(this.images[0], 0, 0, width, height);
-   
+
     // initiate scroll listeners
     if (this.props.scrollable) {
       this.addScrollListener();
@@ -126,30 +127,38 @@ class Video extends React.Component {
 
   canvasisinview() {
     const direction = this.state.direction;
-    let rect = this.canvas.getBoundingClientRect();
-    if (direction > 0 && (rect.top - 65) <= 0){
+    let rect = this.container.getBoundingClientRect();
+    console.log(rect.top, rect.height);
+    if (direction > 0 && (rect.top) <= 0){
       return true;
-    } else if (direction < 0 && (rect.top - 65) >= 0 && rect.top <= rect.height + 65) {
+    } else if (direction < 0 && (rect.top + rect.height >= 0)) {
       return true;
     }
     return false;
   }
 
   scrubvideo() {
+
     const direction = this.state.direction;
     let location = this.state.location;
     location += direction;
-    const image = Math.round(location / 100);
+    const mod = this.container.offsetHeight / this.images.length;
+    const image = Math.round(location / mod);
     const remaining = this.state.duration - image;
     this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
-    this.setState({ timeremaing: remaining, location });
+    this.setState({ timeremaing: remaining, location, yoffset: window.pageYOffset });
   }
 
   render() {
     return (
-      <div className={styles.videocontainer}>
+      <div
+        ref={node => {
+          this.container = node;
+        }}
+        className={styles.videocontainer}
+      >
         <canvas
-          className={styles.canvas}
+          className={this.state.preventUserScroll ? styles.fixed : styles.relative}
           ref={node => {
             if (node) {
               this.canvas = node;

@@ -46,7 +46,10 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"videocontainer": "styles-videocontainer--2m0vV"
+	"videocontainer": "styles-videocontainer--2m0vV",
+	"fixed": "styles-fixed--2brzj",
+	"relative": "styles-relative--3FbG0",
+	"sticky": "styles-sticky--3oq45"
 };
 
 /***/ }),
@@ -301,6 +304,7 @@ class Video extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       timeremaing: props.duration - 1,
       location: 0,
       scrollable: props.scrollable,
+      yoffset: 0,
       preventUserScroll: false,
       scrolled: 0,
       direction: 0,
@@ -320,8 +324,8 @@ class Video extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     this.update();
 
     if (this.state.preventUserScroll) {
-      if (e.preventDefault) e.preventDefault();
-      e.returnValue = false;
+      // if (e.preventDefault) e.preventDefault();
+      // e.returnValue = false;
       this.scrubvideo();
     }
   }
@@ -414,31 +418,39 @@ class Video extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   canvasisinview() {
     const direction = this.state.direction;
-    let rect = this.canvas.getBoundingClientRect();
-    if (direction > 0 && rect.top - 65 <= 0) {
+    let rect = this.container.getBoundingClientRect();
+    console.log(rect.top, rect.height);
+    if (direction > 0 && rect.top <= 0) {
       return true;
-    } else if (direction < 0 && rect.top - 65 >= 0 && rect.top <= rect.height + 65) {
+    } else if (direction < 0 && rect.top + rect.height >= 0) {
       return true;
     }
     return false;
   }
 
   scrubvideo() {
+
     const direction = this.state.direction;
     let location = this.state.location;
     location += direction;
-    const image = Math.round(location / 100);
+    const mod = this.container.offsetHeight / this.images.length;
+    const image = Math.round(location / mod);
     const remaining = this.state.duration - image;
     this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
-    this.setState({ timeremaing: remaining, location });
+    this.setState({ timeremaing: remaining, location, yoffset: window.pageYOffset });
   }
 
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.videocontainer },
+      {
+        ref: node => {
+          this.container = node;
+        },
+        className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.videocontainer
+      },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('canvas', {
-        className: __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.canvas,
+        className: this.state.preventUserScroll ? __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.fixed : __WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.relative,
         ref: node => {
           if (node) {
             this.canvas = node;
@@ -901,24 +913,16 @@ function Exploded() {
     __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       'div',
       { className: Exploded___WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.main },
-      __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-        'div',
-        { className: Exploded___WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.diagram },
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'div',
-          { className: Exploded___WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.explosioncontainer },
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Video_defaultExport, {
-            autoPlay: 'true',
-            muted: 'true',
-            loop: 'true',
-            duration: 59,
-            className: Exploded___WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.video,
-            scrollable: true,
-            src: 'https://demo.vmg.nyc/greg/repone/repone_large.mp4',
-            type: 'video/mp4'
-          })
-        )
-      )
+      __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Video_defaultExport, {
+        autoPlay: 'true',
+        muted: 'true',
+        loop: 'true',
+        duration: 59,
+        className: Exploded___WEBPACK_IMPORTED_MODULE_2__styles_scss___default.a.video,
+        scrollable: true,
+        src: 'https://demo.vmg.nyc/greg/repone/repone_large.mp4',
+        type: 'video/mp4'
+      })
     )
   );
 }
@@ -1099,7 +1103,6 @@ function Home() {
   return Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: Home___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
-    Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Modal_defaultExport, { link: 'https://www.youtube.com/watch?v=uWIAo2XFcX4', linktext: 'Check out this tech demonstration for our new 3D sensing.', title: 'Hi there!', message: 'This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do.' }),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Analytics_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Platform_defaultExport, null),
@@ -1115,4 +1118,4 @@ function Home() {
 
 /***/ })
 ];;
-//# sourceMappingURL=home-9cb38e7ef1b2f5c8cdb9.js.map
+//# sourceMappingURL=home-928c647df13f81a4289f.js.map
