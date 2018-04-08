@@ -82,7 +82,7 @@ class Video extends React.Component {
 
     // draw thumbnail
     const width = window.innerWidth;
-    const height = window.innerWidth * .5625;
+    const height = window.innerWidth * 0.5625;
     this.canvas.width = width;
     this.canvas.height = height;
     this.context.drawImage(this.images[0], 0, 0, width, height);
@@ -100,7 +100,7 @@ class Video extends React.Component {
 
   update() {
     const width = window.innerWidth;
-    const height = .5625 * width;
+    const height = 0.5625 * width;
 
     if (width !== this.state.width) {
       this.canvas.width = width;
@@ -127,18 +127,27 @@ class Video extends React.Component {
 
   canvasisinview() {
     const direction = this.state.direction;
-    let rect = this.container.getBoundingClientRect();
-    console.log(rect.top, rect.height);
-    if (direction > 0 && (rect.top) <= 0){
+    const container = this.container.getBoundingClientRect();
+    const canvas = this.canvas.getBoundingClientRect();
+    if (direction > 0 && container.top <= 0) {
       return true;
-    } else if (direction < 0 && (rect.top + rect.height >= 0)) {
+    } else if (direction < 0 && canvas.top >= 0) {
       return true;
     }
     return false;
   }
+  canvasposition() {
+    const container = this.container.getBoundingClientRect();
+    const canvas = this.canvas.getBoundingClientRect();
+    console.log(container.top);
+    if (container.top <= 0) {
+      return styles.relativebottom;
+    } else {
+      return styles.relativetop;
+    }
+  }
 
   scrubvideo() {
-
     const direction = this.state.direction;
     let location = this.state.location;
     location += direction;
@@ -150,6 +159,7 @@ class Video extends React.Component {
   }
 
   render() {
+    let canvasposition = this.canvasposition();
     return (
       <div
         ref={node => {
@@ -158,7 +168,7 @@ class Video extends React.Component {
         className={styles.videocontainer}
       >
         <canvas
-          className={this.state.preventUserScroll ? styles.fixed : styles.relative}
+          className={this.state.preventUserScroll ? styles.fixed : canvasposition}
           ref={node => {
             if (node) {
               this.canvas = node;

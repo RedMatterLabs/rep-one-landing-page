@@ -16,10 +16,16 @@
   top: 0px;
 }
 
-.relative {
+.relativebottom {
   left:0;
   position: absolute;
   bottom: 0px;
+}
+
+.relativetop {
+  left:0;
+  position: absolute;
+  top: 0px;
 }
 
 .sticky {
