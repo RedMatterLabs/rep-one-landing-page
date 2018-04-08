@@ -7,6 +7,7 @@ class Video extends React.Component {
     super(props);
 
     this.state = {
+      image: 'https://demo.vmg.nyc/greg/parallax/other/repone_large0000.jpg',
       duration: props.duration - 1,
       timeremaing: props.duration - 1,
       location: 0,
@@ -29,11 +30,11 @@ class Video extends React.Component {
     const direction = e.deltaY;
     this.setState({ scrolled: newscrollposition, direction });
     this.update();
-
+    this.darawcanvas();
     if (this.state.preventUserScroll) {
       // if (e.preventDefault) e.preventDefault();
       // e.returnValue = false;
-      this.scrubvideo();
+      this.selectframe();
     }
   }
 
@@ -85,12 +86,12 @@ class Video extends React.Component {
     const height = window.innerWidth * 0.5625;
     this.canvas.width = width;
     this.canvas.height = height;
-    this.context.drawImage(this.images[0], 0, 0, width, height);
 
     // initiate scroll listeners
     if (this.props.scrollable) {
       this.addScrollListener();
-      this.scrubvideo();
+      this.selectframe();
+      this.darawcanvas();
     }
   }
 
@@ -141,13 +142,12 @@ class Video extends React.Component {
       const container = this.container.getBoundingClientRect();
       if (container.top <= 0) {
         return styles.relativebottom;
-      } else {
-        return styles.relativetop;
       }
+      return styles.relativetop;
     }
   }
 
-  scrubvideo() {
+  selectframe() {
     const direction = this.state.direction;
     let location = this.state.location;
     location += direction;
@@ -156,12 +156,22 @@ class Video extends React.Component {
     image = image > this.images.length - 1 ? this.images.length - 1 : image;
     image = image < 0 ? 0 : image;
     const remaining = this.state.duration - image;
-    this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
-    this.setState({ timeremaing: remaining, location, yoffset: window.pageYOffset });
+    this.setState({
+      image: this.images[image],
+      timeremaing: remaining,
+      location,
+      yoffset: window.pageYOffset,
+    });
+  }
+
+  darawcanvas() {
+    if (this.context) {
+      this.context.drawImage(this.state.image, 0, 0, this.state.width, this.state.height);
+    }
   }
 
   render() {
-    let canvasposition = this.canvasposition();
+    const canvasposition = this.canvasposition();
     return (
       <div
         ref={node => {
