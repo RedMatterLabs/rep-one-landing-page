@@ -7,7 +7,7 @@ class Video extends React.Component {
     super(props);
 
     this.state = {
-      image: 'https://demo.vmg.nyc/greg/parallax/other/repone_large0000.jpg',
+      image: 0,
       duration: props.duration - 1,
       timeremaing: props.duration - 1,
       location: 0,
@@ -30,12 +30,8 @@ class Video extends React.Component {
     const direction = e.deltaY;
     this.setState({ scrolled: newscrollposition, direction });
     this.update();
-    this.darawcanvas();
-    if (this.state.preventUserScroll) {
-      // if (e.preventDefault) e.preventDefault();
-      // e.returnValue = false;
-      this.selectframe();
-    }
+    this.drawcanvas();
+    this.selectframe();
   }
 
   keyHandler(e) {
@@ -91,7 +87,7 @@ class Video extends React.Component {
     if (this.props.scrollable) {
       this.addScrollListener();
       this.selectframe();
-      this.darawcanvas();
+      this.drawcanvas();
     }
   }
 
@@ -148,23 +144,27 @@ class Video extends React.Component {
   }
 
   selectframe() {
-    const direction = this.state.direction;
-    let location = this.state.location;
-    location += direction;
-    const mod = this.container.offsetHeight / this.images.length;
-    let image = Math.round(location / mod);
-    image = image > this.images.length - 1 ? this.images.length - 1 : image;
-    image = image < 0 ? 0 : image;
-    const remaining = this.state.duration - image;
-    this.setState({
-      image: this.images[image],
-      timeremaing: remaining,
-      location,
-      yoffset: window.pageYOffset,
-    });
+    if (!this.state.image) {
+      this.setState({ image: this.images[0] });
+    } else if (this.state.preventUserScroll) {
+      const direction = this.state.direction;
+      let location = this.state.location;
+      location += direction;
+      const mod = this.container.offsetHeight / this.images.length;
+      let image = Math.round(location / mod);
+      image = image > this.images.length - 1 ? this.images.length - 1 : image;
+      image = image < 0 ? 0 : image;
+      const remaining = this.state.duration - image;
+      this.setState({
+        image: this.images[image],
+        timeremaing: remaining,
+        location,
+        yoffset: window.pageYOffset,
+      });
+    }
   }
 
-  darawcanvas() {
+  drawcanvas() {
     if (this.context) {
       this.context.drawImage(this.state.image, 0, 0, this.state.width, this.state.height);
     }

@@ -77,24 +77,3 @@ body {
   border: 1px solid #616161;
   box-shadow: none;
 }
-
-@media (max-width: 800px) {
-  .section h1 {
-    font-size: 3.3em;
-  }
-  body {
-    font-size: 12.5px;
-  }
-  .section h2 {
-    font-size: 3em;
-    font-weight: 500;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 7px;
-  }
-}
-
-

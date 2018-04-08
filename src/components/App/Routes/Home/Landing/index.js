@@ -10,10 +10,11 @@ class Landing extends React.Component {
           <video autoPlay="true" muted="true" loop="true" className={styles.herovid}>
             <source src="https://demo.vmg.nyc/greg/repone/repone_hero_large.mp4" type="video/mp4" />
           </video>
+          <img className={styles.heroimg} src={require('src/images/hero_mobile_full_screen.png')} />
         </div>
         <div className={styles.main}>
           <h1>
-            Win in the weight room<br /> 
+            Win in the weight room<br />
             <div className={styles.rolotext}>
               <div>
                 <p>Win</p>
