@@ -50,11 +50,6 @@ class Analytics extends React.Component {
             </div>
           </div>
         </div>
-        <div className={styles.weightroom}>
-          <div>
-          <img src={require('src/images/weightroom.jpg')} />
-          </div>
-          </div>
       </div>
     );
   }

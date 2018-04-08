@@ -1,12 +1,15 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles.scss";
 
+.section {
+  border-bottom: 1px solid $greylight;
+}
+
 .subsection {
   height: 100%;
   flex: 0 1 300px;
+  padding-left: 15px;
   margin: 0;
-  background-color: $greylight;
-  border-bottom: 2px solid $greymedium;
   transition: 0.3s all;
   overflow: hidden;
   border-radius: 2px;
@@ -24,19 +27,14 @@
   text-transform: none;
 }
 
-.subsection:hover {
-  height: 100%;
-  flex: 0 1 300px;
-  margin: 0;
-  background-color: $greylight;
+.subsection:hover .textcontainer{
   border-bottom: 2px solid $red;
-  overflow: hidden;
 }
 
 .subcontainer {
   justify-content: space-between;
   padding: 0;
-  margin: 40px auto 300px auto;
+  margin: 40px auto 50px auto;
   list-style: none;
   display: flex;
   width: 100%;
@@ -63,15 +61,18 @@
 
 .placeholder {
   background-color: $greymedium;
-  width: 300px;
-  height: 300px;
   overflow: hidden;
+  padding-top: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .placeholder > img {
-  min-width: 100%;
-  max-height: 100%;
+  width: 100%;
   transition: all 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .subsection:hover > .placeholder > img {
@@ -83,33 +84,35 @@
   display: flex;
   padding: 30px 20px;
   align-items: center;
+  background-color: $greylight;
+  border-bottom: 2px solid $greymedium;
 }
 
 .textcontainer > div {
   display: inline;
 }
 
-.weightroom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  width: 100vw;
-  overflow: hidden;
-}
+@media (max-width: 580px) {
+  .placeholder {
+    display: none;
+  }
 
-.weightroom div {
-  position: absolute;
-  top: -2.5vw;
-  overflow: hidden;
-  height: 100px;
-  width: 100vw;
-}
+  .subcontainer {
+    display: block;
+  }
 
-.weightroom img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  mix-blend-mode: multiply;
+  .subsection:hover .textcontainer {
+    border-bottom: 0px solid transparent;
+  }
+
+  .textcontainer {
+    background-color: transparent;
+    border-bottom: 0px solid transparent;
+  }
+
+
+  .textcontainer {
+    display: inline;
+    margin: 0 auto;
+  }
 }
