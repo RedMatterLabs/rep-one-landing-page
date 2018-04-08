@@ -137,13 +137,13 @@ class Video extends React.Component {
     return false;
   }
   canvasposition() {
-    const container = this.container.getBoundingClientRect();
-    const canvas = this.canvas.getBoundingClientRect();
-    console.log(container.top);
-    if (container.top <= 0) {
-      return styles.relativebottom;
-    } else {
-      return styles.relativetop;
+    if (this.container) {
+      const container = this.container.getBoundingClientRect();
+      if (container.top <= 0) {
+        return styles.relativebottom;
+      } else {
+        return styles.relativetop;
+      }
     }
   }
 
@@ -152,7 +152,9 @@ class Video extends React.Component {
     let location = this.state.location;
     location += direction;
     const mod = this.container.offsetHeight / this.images.length;
-    const image = Math.round(location / mod);
+    let image = Math.round(location / mod);
+    image = image > this.images.length - 1 ? this.images.length - 1 : image;
+    image = image < 0 ? 0 : image;
     const remaining = this.state.duration - image;
     this.context.drawImage(this.images[image], 0, 0, this.state.width, this.state.height);
     this.setState({ timeremaing: remaining, location, yoffset: window.pageYOffset });
