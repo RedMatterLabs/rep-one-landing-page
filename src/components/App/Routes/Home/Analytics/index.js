@@ -36,7 +36,7 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src='https://assets.reponestrength.com/repone_render.png' />
+                <img src='https://assets.reponestrength.com/device-render.png' />
               </div>
               <div className={styles.textcontainer}>
                 <div>

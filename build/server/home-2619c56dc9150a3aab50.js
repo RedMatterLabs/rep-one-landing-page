@@ -586,7 +586,7 @@ class Analytics extends Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               { className: Analytics___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.placeholder },
-              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://assets.reponestrength.com/repone_render.png' })
+              Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://assets.reponestrength.com/device-render.png' })
             ),
             Analytics___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
