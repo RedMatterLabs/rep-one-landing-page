@@ -29,15 +29,11 @@ class Video extends React.Component {
     const newscrollposition = this.state.scrolled + e.deltaY;
     const direction = e.deltaY;
     this.setState({ scrolled: newscrollposition, direction });
-    this.update();
-    this.drawcanvas();
-    this.selectframe();
   }
 
   keyHandler(e) {
     if (this.keys[e.keyCode]) {
       this.scrollHandler(e);
-      return false;
     }
 
     return true;
@@ -83,6 +79,12 @@ class Video extends React.Component {
     this.canvas.width = width;
     this.canvas.height = height;
 
+    this.updateinterval = setInterval(() => {
+      this.selectframe();
+      this.drawcanvas();
+      this.update();
+    }, 1);
+
     // initiate scroll listeners
     if (this.props.scrollable) {
       this.addScrollListener();
@@ -108,7 +110,7 @@ class Video extends React.Component {
     this.updateScrollableState(top);
   }
 
-  updateScrollableState(top) {
+  updateScrollableState() {
     if (this.state.direction > 0 && this.canvasisinview() && this.state.timeremaing) {
       if (!this.state.preventUserScroll) {
         this.disableScroll();
@@ -133,7 +135,11 @@ class Video extends React.Component {
     }
     return false;
   }
+
   canvasposition() {
+    if (this.container) {
+      console.log(this.container.getBoundingClientRect().top);
+    }
     if (this.container) {
       const container = this.container.getBoundingClientRect();
       if (container.top <= 0) {
@@ -147,14 +153,15 @@ class Video extends React.Component {
     if (!this.state.image) {
       this.setState({ image: this.images[0] });
     } else if (this.state.preventUserScroll) {
-      const direction = this.state.direction;
-      let location = this.state.location;
-      location += direction;
-      const mod = this.container.offsetHeight / this.images.length;
+      const rect = this.container.getBoundingClientRect();
+      const location = rect.top < 0 ? Math.abs(rect.top) : 0;
+      const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
       let image = Math.round(location / mod);
       image = image > this.images.length - 1 ? this.images.length - 1 : image;
       image = image < 0 ? 0 : image;
+
       const remaining = this.state.duration - image;
+
       this.setState({
         image: this.images[image],
         timeremaing: remaining,

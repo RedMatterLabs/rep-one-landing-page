@@ -1,13 +1,4 @@
 {
-  "home.js": "/home-541b1365a5b278b6c39d.js",
-  "home.js.map": "/home-acadaa935fefd63d4c07.js.map",
-  "main.css": "/main-2aadda115238adaefa811aea3bd31581.css",
-  "main.css.map": "/main-2aadda115238adaefa811aea3bd31581.css.map",
-  "main.js": "/main-294d8be9331169aae383.js",
-  "main.js.map": "/main-4f55fa7375c4300a903d.js.map",
-  "manifest.js": "/manifest-c762b096073b4666ba15.js",
-  "manifest.js.map": "/manifest-aebd672cdd4756bcffe6.js.map",
-  "repone.png": "/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png",
-  "vendor.js": "/vendor-d87feab581bd9ce5c3c1.js",
-  "vendor.js.map": "/vendor-15e3741f54e914c6d9b8.js.map"
+  "main.js": "http://localhost:3001/main.js",
+  "repone.png": "http://localhost:3001/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png"
 }
