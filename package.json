@@ -1,40 +1,16 @@
 {
-  "name": "RepOneLanding",
-  "version": "1.0.0",
-  "description": "",
-  "main": "",
-  "author": "Gregory Mender, Squats and Science Labs",
-  "license": "",
+  "name": "rep-one-landing-page",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "babel-polyfill": "6.26.0",
-    "babel-preset-kyt-react": "0.3.0",
-    "compression": "1.6.2",
-    "express": "4.15.3",
-    "kyt": "0.9.0",
-    "material-ui": "0.20.0",
-    "materialize-css": "^0.100.2",
-    "npm": "^5.7.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "react-router": "2.6.1"
-  },
-  "devDependencies": {
-    "enzyme": "2.4.1",
-    "react-addons-test-utils": "15.3.0",
-    "react-hot-loader": "3.0.0-beta.6"
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
   },
   "scripts": {
-    "dev": "kyt dev",
-    "build": "kyt build",
-    "heroku-postbuild": "npm run build",
-    "start": "node build/server/main.js",
-    "proto": "kyt proto",
-    "test": "kyt test",
-    "test-watch": "kyt test -- --watch",
-    "test-coverage": "kyt test -- --coverage",
-    "lint": "npm run lint-script && npm run lint-style",
-    "lint-script": "kyt lint-script",
-    "lint-style": "kyt lint-style",
-    "kyt:help": "kyt --help"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
