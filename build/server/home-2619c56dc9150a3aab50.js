@@ -131,18 +131,18 @@ module.exports = {
 /***/ 30:
 /***/ (function(module, exports) {
 
-module.exports = {
-	"container": "styles-container--1u53v",
-	"section": "styles-section--2ilPY",
-	"main": "styles-main--2R38f",
-	"button": "styles-button--1EyEm",
-	"switch": "styles-switch--3BLD5",
-	"slider": "styles-slider--3nH1V"
-};
+
 
 /***/ }),
 
 /***/ 31:
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 32:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -154,7 +154,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -168,7 +168,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -177,7 +177,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // CONCATENATED MODULE: ./src/components/App/Shared/Video/index.js
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
@@ -852,40 +852,513 @@ function Teams() {
 }
 
 /* harmony default export */ var Teams_defaultExport = (Teams);
+// CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/components/teamform/index.js
+/* harmony import */ var teamform___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var teamform___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(teamform___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var teamform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(30);
+/* harmony import */ var teamform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(teamform___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+class TeamForm extends teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      job: '',
+      email: '',
+      phone1: '',
+      phone2: '',
+      phone3: '',
+      organization: '',
+      teams: '',
+      athletes: '',
+      stations: '',
+      other: ''
+    };
+  }
+
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+    script.async = false;
+    script.setAttribute("id", "mailchimp team validate");
+    document.body.appendChild(script);
+
+    const script2 = document.createElement("script");
+    script2.src = "https://assets.reponestrength.com/mailchimp.teams.js";
+    script2.async = false;
+    script2.setAttribute("id", "mailchimp team repone");
+    document.body.appendChild(script2);
+  }
+
+  componentWillUnmount() {
+    try {
+      const script = document.getElementById("mailchimp team validate");
+      script.parentNode.removeChild(script);
+
+      const script2 = document.getElementById("mailchimp team repone");
+      script2.parentNode.removeChild(script2);
+    } catch (e) {
+      console.log("Scripts don't exist");
+    }
+  }
+
+  handleNameChange(event) {
+    this.setState({ name: event.target.value });
+  }
+
+  handleJobChange(event) {
+    this.setState({ job: event.target.value });
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  handlePhoneChange1(event) {
+    this.setState({ phone1: event.target.value });
+  }
+
+  handlePhoneChange2(event) {
+    this.setState({ phone2: event.target.value });
+  }
+
+  handlePhoneChange3(event) {
+    this.setState({ phone3: event.target.value });
+  }
+
+  handleOrganizationChange(event) {
+    this.setState({ organization: event.target.value });
+  }
+
+  handleTeamsChange(event) {
+    this.setState({ teams: event.target.value });
+  }
+
+  handleAthletesChange(event) {
+    this.setState({ athletes: event.target.value });
+  }
+
+  handleStationsChange(event) {
+    this.setState({ stations: event.target.value });
+  }
+
+  handleOtherChange(event) {
+    this.setState({ other: event.target.value });
+  }
+
+  render() {
+    return teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { id: 'mc_embed_signup' },
+      teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'form',
+        { action: 'https://squatsandscience.us12.list-manage.com/subscribe/post?u=a3cf758809f155c2dd9a85297&id=bc978fccc8', method: 'post', id: 'mc-embedded-subscribe-form', name: 'mc-embedded-subscribe-form', className: 'validate', target: '_blank', noValidate: true },
+        teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { id: 'mc_embed_signup_scroll' },
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'indicates-required' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { className: 'asterisk' },
+              '*'
+            ),
+            ' indicates required'
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              { htmlFor: 'mce-NAME' },
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'asterisk' },
+                '*'
+              )
+            ),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.name, name: 'NAME', className: 'required', id: 'mce-NAME', placeholder: 'name', onChange: this.handleNameChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-JOBTITLE' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.job, name: 'JOBTITLE', className: '', id: 'mce-JOBTITLE', placeholder: 'job title', onChange: this.handleJobChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group size1of2' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-PHONE' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'phonefield phonefield-us' },
+              '(',
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonearea' },
+                teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-area', name: 'PHONE[area]', maxLength: '3', size: '3', value: this.state.phone1, type: 'text', onChange: this.handlePhoneChange1.bind(this) })
+              ),
+              ')',
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonedetail1' },
+                teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-detail1', name: 'PHONE[detail1]', maxLength: '3', size: '3', value: this.state.phone2, type: 'text', onChange: this.handlePhoneChange2.bind(this) })
+              ),
+              ' -',
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonedetail2' },
+                teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-detail2', name: 'PHONE[detail2]', maxLength: '4', size: '4', value: this.state.phone3, type: 'text', onChange: this.handlePhoneChange3.bind(this) })
+              ),
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'small-meta nowrap' },
+                '(###) ###-####'
+              )
+            )
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              { htmlFor: 'mce-EMAIL' },
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'asterisk' },
+                '*'
+              )
+            ),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', value: this.state.email, name: 'EMAIL', className: 'required email', id: 'mce-EMAIL', placeholder: 'email', onChange: this.handleEmailChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              { htmlFor: 'mce-ORGNAME' },
+              teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'asterisk' },
+                '*'
+              )
+            ),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.organization, name: 'ORGNAME', className: 'required', id: 'mce-ORGNAME', placeholder: 'organization', onChange: this.handleOrganizationChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group size1of2' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-NUMTEAMS' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'number', name: 'NUMTEAMS', className: '', value: this.state.teams, id: 'mce-NUMTEAMS', placeholder: '# teams', onChange: this.handleTeamsChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group size1of2' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-NUMATHLETE' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'number', name: 'NUMATHLETE', className: '', value: this.state.athletes, id: 'mce-NUMATHLETE', placeholder: '# athletes', onChange: this.handleAthletesChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group size1of2' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-NUMSTATION' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'number', name: 'NUMSTATION', className: '', value: this.state.stations, id: 'mce-NUMSTATION', placeholder: '# training stations you want to outfit', onChange: this.handleStationsChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-OTHER' }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.other, name: 'OTHER', className: '', id: 'mce-OTHER', placeholder: 'anything else?', onChange: this.handleOtherChange.bind(this) })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { id: 'mce-responses', className: 'clear' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'response', id: 'mce-error-response', style: { display: 'none' } }),
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'response', id: 'mce-success-response', style: { display: 'none' } })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { style: { position: 'absolute', left: -5000 }, 'aria-hidden': 'true' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'b_a3cf758809f155c2dd9a85297_bc978fccc8', tabIndex: '-1', value: '' })
+          ),
+          teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'clear' },
+            teamform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'submit', value: 'Get in touch', name: 'subscribe', id: 'mc-embedded-subscribe', className: 'button' })
+          )
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ var teamform_defaultExport = (TeamForm);
+// CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/components/individualform/index.js
+/* harmony import */ var individualform___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var individualform___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(individualform___WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var individualform___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(31);
+/* harmony import */ var individualform___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(individualform___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+
+
+
+class IndividualForm extends individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      email: '',
+      phone1: '',
+      phone2: '',
+      phone3: '',
+      other: ''
+    };
+  }
+
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+    script.async = false;
+    script.setAttribute("id", "mailchimp individual validate");
+    document.body.appendChild(script);
+
+    const script2 = document.createElement("script");
+    script2.src = "https://assets.reponestrength.com/mailchimp.individual.js";
+    script2.async = false;
+    script2.setAttribute("id", "mailchimp individual repone");
+    document.body.appendChild(script2);
+  }
+
+  componentWillUnmount() {
+    try {
+      const script = document.getElementById("mailchimp individual validate");
+      script.parentNode.removeChild(script);
+
+      const script2 = document.getElementById("mailchimp individual repone");
+      script2.parentNode.removeChild(script2);
+    } catch (e) {
+      console.log("Scripts don't exist");
+    }
+  }
+
+  handleNameChange(event) {
+    this.setState({ name: event.target.value });
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  handlePhoneChange1(event) {
+    this.setState({ phone1: event.target.value });
+  }
+
+  handlePhoneChange2(event) {
+    this.setState({ phone2: event.target.value });
+  }
+
+  handlePhoneChange3(event) {
+    this.setState({ phone3: event.target.value });
+  }
+
+  handleOtherChange(event) {
+    this.setState({ other: event.target.value });
+  }
+
+  render() {
+    return individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { id: 'mc_embed_signup' },
+      individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'form',
+        { action: 'https://squatsandscience.us12.list-manage.com/subscribe/post?u=a3cf758809f155c2dd9a85297&id=c8b6623f1e', method: 'post', id: 'mc-embedded-subscribe-form', name: 'mc-embedded-subscribe-form', className: 'validate', target: '_blank', noValidate: true },
+        individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { id: 'mc_embed_signup_scroll' },
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'indicates-required' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { className: 'asterisk' },
+              '*'
+            ),
+            ' indicates required'
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              { htmlFor: 'mce-NAME' },
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'asterisk' },
+                '*'
+              )
+            ),
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.name, name: 'NAME', className: 'required', id: 'mce-NAME', placeholder: 'name', onChange: this.handleNameChange.bind(this) })
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'label',
+              { htmlFor: 'mce-EMAIL' },
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'asterisk' },
+                '*'
+              )
+            ),
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', value: this.state.email, name: 'EMAIL', className: 'required email', id: 'mce-EMAIL', placeholder: 'email', onChange: this.handleEmailChange.bind(this) })
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group size1of2' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-PHONE' }),
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'phonefield phonefield-us' },
+              '(',
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonearea' },
+                individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-area', name: 'PHONE[area]', maxLength: '3', size: '3', value: this.state.phone1, type: 'text', onChange: this.handlePhoneChange1.bind(this) })
+              ),
+              ')',
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonedetail1' },
+                individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-detail1', name: 'PHONE[detail1]', maxLength: '3', size: '3', value: this.state.phone2, type: 'text', onChange: this.handlePhoneChange2.bind(this) })
+              ),
+              ' -',
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'phonedetail2' },
+                individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'phonepart ', pattern: '[0-9]*', id: 'mce-PHONE-detail2', name: 'PHONE[detail2]', maxLength: '4', size: '4', value: this.state.phone3, type: 'text', onChange: this.handlePhoneChange3.bind(this) })
+              ),
+              individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'span',
+                { className: 'small-meta nowrap' },
+                '(###) ###-####'
+              )
+            )
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'mc-field-group' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('label', { htmlFor: 'mce-OTHER' }),
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', value: this.state.other, name: 'OTHER', className: '', id: 'mce-OTHER', placeholder: 'anything else?', onChange: this.handleOtherChange.bind(this) })
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { id: 'mce-responses', className: 'clear' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'response', id: 'mce-error-response', style: { display: 'none' } }),
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'response', id: 'mce-success-response', style: { display: 'none' } })
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { style: { position: 'absolute', left: -5000 }, 'aria-hidden': 'true' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'b_a3cf758809f155c2dd9a85297_bc978fccc8', tabIndex: '-1', value: '' })
+          ),
+          individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'clear' },
+            individualform___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'submit', value: 'Join waitlist', name: 'subscribe', id: 'mc-embedded-subscribe', className: 'button' })
+          )
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ var individualform_defaultExport = (IndividualForm);
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/CTA/index.js
 /* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(CTA___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(30);
-/* harmony import */ var CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Toggle__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_Toggle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_Toggle__);
+
+// import styles from './styles.css';
 
 
 
-function CTA() {
-  return CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.section, id: 'cta' },
-    CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+
+// TODO: move this to a css file if possible
+// If it's possible to move it to a scss even better, but it seems unlikely
+const styles = {
+  block: {
+    maxWidth: 250
+  },
+  toggle: {
+    marginBottom: 16
+  },
+  thumbOff: {
+    backgroundColor: '#ffcccc'
+  },
+  trackOff: {
+    backgroundColor: '#ff9d9d'
+  },
+  thumbSwitched: {
+    backgroundColor: 'red'
+  },
+  trackSwitched: {
+    backgroundColor: '#ff9d9d'
+  }
+};
+
+class CTA_CTA extends CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showingTeams: true
+    };
+  }
+
+  handleToggleChange() {
+    this.setState({ showingTeams: !this.state.showingTeams });
+  }
+
+  _renderForm() {
+    if (this.state.showingTeams) {
+      return CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(teamform_defaultExport, null);
+    } else {
+      return CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(individualform_defaultExport, null);
+    }
+  }
+
+  render() {
+    return CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.main },
-      CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h1',
-        null,
-        'Be the first to get RepOne'
-      ),
-      CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'a',
-        { className: CTA___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.button },
-        'Contact Us'
-      )
-    )
-  );
+      { style: styles.block },
+      CTA___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_Toggle___default.a, {
+        label: '',
+        toggled: !this.state.showingTeams,
+        onToggle: this.handleToggleChange.bind(this),
+        thumbStyle: styles.thumbOff,
+        trackStyle: styles.trackOff,
+        thumbSwitchedStyle: styles.thumbSwitched,
+        trackSwitchedStyle: styles.trackSwitched
+      }),
+      this._renderForm()
+    );
+  }
+
 }
 
-/* harmony default export */ var CTA_defaultExport = (CTA);
+/* harmony default export */ var CTA_defaultExport = (CTA_CTA);
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Price/index.js
 /* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Price___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(31);
+/* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(32);
 /* harmony import */ var Price___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Price___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -919,7 +1392,7 @@ class Price extends Price___WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
 // CONCATENATED MODULE: ./src/components/App/Routes/Home/Modal/index.js
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(32);
+/* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__ = __webpack_require__(33);
 /* harmony import */ var Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss___default = __webpack_require__.n(Modal___WEBPACK_IMPORTED_MODULE_1__styles_scss__);
 
 
@@ -984,7 +1457,6 @@ function Home() {
   return Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: Home___WEBPACK_IMPORTED_MODULE_1__styles_scss___default.a.container },
-    Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Modal_defaultExport, { link: 'https://www.youtube.com/watch?v=uWIAo2XFcX4', linktext: 'Check out this tech demonstration for our new 3D sensing.', title: 'Hi there!', message: 'This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do.' }),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Landing_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Analytics_defaultExport, null),
     Home___WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Platform_defaultExport, null),
@@ -1001,4 +1473,4 @@ function Home() {
 /***/ })
 
 };;
-//# sourceMappingURL=home-85a403248588998fd76a.js.map
+//# sourceMappingURL=home-2619c56dc9150a3aab50.js.map

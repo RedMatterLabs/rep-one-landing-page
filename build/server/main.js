@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"85a403248588998fd76a"}[chunkId] + ".js");
+/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"2619c56dc9150a3aab50"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -353,7 +353,7 @@ App.propTypes = {
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 33)).then(module => cb(null, module.default)).catch(e => {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 34)).then(module => cb(null, module.default)).catch(e => {
     throw e;
   });
 };
@@ -601,7 +601,7 @@ module.exports = require("material-ui/styles/getMuiTheme");
 /* 21 */
 /***/ (function(module, exports) {
 
-module.exports = {"home.js":"/home-fa4eba9cb9b1650663a1.js","home.js.map":"/home-c876f0eca92059c07cd9.js.map","main.css":"/main-2aadda115238adaefa811aea3bd31581.css","main.css.map":"/main-2aadda115238adaefa811aea3bd31581.css.map","main.js":"/main-5d3f5012ca876a0525c4.js","main.js.map":"/main-e2aee59e24d1b7ab3136.js.map","manifest.js":"/manifest-da2d66c59e69783f3f3f.js","manifest.js.map":"/manifest-9e38866b1d8965e7ae13.js.map","vendor.js":"/vendor-0d0f8d607802f57cf0c6.js","vendor.js.map":"/vendor-3a5c7f2ba53ea0ff15cd.js.map"}
+module.exports = {"home.js":"/home-d5626dc366e092d17dca.js","home.js.map":"/home-4329227d5b7149f250bb.js.map","main.css":"/main-7e5efb2e44df75dc94215cd8826fc47a.css","main.css.map":"/main-7e5efb2e44df75dc94215cd8826fc47a.css.map","main.js":"/main-b8d22cc7554cfd96f260.js","main.js.map":"/main-dd3faa2e31e502566628.js.map","manifest.js":"/manifest-a0fd86f84497540f3b31.js","manifest.js.map":"/manifest-eb4d4fa50cd0c929749f.js.map","vendor.js":"/vendor-740531db822e5d1fb233.js","vendor.js.map":"/vendor-c117be789d99d27e2e16.js.map"}
 
 /***/ }),
 /* 22 */,
@@ -616,10 +616,17 @@ module.exports = {"home.js":"/home-fa4eba9cb9b1650663a1.js","home.js.map":"/home
 /* 31 */,
 /* 32 */,
 /* 33 */,
-/* 34 */
+/* 34 */,
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+module.exports = require("material-ui/Toggle");
 
 /***/ })
 /******/ ]);
