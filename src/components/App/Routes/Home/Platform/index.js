@@ -10,7 +10,7 @@ class Platform extends React.Component {
           <h2>Your workout cards, players manual, Excel, and more. Simplified.</h2>
           <div className={styles.container}>
             <div className={`${styles.image} ${styles.left}`}>
-              <img src='http://assets.reponestrength.com/screenshot_athlete.png' alt="autoregulation" />
+              <img src='https://assets.reponestrength.com/screenshot_athlete.png' alt="autoregulation" />
             </div>
             <div className={`${styles.textcontainer} ${styles.right}`}>
               <div className={styles.text}>
@@ -37,13 +37,13 @@ class Platform extends React.Component {
               </div>
             </div>
             <div className={`${styles.image} ${styles.left}`}>
-              <img src='http://assets.reponestrength.com/screenshot_live.png' alt="autoregulation" />
+              <img src='https://assets.reponestrength.com/screenshot_live.png' alt="autoregulation" />
             </div>
           </div>
 
           <div className={styles.container}>
             <div className={`${styles.image} ${styles.left}`}>
-              <img src='http://assets.reponestrength.com/screenshot_dashboard.png' alt="autoregulation" />
+              <img src='https://assets.reponestrength.com/screenshot_dashboard.png' alt="autoregulation" />
             </div>
             <div className={`${styles.textcontainer} ${styles.right}`}>
               <div className={styles.text}>

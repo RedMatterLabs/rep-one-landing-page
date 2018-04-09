@@ -9,7 +9,7 @@ function Insights() {
         <h2>Industry-leading 3D sensing makes the invisible, visible.</h2>
         <div className={styles.diagram}>
           <div className={styles.diagramcontainer}>
-            <img src='http://assets.reponestrength.com/deadlift_guy.jpg' />
+            <img src='https://assets.reponestrength.com/deadlift_guy.jpg' />
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ class Header extends React.Component {
       >
         <div className={styles.main}>
           <h1>
-            <img className={styles.logo} src={require('src/images/repone.png')} />
+            <img className={styles.logo} src='https://assets.reponestrength.com/logo.png' />
           </h1>
           <a href="#cta" className={styles.button}>
             Get in touch

@@ -8,9 +8,9 @@ class Landing extends React.Component {
       <div className={styles.section}>
         <div className={styles.bg}>
           <video autoPlay="true" muted="true" loop="true" className={styles.herovid}>
-            <source src="http://assets.reponestrength.com/hero_movie_no_sound.m4v" type="video/mp4" />
+            <source src="https://assets.reponestrength.com/hero_movie_no_sound.m4v" type="video/mp4" />
           </video>
-          <img className={styles.heroimg} src='http://assets.reponestrength.com/hero_mobile_full_screen.jpg' />
+          <img className={styles.heroimg} src='https://assets.reponestrength.com/hero_mobile_full_screen.jpg' />
         </div>
         <div className={styles.main}>
           <h1>
