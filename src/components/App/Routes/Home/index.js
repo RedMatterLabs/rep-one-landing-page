@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './styles.scss';
-import Landing from 'src/components/App/Routes/Home/Landing/index.js';
-import Analytics from 'src/components/App/Routes/Home/Analytics/index.js';
-import Platform from 'src/components/App/Routes/Home/Platform/index.js';
-import Insights from 'src/components/App/Routes/Home/Insights/index.js';
-import Exploded from 'src/components/App/Routes/Home/Exploded/index.js';
-import Teams from 'src/components/App/Routes/Home/Teams/index.js';
-import CTA from 'src/components/App/Routes/Home/CTA/index.js';
-import Price from 'src/components/App/Routes/Home/Price/index.js';
-import Modal from 'src/components/App/Routes/Home/Modal/index.js';
+import Landing from 'components/App/Routes/Home/Landing/index.js';
+import Analytics from 'components/App/Routes/Home/Analytics/index.js';
+import Platform from 'components/App/Routes/Home/Platform/index.js';
+import Insights from 'components/App/Routes/Home/Insights/index.js';
+import Exploded from 'components/App/Routes/Home/Exploded/index.js';
+import Teams from 'components/App/Routes/Home/Teams/index.js';
+import CTA from 'components/App/Routes/Home/CTA/index.js';
+import Price from 'components/App/Routes/Home/Price/index.js';
+import Modal from 'components/App/Routes/Home/Modal/index.js';
 
 function Home() {
   return (

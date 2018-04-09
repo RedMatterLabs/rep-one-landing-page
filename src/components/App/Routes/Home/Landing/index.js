@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import Video from 'src/components/App/Shared/Video/index.js';
+import Video from 'components/App/Shared/Video/index.js';
 
 class Landing extends React.Component {
   render() {
