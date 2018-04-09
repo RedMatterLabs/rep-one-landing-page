@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"995f88c75d3e71f7970a"}[chunkId] + ".js");
+/******/ 			var chunk = require("./" + ({"0":"home"}[chunkId]||chunkId) + "-" + {"0":"9a51637ff15f06d87353"}[chunkId] + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -343,7 +343,7 @@ App.propTypes = {
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 45)).then(module => cb(null, module.default)).catch(e => {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 27)).then(module => cb(null, module.default)).catch(e => {
     throw e;
   });
 };
@@ -540,7 +540,7 @@ module.exports = {
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-654a85dcc680ed22d8c2eb6159b2132c.png","3.png":"/3-55aff29752ab76572d2b27318775b25f.png","4.png":"/4-cf69f3f1a2240c3f41ae23b4e1e641cc.png","5.png":"/5-346ee073ccef60fbcec7c597fd07844d.png","6.png":"/6-edb3c982da439d6b5f4c310095432a78.png","7.png":"/7-bbf89db8cac7ea9a0db70ccf5826a03c.png","athlete_kiosk.jpg":"/athlete_kiosk-1e3958dba1c56ae657d1adc432f1b7b1.jpg","coach_portal.jpg":"/coach_portal-4b44850aa4f91ac66b4a44c9736f4ce9.jpg","court_seats.svg":"/court_seats-58dfacc1b6b474b2b678680b4f1694dd.svg","hero_mobile_full_screen.png":"/hero_mobile_full_screen-eef57defad9b8128a224cf4abc7cc0ab.png","home.js":"/home-0a596948016a6c58b1b4.js","home.js.map":"/home-d408e4dac75304257f89.js.map","jacob.jpg":"/jacob-92100213440eb600a301382277698c2a.jpg","main.css":"/main-a2d284922d210c27c4fd2413b0007da5.css","main.css.map":"/main-a2d284922d210c27c4fd2413b0007da5.css.map","main.js":"/main-294d8be9331169aae383.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-23d60d622c7f8850088b.js","manifest.js.map":"/manifest-c636f564a409497655df.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","repone_render.png":"/repone_render-de35d69a0bebca1abaa1647cbe8906b8.png","screenshot_athlete.png":"/screenshot_athlete-a19f612ea08909598e5a13a3c32bc44a.png","screenshot_dashboard.png":"/screenshot_dashboard-a828e13cbfe9ffc5b82f043c60bb03b1.png","screenshot_live.png":"/screenshot_live-6b3e09aea703e42863b84d36c03da3a5.png","simple_court.svg":"/simple_court-b0213b6cac3af4f5a2ebadf84509258e.svg","stadium.svg":"/stadium-f3a5d52b94d6fe16316f6e6d9ecebd2f.svg","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
+module.exports = {"home.js":"/home-541b1365a5b278b6c39d.js","home.js.map":"/home-acadaa935fefd63d4c07.js.map","main.css":"/main-2aadda115238adaefa811aea3bd31581.css","main.css.map":"/main-2aadda115238adaefa811aea3bd31581.css.map","main.js":"/main-294d8be9331169aae383.js","main.js.map":"/main-4f55fa7375c4300a903d.js.map","manifest.js":"/manifest-c762b096073b4666ba15.js","manifest.js.map":"/manifest-aebd672cdd4756bcffe6.js.map","repone.png":"/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png","vendor.js":"/vendor-d87feab581bd9ce5c3c1.js","vendor.js.map":"/vendor-15e3741f54e914c6d9b8.js.map"}
 
 /***/ }),
 /* 16 */,
@@ -555,25 +555,7 @@ module.exports = {"1.png":"/1-41aa42702fd9932246a9371c5dfbb0f7.png","2.png":"/2-
 /* 25 */,
 /* 26 */,
 /* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");

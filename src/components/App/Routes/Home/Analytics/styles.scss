@@ -34,7 +34,7 @@
 .subcontainer {
   justify-content: space-between;
   padding: 0;
-  margin: 40px auto 50px auto;
+  margin: 40px auto 100px auto;
   list-style: none;
   display: flex;
   width: 100%;
@@ -114,5 +114,37 @@
   .textcontainer {
     display: inline;
     margin: 0 auto;
+  }
+}
+
+@media (max-width:600px) {
+  .section h1 {
+    font-size: 18px;
+    text-transform:uppercase;
+  }
+  .section h2 {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    line-height: 1.375em;
+    text-transform:uppercase;
+  }
+
+  .textcontainer {
+    padding: 10px 20px;
+  }
+
+  .textcontainer h2 {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin-bottom: 0;
+  }
+
+  .subcontainer {
+    margin: 20px auto 60px auto;
+  }
+
+  .subcontainer p {
+    padding: 0.25em 1em 0 1em;
   }
 }

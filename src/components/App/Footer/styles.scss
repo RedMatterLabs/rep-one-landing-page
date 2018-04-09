@@ -91,3 +91,9 @@ a:hover {
 .socialIcons li:nth-of-type(4) a i:hover {
   background-color: #00aced;
 }
+
+@media (max-width:600px) {
+  .footer li {
+    font-size: .8em;
+  }  
+}

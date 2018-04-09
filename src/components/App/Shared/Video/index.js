@@ -69,7 +69,7 @@ class Video extends React.Component {
 
     for (let i = 0; i < this.props.duration; i++) {
       const filename = `${i}.jpg`;
-      const imageurl = `https://demo.vmg.nyc/greg/parallax/other/repone_large${i > 9
+      const imageurl = `http://assets.reponestrength.com/repone_large${i > 9
         ? '00'
         : '000'}${filename}`;
       const image = new Image();

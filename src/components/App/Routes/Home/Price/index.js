@@ -8,9 +8,9 @@ class Price extends React.Component {
         <div className={styles.main}>
           <h1>Flexible pricing to fit your organization</h1>
           <div className={styles.container}>
-            <img src={require('src/images/simple_court.svg')} />
-            <img src={require('src/images/court_seats.svg')} />
-            <img src={require('src/images/stadium.svg')} />
+            <img src='http://assets.reponestrength.com/simple_court.svg' />
+            <img src='http://assets.reponestrength.com/court_seats.svg' />
+            <img src='http://assets.reponestrength.com/stadium.svg' />
         </div>
         </div>
       </div>

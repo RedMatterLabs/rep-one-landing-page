@@ -63,3 +63,15 @@
 .explodedvid {
   width: 100%;
 }
+
+@media (max-width:600px) {
+
+  .section h2 {
+    font-weight: 100;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    line-height: 1.375em;
+    text-transform:uppercase;
+  }
+
+}

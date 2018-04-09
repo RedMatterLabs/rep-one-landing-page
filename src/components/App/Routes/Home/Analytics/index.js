@@ -11,7 +11,7 @@ class Analytics extends React.Component {
           <div className={styles.subcontainer}>
           <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/athlete_kiosk.jpg')} />
+                <img src='https://assets.reponestrength.com/athlete_kiosk.jpg' />
               </div>
               <div className={styles.textcontainer}>
                 <div>
@@ -22,7 +22,7 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/coach_portal.jpg')} />
+                <img src='https://assets.reponestrength.com/coach_portal.jpg' />
               </div>
               <div className={styles.textcontainer}>
                 <div>
@@ -36,7 +36,7 @@ class Analytics extends React.Component {
             </div>
             <div className={styles.subsection}>
               <div className={styles.placeholder}>
-                <img src={require('src/images/repone_render.png')} />
+                <img src='https://assets.reponestrength.com/repone_render.png' />
               </div>
               <div className={styles.textcontainer}>
                 <div>
