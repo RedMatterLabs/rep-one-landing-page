@@ -1,15 +1,72 @@
 import React from 'react';
-import styles from './styles.scss';
+// import styles from './styles.css';
+import Toggle from 'material-ui/Toggle';
+import TeamForm from './components/teamform';
+import IndividualForm from './components/individualform';
 
-function CTA() {
-  return (
-    <div className={styles.section} id="cta">
-      <div className={styles.main}>
-        <h1>Be the first to get RepOne</h1>
-        <a className={styles.button}>Contact Us</a>
+// TODO: move this to a css file if possible
+// If it's possible to move it to a scss even better, but it seems unlikely
+const styles = {
+  block: {
+    maxWidth: 250,
+  },
+  toggle: {
+    marginBottom: 16,
+  },
+  thumbOff: {
+    backgroundColor: '#ffcccc',
+  },
+  trackOff: {
+    backgroundColor: '#ff9d9d',
+  },
+  thumbSwitched: {
+    backgroundColor: 'red',
+  },
+  trackSwitched: {
+    backgroundColor: '#ff9d9d',
+  }
+};
+
+class CTA extends React.Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      showingTeams: true,
+    };
+  }
+
+  handleToggleChange() {
+    this.setState({showingTeams: !this.state.showingTeams});
+  }
+
+  _renderForm() {
+    if (this.state.showingTeams) {
+      return <TeamForm />;
+    } else {
+      return <IndividualForm />;
+    }
+  }
+
+  render() {
+    return (
+      <div style={styles.block}>
+        <span onClick={this.handleToggleChange.bind(this)}>
+          <Toggle
+            label=""
+            toggled={!this.state.showingTeams}
+            thumbStyle={styles.thumbOff}
+            trackStyle={styles.trackOff}
+            thumbSwitchedStyle={styles.thumbSwitched}
+            trackSwitchedStyle={styles.trackSwitched}
+          />
+        </span>
+        {this._renderForm()}
       </div>
-    </div>
-  );
+    );
+  }
+
 }
 
 export default CTA;
