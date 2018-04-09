@@ -1,14 +1,14 @@
 import React from 'react';
 import Route from 'react-router/lib/Route';
 import IndexRoute from 'react-router/lib/IndexRoute';
-import App from 'src/components/App';
+import App from 'components/App';
 
 // Webpack 2 supports ES2015 `import()` by auto-
 // chunking assets. Check out the following for more:
 // https://webpack.js.org/guides/migrating/#code-splitting-with-es2015
 
 const importHome = (nextState, cb) => {
-  import(/* webpackChunkName: "home" */ 'src/components/App/Routes/Home')
+  import(/* webpackChunkName: "home" */ 'components/App/Routes/Home')
     .then(module => cb(null, module.default))
     .catch(e => {
       throw e;
@@ -27,7 +27,7 @@ const routes = (
 // routes so we need to require them here as a workaround.
 // https://github.com/gaearon/react-hot-loader/issues/288
 if (module.hot) {
-  require('src/components/App/Routes/Home'); // eslint-disable-line global-require
+  require('components/App/Routes/Home'); // eslint-disable-line global-require
 }
 
 export default routes;
