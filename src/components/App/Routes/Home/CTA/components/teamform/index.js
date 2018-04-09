@@ -36,10 +36,15 @@ class TeamForm extends React.Component {
   }
 
   componentWillUnmount() {
-    const script = document.getElementById("mailchimp team validate");
-    script.parentNode.removeChild(script);
-    const script2 = document.getElementById("mailchimp team repone");
-    script2.parentNode.removeChild(script2);
+    try {
+      const script = document.getElementById("mailchimp team validate");
+      script.parentNode.removeChild(script);
+
+      const script2 = document.getElementById("mailchimp team repone");
+      script2.parentNode.removeChild(script2);
+    } catch (e) {
+      console.log("Scripts don't exist");
+    }
   }
 
   handleNameChange(event) {
