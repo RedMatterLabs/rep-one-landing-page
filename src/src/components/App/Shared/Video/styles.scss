@@ -1,0 +1,33 @@
+.videocontainer {
+  position: relative;
+  display: block;
+  height: 112vw;
+  width: 100vw;
+}
+
+.videocontainer video {
+  max-height: 56vw;
+  width: 100vw;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0px;
+}
+
+.relativebottom {
+  left:0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.relativetop {
+  left:0;
+  position: absolute;
+  top: 0px;
+}
+
+.sticky {
+  position: sticky;
+}
