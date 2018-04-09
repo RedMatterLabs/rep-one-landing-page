@@ -69,7 +69,7 @@ class Video extends React.Component {
 
     for (let i = 0; i < this.props.duration; i++) {
       const filename = `${i}.jpg`;
-      const imageurl = `http://assets.reponestrength.com/repone_large${i > 9
+      const imageurl = `https://assets.reponestrength.com/repone_large${i > 9
         ? '00'
         : '000'}${filename}`;
       const image = new Image();
@@ -165,7 +165,7 @@ class Video extends React.Component {
   }
 
   drawcanvas() {
-    if (this.context) {
+    if (this.context && this.state.image) {
       this.context.drawImage(this.state.image, 0, 0, this.state.width, this.state.height);
     }
   }
