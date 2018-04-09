@@ -1,0 +1,90 @@
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
+
+.electronorbit,
+.electron,
+.nucleus {
+  border-color: $white;
+  border-radius: 100%;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  margin: 1.4em auto;
+}
+
+.electronoutline {
+  position: absolute;
+  border-radius: 100%;
+  align-items: center;
+  width: 7em;
+  height: 7em;
+  border: 0.25em solid $white;
+  background-color: black;
+}
+
+.electronoutline:nth-of-type(4) {
+  border: 0.45em solid black;
+  margin: -0.225em 0.1em;
+}
+
+.electronoutline:nth-of-type(3) {
+  border: 0.25em solid $white;
+  margin: -0.15em -0.05em;
+}
+
+.electronoutline:nth-of-type(2) {
+  border: 0.45em solid black;
+  margin: -0.425em -0.2em;
+}
+
+.electronoutline:nth-of-type(1) {
+  border: 0.25em solid $white;
+  margin: -0.35em -0.3em;
+}
+
+.electronorbit {
+  margin: 1.4em auto;
+  align-items: center;
+  width: 7em;
+  height: 7em;
+  border: 0.25em solid $white;
+  display: flex;
+  background-color: black;
+  animation: orbit 10s infinite linear;
+}
+
+.electron {
+  width: 0;
+  height: 0;
+  border: 0.5em solid $white;
+  margin: 0 -0.5em;
+}
+
+.nucleus {
+  width: 1em;
+  height: 1em;
+  border: 0.5em solid $white;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 8em;
+  mix-blend-mode: lighten;
+  text-align: center;
+}
+
+.logo label {
+  margin-top: 1.8em;
+  color: $white;
+  font-size: 2.4em;
+  font-weight: 00;
+}
