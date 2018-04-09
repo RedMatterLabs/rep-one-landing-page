@@ -1,4 +1,13 @@
 {
-  "main.js": "http://localhost:3001/main.js",
-  "repone.png": "http://localhost:3001/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png"
+  "home.js": "/home-8639ec231cbabaf7949c.js",
+  "home.js.map": "/home-4329227d5b7149f250bb.js.map",
+  "main.css": "/main-7e5efb2e44df75dc94215cd8826fc47a.css",
+  "main.css.map": "/main-7e5efb2e44df75dc94215cd8826fc47a.css.map",
+  "main.js": "/main-6e581d2cbd72c75f2292.js",
+  "main.js.map": "/main-42914fad0be47a94db98.js.map",
+  "manifest.js": "/manifest-f0c986cc7457a4470205.js",
+  "manifest.js.map": "/manifest-d61839a27e0028770f86.js.map",
+  "repone.png": "/repone-c15c79aab4b3da53b96a20c6c9a4f14e.png",
+  "vendor.js": "/vendor-740531db822e5d1fb233.js",
+  "vendor.js.map": "/vendor-c117be789d99d27e2e16.js.map"
 }
