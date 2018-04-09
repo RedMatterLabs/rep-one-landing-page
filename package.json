@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "kyt dev",
     "build": "kyt build",
-    "heroku-prebuild": "npm run build",
+    "heroku-postbuild": "npm run build",
     "start": "node build/server/main.js",
     "proto": "kyt proto",
     "test": "kyt test",
