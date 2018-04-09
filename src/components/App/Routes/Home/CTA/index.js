@@ -52,16 +52,15 @@ class CTA extends React.Component {
   render() {
     return (
       <div style={styles.block}>
-        <span onClick={this.handleToggleChange.bind(this)}>
           <Toggle
             label=""
             toggled={!this.state.showingTeams}
+            onToggle={this.handleToggleChange.bind(this)}
             thumbStyle={styles.thumbOff}
             trackStyle={styles.trackOff}
             thumbSwitchedStyle={styles.thumbSwitched}
             trackSwitchedStyle={styles.trackSwitched}
           />
-        </span>
         {this._renderForm()}
       </div>
     );
