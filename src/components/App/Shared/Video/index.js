@@ -83,7 +83,7 @@ class Video extends React.Component {
       this.selectframe();
       this.drawcanvas();
       this.update();
-    }, 1);
+    }, 32);
 
     // initiate scroll listeners
     if (this.props.scrollable) {
@@ -106,8 +106,8 @@ class Video extends React.Component {
       this.canvas.height = height;
     }
 
-    this.setState({ top, width, height });
-    this.updateScrollableState(top);
+    this.setState({ top: window.top, width, height });
+    this.updateScrollableState(window.top);
   }
 
   updateScrollableState() {
