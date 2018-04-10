@@ -94,7 +94,7 @@ class Video extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.checkInterval);
+    clearInterval(this.updateinterval);
   }
 
   update() {
