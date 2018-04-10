@@ -13,7 +13,6 @@ class Video extends React.Component {
       location: 0,
       scrollable: props.scrollable,
       yoffset: 0,
-      preventUserScroll: false,
       scrolled: 0,
       direction: 0,
       top: 0,
@@ -49,14 +48,6 @@ class Video extends React.Component {
     document.onmousewheel = this.scrollHandler.bind(this); // older browsers, IE
     window.ontouchmove = this.scrollHandler.bind(this); // mobile
     document.onkeydown = this.keyHandler.bind(this);
-  }
-
-  disableScroll() {
-    this.setState({ preventUserScroll: true });
-  }
-
-  enableScroll() {
-    this.setState({ preventUserScroll: false });
   }
 
   componentDidMount() {
@@ -101,45 +92,25 @@ class Video extends React.Component {
     const width = window.innerWidth;
     const height = 0.5625 * width;
 
-    if (width !== this.state.width) {
-      this.canvas.width = width;
-      this.canvas.height = height;
-    }
-
-    this.setState({ top: window.top, width, height });
-    this.updateScrollableState(window.top);
-  }
-
-  updateScrollableState() {
-    if (this.state.direction > 0 && this.canvasisinview() && this.state.timeremaing) {
-      if (!this.state.preventUserScroll) {
-        this.disableScroll();
-      }
-    } else if (this.state.direction < 0 && this.canvasisinview() && this.state.location > 5) {
-      if (!this.state.preventUserScroll) {
-        this.disableScroll();
-      }
-    } else {
-      this.enableScroll();
-    }
+    this.setState({width, height});
   }
 
   canvasisinview() {
-    const direction = this.state.direction;
-    const container = this.container.getBoundingClientRect();
-    const canvas = this.canvas.getBoundingClientRect();
-    if (direction > 0 && container.top <= 0) {
-      return true;
-    } else if (direction < 0 && canvas.top >= 0) {
-      return true;
+    if (this.container) {
+      const rect = this.container.getBoundingClientRect();
+      return (rect.top <= 0 && this.hasframes());  
     }
-    return false;
+  }
+
+  hasframes() {
+    const rect = this.container.getBoundingClientRect();
+    const location = rect.top < 0 ? Math.abs(rect.top) : 0;
+    const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
+    let image = Math.round(location / mod);
+    return (Boolean(this.images[image]));
   }
 
   canvasposition() {
-    if (this.container) {
-      console.log(this.container.getBoundingClientRect().top);
-    }
     if (this.container) {
       const container = this.container.getBoundingClientRect();
       if (container.top <= 0) {
@@ -152,14 +123,14 @@ class Video extends React.Component {
   selectframe() {
     if (!this.state.image) {
       this.setState({ image: this.images[0] });
-    } else if (this.state.preventUserScroll) {
+    } else if (this.canvasisinview()) {
       const rect = this.container.getBoundingClientRect();
       const location = rect.top < 0 ? Math.abs(rect.top) : 0;
       const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
       let image = Math.round(location / mod);
+
       image = image > this.images.length - 1 ? this.images.length - 1 : image;
       image = image < 0 ? 0 : image;
-
       const remaining = this.state.duration - image;
 
       this.setState({
@@ -187,7 +158,7 @@ class Video extends React.Component {
         className={styles.videocontainer}
       >
         <canvas
-          className={this.state.preventUserScroll ? styles.fixed : canvasposition}
+          className={this.canvasisinview() ? styles.fixed : canvasposition}
           ref={node => {
             if (node) {
               this.canvas = node;
