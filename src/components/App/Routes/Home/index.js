@@ -10,40 +10,20 @@ import CTA from 'components/App/Routes/Home/CTA/index.js';
 import Price from 'components/App/Routes/Home/Price/index.js';
 import Modal from 'components/App/Routes/Home/Modal/index.js';
 
-class Home extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      mounted: false,
-    };
-  }
-
-  componentDidMount() {
-    this.setState({mounted: true});
-  }
-
-  render() {
-    if (!this.state.mounted) {
-      console.log("display nothing");
-      return null;
-    } else {
-      console.log("display app");
-      return (
-        <div className={styles.container}>
-          {/* <Modal link='https://www.youtube.com/watch?v=uWIAo2XFcX4' linktext='Check out this tech demonstration for our new 3D sensing.' title='Hi there!' message="This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do." /> */}
-          <Landing />
-          <Analytics />
-          <Platform />
-          <Insights />
-          <Exploded />
-          <Teams />
-          <Price />
-          <CTA />
-        </div>
-      );
-    }
-  }
+function Home() {
+  return (
+    <div className={styles.container}>
+      {/* <Modal link='https://www.youtube.com/watch?v=uWIAo2XFcX4' linktext='Check out this tech demonstration for our new 3D sensing.' title='Hi there!' message="This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do." /> */}
+      <Landing />
+      <Analytics />
+      <Platform />
+      <Insights />
+      <Exploded />
+      <Teams />
+      <Price />
+      <CTA />
+    </div>
+  );
 }
 
 export default Home;
