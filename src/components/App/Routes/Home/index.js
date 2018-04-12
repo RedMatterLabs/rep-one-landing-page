@@ -25,8 +25,10 @@ class Home extends React.Component {
 
   render() {
     if (!this.state.mounted) {
+      console.log("display nothing");
       return null;
     } else {
+      console.log("display app");
       return (
         <div className={styles.container}>
           {/* <Modal link='https://www.youtube.com/watch?v=uWIAo2XFcX4' linktext='Check out this tech demonstration for our new 3D sensing.' title='Hi there!' message="This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do." /> */}
