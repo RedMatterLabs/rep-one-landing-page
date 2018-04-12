@@ -2,7 +2,42 @@ import React from 'react';
 import styles from './styles.scss';
 import Video from 'components/App/Shared/Video/index.js';
 
+const words= ["on the field",
+"on the court",
+"in the rink",
+"on the pitch",
+"on the track",
+"in the pool",
+"on the road",
+"on the slope",
+"on the field",
+"in the games",
+"in the ring"];
+
 class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      windex: 0,
+    }
+  ;}
+
+  componentDidMount () {
+    this.textinterval = setInterval(() => {
+      var maxindex = words.length - 1;
+      const currenttextindex = this.state.windex + 1 > maxindex ? 0 : this.state.windex + 1;
+      const nexttextindex = this.state.windex === maxindex ? 0 : this.state.windex + 2;
+      this.setState({windex: this.state.windex + 1, currenttext: words[currenttextindex], nexttext: words[nexttextindex]})
+      
+    }, 1000 )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.updateinterval);
+  }
+
+  com
+
   render() {
     return (
       <div className={styles.section}>
@@ -17,20 +52,8 @@ class Landing extends React.Component {
             Win in the weight room<br />
             <div className={styles.rolotext}>
               <div>
-                <p>Win</p>
-                <ul>
-                  <li>on the field</li>
-                  <li>on the court</li>
-                  <li>in the rink</li>
-                  <li>on the pitch</li>
-                  <li>on the track</li>
-                  <li>in the pool</li>
-                  <li>on the road</li>
-                  <li>on the slope</li>
-                  <li>on the field</li>
-                  <li>in the games</li>
-                  <li>in the ring</li>
-                </ul>
+                <p ref={(node) => {this.currentnode = node;}}>{'Win ' + this.state.currenttext}</p>
+                <p ref={(node) => {this.nextnode = node;}}>{'Win ' + this.state.nexttext}</p>
               </div>
             </div>
           </h1>

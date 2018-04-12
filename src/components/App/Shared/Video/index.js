@@ -70,11 +70,13 @@ class Video extends React.Component {
     this.canvas.width = width;
     this.canvas.height = height;
 
+    if (window.innerWidth > 600) {
     this.updateinterval = setInterval(() => {
       this.selectframe();
       this.drawcanvas();
       this.update();
     }, 32);
+  }
 
     // initiate scroll listeners
     if (this.props.scrollable) {
