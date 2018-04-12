@@ -18,7 +18,7 @@ class IndividualForm extends React.Component {
 
   componentDidMount() {
     const script = document.createElement("script");
-    script.src = "http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+    script.src = "https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
     script.async = false;
     script.setAttribute("id", "mailchimp individual validate");
     document.body.appendChild(script);
