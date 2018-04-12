@@ -1,12 +1,12 @@
 import React from 'react';
-// import styles from './styles.css';
+import styles from './styles.scss';
 import Toggle from 'material-ui/Toggle';
 import TeamForm from './components/teamform';
 import IndividualForm from './components/individualform';
 
 // TODO: move this to a css file if possible
 // If it's possible to move it to a scss even better, but it seems unlikely
-const styles = {
+const toggleStyles = {
   block: {
     maxWidth: 250,
   },
@@ -51,17 +51,24 @@ class CTA extends React.Component {
 
   render() {
     return (
-      <div style={styles.block}>
-          <Toggle
-            label=""
-            toggled={!this.state.showingTeams}
-            onToggle={this.handleToggleChange.bind(this)}
-            thumbStyle={styles.thumbOff}
-            trackStyle={styles.trackOff}
-            thumbSwitchedStyle={styles.thumbSwitched}
-            trackSwitchedStyle={styles.trackSwitched}
-          />
-        {this._renderForm()}
+      <div className={styles.section} id="analytics">
+        <div className={styles.main}>
+          <h1>BE THE FIRST TO GET REP ONE</h1>
+          <h2>Coming later this year.</h2>
+
+          <div style={toggleStyles.block}>
+              <Toggle
+                label=""
+                toggled={!this.state.showingTeams}
+                onToggle={this.handleToggleChange.bind(this)}
+                thumbStyle={toggleStyles.thumbOff}
+                trackStyle={toggleStyles.trackOff}
+                thumbSwitchedStyle={toggleStyles.thumbSwitched}
+                trackSwitchedStyle={toggleStyles.trackSwitched}
+              />
+            {this._renderForm()}
+          </div>
+        </div>
       </div>
     );
   }
