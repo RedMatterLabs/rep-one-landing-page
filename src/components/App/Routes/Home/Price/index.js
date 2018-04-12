@@ -8,9 +8,7 @@ class Price extends React.Component {
         <div className={styles.main}>
           <h1>Flexible pricing to fit your organization</h1>
           <div className={styles.container}>
-            <img src='https://assets.reponestrength.com/simple_court.svg' />
-            <img src='https://assets.reponestrength.com/court_seats.svg' />
-            <img src='https://assets.reponestrength.com/stadium.svg' />
+            <img src='https://assets.reponestrength.com/pricing.png' />
         </div>
         </div>
       </div>
