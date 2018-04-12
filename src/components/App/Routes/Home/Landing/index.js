@@ -19,6 +19,8 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       windex: 0,
+      currenttext: words[0],
+      nexttext: words[1]
     }
   ;}
 
