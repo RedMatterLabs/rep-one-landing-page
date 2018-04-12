@@ -19,13 +19,13 @@
 
 .container {
   display: flex;
-  width: 100%;
   margin-top: 80px;
   margin-bottom: 80px;
-  justify-content: space-between;
 }
 
-
 .container img {
-  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50vw;
+  max-height: 50vh;
 }
