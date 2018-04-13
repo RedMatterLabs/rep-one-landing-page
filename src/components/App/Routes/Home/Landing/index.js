@@ -19,6 +19,7 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       windex: 0,
+      windexnext: 1,
       winiter: 0,
       transitionstate: 0,
       currenttext: words[0],
@@ -46,12 +47,12 @@ class Landing extends React.Component {
     const maxindex = words.length - 1;
     switch(this.state.animationiter) {
       case 1: 
-        const nexttextindex = this.state.windex + 1 === maxindex ? 0 : this.state.windex + 1;
-        this.setState({nexttext: words[nexttextindex]});
+        const nextindex = this.state.windexnext  === maxindex ? 0 : this.state.windexnext + 1;
+        this.setState({nexttext: words[nextindex], windexnext: nextindex});
         break;
       case 2: 
-        const currenttextindex = this.state.windex === maxindex ? 0 : this.state.windex + 1;
-        this.setState({windex: currenttextindex, currenttext: words[currenttextindex]});
+        const index = this.state.windex === maxindex ? 0 : this.state.windex + 1;
+        this.setState({windex: index, currenttext: words[index]});
         break;
       default: break;
     }
