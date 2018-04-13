@@ -29,7 +29,7 @@ class Analytics extends React.Component {
                   <h2>Coaching Portal</h2>
                   <p>
                     Full-roster capabilities and athlete performance monitoring in real-time using
-                    our unique metrics
+                    our unique metrics.
                   </p>
                 </div>
               </div>
