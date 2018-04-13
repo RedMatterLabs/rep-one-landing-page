@@ -2,7 +2,7 @@
 @import "src/shared-styles/styles";
 .section {
   background-color: $greylight;
-  height: 70vh;
+  height: 100vh;
 }
 
 .section h1 {
@@ -28,6 +28,10 @@
 
 .main {
   max-width: none;
+}
+
+.main > div {
+  max-width: 100% !important;
 }
 
 .switch {
@@ -80,3 +84,17 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border: 1px solid $greymedium;
+  background-color: $greylight;
+  font-family: helvetica;
+  font-weight: 100;
+  border-radius: 2px;
+}
+input:focus 		{ outline:none; }

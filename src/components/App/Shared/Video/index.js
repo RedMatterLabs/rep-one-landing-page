@@ -67,22 +67,24 @@ class Video extends React.Component {
     // draw thumbnail
     const width = window.innerWidth;
     const height = window.innerWidth * 0.5625;
-    this.canvas.width = width;
-    this.canvas.height = height;
+    if (this.canvas) {
+      this.canvas.width = width;
+      this.canvas.height = height;
 
-    if (window.innerWidth > 600) {
-    this.updateinterval = setInterval(() => {
-      this.selectframe();
-      this.drawcanvas();
-      this.update();
-    }, 32);
-  }
+      if (window.innerWidth > 600) {
+      this.updateinterval = setInterval(() => {
+        this.selectframe();
+        this.drawcanvas();
+        this.update();
+        }, 32);
+      }
 
-    // initiate scroll listeners
-    if (this.props.scrollable) {
-      this.addScrollListener();
-      this.selectframe();
-      this.drawcanvas();
+      // initiate scroll listeners
+      if (this.props.scrollable) {
+        this.addScrollListener();
+        this.selectframe();
+        this.drawcanvas();
+      }
     }
   }
 
@@ -123,25 +125,21 @@ class Video extends React.Component {
   }
 
   selectframe() {
-    if (!this.state.image) {
-      this.setState({ image: this.images[0] });
-    } else if (this.canvasisinview()) {
-      const rect = this.container.getBoundingClientRect();
-      const location = rect.top < 0 ? Math.abs(rect.top) : 0;
-      const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
-      let image = Math.round(location / mod);
+    const rect = this.container.getBoundingClientRect();
+    const location = rect.top < 0 ? Math.abs(rect.top) : 0;
+    const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
+    let image = Math.round(location / mod);
 
-      image = image > this.images.length - 1 ? this.images.length - 1 : image;
-      image = image < 0 ? 0 : image;
-      const remaining = this.state.duration - image;
+    image = image > this.images.length - 1 ? this.images.length - 1 : image;
+    image = image < 0 ? 0 : image;
+    const remaining = this.state.duration - image;
 
-      this.setState({
-        image: this.images[image],
-        timeremaing: remaining,
-        location,
-        yoffset: window.pageYOffset,
-      });
-    }
+    this.setState({
+      image: this.images[image],
+      timeremaing: remaining,
+      location,
+      yoffset: window.pageYOffset,
+    });
   }
 
   drawcanvas() {
@@ -152,6 +150,7 @@ class Video extends React.Component {
 
   render() {
     const canvasposition = this.canvasposition();
+    if (window.innerWidth > 600) {
     return (
       <div
         ref={node => {
@@ -170,6 +169,18 @@ class Video extends React.Component {
         />
       </div>
     );
+  } else {
+    return (
+      <div
+      ref={node => {
+        this.container = node;
+      }}
+      className={styles.videocontainer}
+    >
+      <img src='https://assets.reponestrength.com/repone_large0059.jpg' />
+    </div>
+    )
+  }
   }
 }
 

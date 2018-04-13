@@ -48,7 +48,6 @@
 
 .subcontainer h2 {
   padding: 0em 1em;
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -96,6 +95,34 @@
 .textcontainer > div {
   display: inline;
 }
+
+@media (min-width: 750px) and (max-width: 900px) {
+  .textcontainer {
+    height: 10em;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 750px) {
+  .textcontainer {
+    height: 13em;
+  }
+}
+
+
+@media (min-width: 650px) and (max-width: 700px) {
+  .textcontainer {
+    height: 14em;
+  }
+}
+
+
+
+@media (min-width: 600px) and (max-width: 650px) {
+  .textcontainer {
+    height: 15em;
+  }
+}
+
 
 @media (max-width: 600px) {
   .main {

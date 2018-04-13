@@ -32,7 +32,7 @@ class Teams extends React.Component {
   componentDidMount () {
     this.animateinterval = setInterval(() => {
         this.animate();
-    }, 1000 );
+    }, 2000 );
   }
 
   componentWillUnmount() {
@@ -95,10 +95,10 @@ class Teams extends React.Component {
 
           <div className={styles.teamlogocontainer}>
               <div className={styles.logocontainer}>
-
                 <img ref={(node) => {this.currentnode = node}} className={styles.middle} src={this.state.currenttext} alt='logo'/>
+              </div>
+              <div className={styles.logocontainer}>
                 <img ref={(node) => {this.nextnode = node}} className={styles.below} src={this.state.nexttext} alt='logo'/>
-
               </div>
           </div>
         </div>

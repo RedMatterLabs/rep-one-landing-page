@@ -31,3 +31,12 @@
 .sticky {
   position: sticky;
 }
+
+@media (max-width:600px) {
+
+  .videocontainer img {
+    margin-left: -50vw;
+    width: 200vw;
+    height: 112vw;
+  }
+}

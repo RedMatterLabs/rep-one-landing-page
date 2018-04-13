@@ -1,0 +1,54 @@
+.form {
+    max-width: 1024px;
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+    letter-spacing: .1em;
+    display: flex;
+}
+
+.form * {
+    display: inline-block;
+    float: left;
+}
+
+
+.form .floatleft {
+    float: left;
+}
+
+.form .floatright {
+    float: right;
+}
+
+.form input {
+    margin-bottom: 20px;
+}
+
+.margin20 {
+    margin:15px 5px;
+}
+
+.form label {
+    float: right;
+}
+
+.mcfieldgroup {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+.size1of2 {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.form .phonepart{
+    width: 31% !important;
+    float: left;
+}
+
+.width100 {
+    width: 100%;
+}
