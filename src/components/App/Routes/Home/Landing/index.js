@@ -19,26 +19,71 @@ class Landing extends React.Component {
     super(props);
     this.state = {
       windex: 0,
+      winiter: 0,
+      transitionstate: 0,
       currenttext: words[0],
-      nexttext: words[1]
+      nexttext: words[1],
+      animationiter: 0
     }
   ;}
 
   componentDidMount () {
-    this.textinterval = setInterval(() => {
-      var maxindex = words.length - 1;
-      const currenttextindex = this.state.windex + 1 > maxindex ? 0 : this.state.windex + 1;
-      const nexttextindex = this.state.windex === maxindex ? 0 : this.state.windex + 2;
-      this.setState({windex: this.state.windex + 1, currenttext: words[currenttextindex], nexttext: words[nexttextindex]})
-      
-    }, 1000 )
+    this.animateinterval = setInterval(() => {
+        this.animate();
+    }, 1000 );
   }
 
   componentWillUnmount() {
-    clearInterval(this.updateinterval);
+    clearInterval(this.animateinterval);
   }
 
-  com
+  animate () {
+    this.updatewords()
+    this.updatetextposition()
+  }
+
+  updatewords() {
+    const maxindex = words.length - 1;
+    switch(this.state.animationiter) {
+      case 1: 
+        const nexttextindex = this.state.windex + 1 === maxindex ? 0 : this.state.windex + 1;
+        this.setState({nexttext: words[nexttextindex]});
+        break;
+      case 2: 
+        const currenttextindex = this.state.windex === maxindex ? 0 : this.state.windex + 1;
+        this.setState({windex: currenttextindex, currenttext: words[currenttextindex]});
+        break;
+      default: break;
+    }
+ 
+  }
+
+  updatetextposition () {
+    switch(this.state.animationiter) {
+      case 0:
+        this.currentnode.className = styles.middle;
+        this.nextnode.className = styles.below;
+        this.setState({animationiter: 1});
+        break; 
+      case 1:
+        this.currentnode.className = styles.above;
+        this.nextnode.className = styles.middle;
+        this.setState({animationiter: 2});
+        break;
+      case 2:
+        this.currentnode.className = styles.below;
+        this.nextnode.className = styles.middle;
+        this.setState({animationiter: 3});
+        break;
+      case 3:
+        this.currentnode.className = styles.middle;
+        this.nextnode.className = styles.above;
+        this.setState({animationiter: 0});
+        break;
+      default:
+        break;
+    }
+  }
 
   render() {
     return (
@@ -54,8 +99,8 @@ class Landing extends React.Component {
             Win in the weight room<br />
             <div className={styles.rolotext}>
               <div>
-                <p ref={(node) => {this.currentnode = node;}}>{'Win ' + this.state.currenttext}</p>
-                <p ref={(node) => {this.nextnode = node;}}>{'Win ' + this.state.nexttext}</p>
+                <p ref={(node) => {this.currentnode = node}} className={`${styles.middle} `}>{'Win ' + this.state.currenttext}</p>
+                <p ref={(node) => {this.nextnode = node}} className={`${styles.below} `}>{'Win ' + this.state.nexttext}</p>
               </div>
             </div>
           </h1>
