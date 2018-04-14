@@ -52,8 +52,9 @@ a:hover {
 
 .socialIcons li {
   vertical-align: top;
-  display: inline;
+  display: inline-block;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 .socialIcons a {
   color: $greylight;

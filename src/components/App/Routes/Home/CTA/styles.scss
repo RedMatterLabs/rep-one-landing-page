@@ -71,6 +71,40 @@
   border-radius: 50%;
 }
 
+.center {
+  width: 50px;
+  height: 10px;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: .2em;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.heading {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 40px auto;
+}
+
+.heading h2 {
+  margin-bottom: 80px;
+}
+
+.center:before {
+  content: "for teams";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.center:after {
+  content: "for individuals";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
 input:checked + .slider {
   background-color: #2196f3;
 }

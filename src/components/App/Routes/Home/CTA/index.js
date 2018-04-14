@@ -53,11 +53,10 @@ class CTA extends React.Component {
     return (
       <div className={styles.section} id="analytics">
         <div className={styles.main}>
+        <div className={styles.heading}>
           <h1>BE THE FIRST TO GET REP ONE</h1>
           <h2>Coming later this year.</h2>
-
-          <div style={toggleStyles.block}>
-              <Toggle
+          <div className={styles.center}><Toggle
                 label=""
                 toggled={!this.state.showingTeams}
                 onToggle={this.handleToggleChange.bind(this)}
@@ -65,7 +64,10 @@ class CTA extends React.Component {
                 trackStyle={toggleStyles.trackOff}
                 thumbSwitchedStyle={toggleStyles.thumbSwitched}
                 trackSwitchedStyle={toggleStyles.trackSwitched}
-              />
+              /></div>
+          </div>
+
+          <div style={toggleStyles.block}>
             {this._renderForm()}
           </div>
         </div>
