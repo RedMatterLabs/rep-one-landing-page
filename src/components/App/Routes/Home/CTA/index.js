@@ -52,7 +52,7 @@ class CTA extends React.Component {
 
   render() {
     return (
-      <div className={styles.section} id="analytics">
+      <div className={styles.section} id="cta">
         <div className={styles.main}>
         <div className={styles.heading}>
           <h1>BE THE FIRST TO GET REP ONE</h1>
