@@ -2,8 +2,21 @@
 @import "src/shared-styles/styles";
 
 .section {
-  background-color: $red;
+  background-color: $white;
   align-items: center;
+  display: block;
+}
+
+.subsection {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.main {
+  background-color: $red;
+  height: 100vh;
+  width: 100vw;
 }
 
 .main h1 {
@@ -21,6 +34,7 @@
 }
 .diagramcontainer {
   width: 100%;
+  max-height: 500px;
   position: relative;
   margin: 0 auto;
   margin-bottom: 10em;
@@ -28,7 +42,41 @@
 
 .diagramcontainer > img {
   margin: 100px auto;
-  max-width: 100%;
+  max-height: 60vh;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  z-index: 100;
+}
+
+.headertop {
+  position: absolute;
+  top: 0;
+}
+
+.headerbottom {
+  position: absolute;
+  bottom: -100px;
+}
+
+.canvas {
+  will-change: transform, height;
+
+}
+
+.relativebottom {
+  left:0;
+  position: absolute;
+  bottom: 0px;
+}
+
+.relativetop {
+  left:0;
+  position: absolute;
+  top: 0px;
 }
 
 .video {
@@ -44,6 +92,7 @@
 
 .diagram {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .main h2 {

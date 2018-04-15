@@ -4,7 +4,6 @@ import Landing from 'components/App/Routes/Home/Landing/index.js';
 import Analytics from 'components/App/Routes/Home/Analytics/index.js';
 import Platform from 'components/App/Routes/Home/Platform/index.js';
 import Insights from 'components/App/Routes/Home/Insights/index.js';
-import Exploded from 'components/App/Routes/Home/Exploded/index.js';
 import Teams from 'components/App/Routes/Home/Teams/index.js';
 import CTA from 'components/App/Routes/Home/CTA/index.js';
 import Price from 'components/App/Routes/Home/Price/index.js';
@@ -18,7 +17,6 @@ function Home() {
       <Analytics />
       <Platform />
       <Insights />
-      <Exploded />
       <Teams />
       <Price />
       <CTA />

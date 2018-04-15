@@ -119,7 +119,15 @@
   opacity: 0;
 }
 
+.headertop {
+  position: absolute;
+  top:0;
+}
 
+.headerbottom {
+  position: absolute;
+  bottom: 0;
+}
 
 @media (max-width: 720px) {
   .heroimg{

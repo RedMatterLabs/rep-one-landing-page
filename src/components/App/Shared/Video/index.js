@@ -12,47 +12,16 @@ class Video extends React.Component {
       timeremaing: props.duration - 1,
       location: 0,
       scrollable: props.scrollable,
-      scrolled: 0,
-      direction: 0,
       top: 0,
       width: 0,
       height: 0,
       xoffset: 0,
-      yoffset: 0,
       containerheight: 0,
       canvaswidth: 0,
       canvasheight: 0
     };
 
-    this.yoffset = 0;
     this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-  }
-
-  scrollHandler(e) {
-    e = e || window.event;
-    const newscrollposition = this.state.scrolled + e.deltaY;
-    const direction = e.deltaY;
-    this.setState({ scrolled: newscrollposition, direction });
-  }
-
-  keyHandler(e) {
-    if (this.keys[e.keyCode]) {
-      this.scrollHandler(e);
-    }
-
-    return true;
-  }
-
-  addScrollListener() {
-    if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', this.scrollHandler.bind(this), false);
-    }
-
-    window.onwheel = this.scrollHandler.bind(this); // modern standard
-    window.onmousewheel = this.scrollHandler.bind(this);
-    document.onmousewheel = this.scrollHandler.bind(this); // older browsers, IE
-    window.ontouchmove = this.scrollHandler.bind(this); // mobile
-    document.onkeydown = this.keyHandler.bind(this);
   }
 
   componentDidMount() {
@@ -83,7 +52,6 @@ class Video extends React.Component {
 
       // initiate scroll listeners
       if (this.props.scrollable) {
-        this.addScrollListener();
         this.update();
         this.selectframe();
         this.drawcanvas();
@@ -102,12 +70,7 @@ class Video extends React.Component {
     const canvasheight = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
 
     const width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
-    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
-    
-    let yoffset = rect.top < 0 ? Math.abs(rect.top) : 0;
-    yoffset = yoffset + canvasheight > rect.height  ? rect.height - canvasheight : yoffset;
-    this.yoffset = yoffset;
-    
+    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;    
     const xoffset = (width - window.innerWidth) * -0.5;
     
     this.setState({width, height, xoffset, containerheight: height * 2 + 'px', canvaswidth, canvasheight});
