@@ -91,12 +91,12 @@ class IndividualForm extends React.Component {
               <label htmlFor="mce-OTHER">Anything else?</label>
               <input type="text" value={this.state.other} name="OTHER" className="" id="mce-OTHER" placeholder="anything else?" onChange={this.handleOtherChange.bind(this)} />
             </div>
+            <div className={styles.mcfieldgroup}>
+              <div className={`indicates-required`}><label><span className={`asterisk`}>*</span> indicates required field</label></div>
+            </div>
             <div id="mce-responses" className="clear">
               <div className="response" id="mce-error-response" style={{display:'none'}}></div>
               <div className="response" id="mce-success-response" style={{display:'none'}}></div>
-            </div>
-            <div className={styles.mcfieldgroup}>
-            <div className={`indicates-required`}><label><span className={`asterisk`}>*</span> indicates required field</label></div>
             </div>
             <div className={styles.mcfieldgroup}>
             <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
