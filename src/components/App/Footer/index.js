@@ -14,7 +14,7 @@ class Footer extends React.Component {
               <li>United States</li>
             </ul>
             <br />
-            <a href="mailto:sales@reponestrength.com">sales@reponestrength.com</a>
+            <a href="mailto:sales@getrepone.com">sales@getrepone.com</a>
           </div>
           <div className={styles.footerSocialIcons}>
             <ul className={styles.socialIcons}>
