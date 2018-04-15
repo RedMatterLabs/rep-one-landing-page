@@ -12,16 +12,19 @@ class Video extends React.Component {
       timeremaing: props.duration - 1,
       location: 0,
       scrollable: props.scrollable,
-      yoffset: 0,
       scrolled: 0,
       direction: 0,
       top: 0,
       width: 0,
       height: 0,
       xoffset: 0,
+      yoffset: 0,
       containerheight: 0,
+      canvaswidth: 0,
+      canvasheight: 0
     };
 
+    this.yoffset = 0;
     this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
   }
 
@@ -68,19 +71,14 @@ class Video extends React.Component {
 
     // draw thumbnail
     
-    const width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
-    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
-    const xoffset = (width - window.innerWidth) * -0.5;
     if (this.canvas) {
-      this.canvas.width = width;
-      this.canvas.height = height;
 
       if (window.innerWidth > 600) {
       this.updateinterval = setInterval(() => {
         this.update();
         this.selectframe();
         this.drawcanvas();
-        }, 32);
+        }, 16);
       }
 
       // initiate scroll listeners
@@ -98,10 +96,21 @@ class Video extends React.Component {
   }
 
   update() {
+    const rect = this.container.getBoundingClientRect();
+
+    const canvaswidth = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
+    const canvasheight = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+
     const width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
     const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+    
+    let yoffset = rect.top < 0 ? Math.abs(rect.top) : 0;
+    yoffset = yoffset + canvasheight > rect.height  ? rect.height - canvasheight : yoffset;
+    this.yoffset = yoffset;
+    
     const xoffset = (width - window.innerWidth) * -0.5;
-    this.setState({width, height, xoffset, containerheight: height * 2 + 'px'});
+    
+    this.setState({width, height, xoffset, containerheight: height * 2 + 'px', canvaswidth, canvasheight});
   }
 
   canvasisinview() {
@@ -132,7 +141,7 @@ class Video extends React.Component {
   selectframe() {
     const rect = this.container.getBoundingClientRect();
     const location = rect.top < 0 ? Math.abs(rect.top) : 0;
-    const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
+    const mod = (this.container.offsetHeight - this.state.canvasheight) / this.images.length;
     let image = Math.round(location / mod);
 
     image = image > this.images.length - 1 ? this.images.length - 1 : image;
@@ -143,12 +152,12 @@ class Video extends React.Component {
       image: this.images[image],
       timeremaing: remaining,
       location,
-      yoffset: window.pageYOffset,
     });
   }
 
   drawcanvas() {
     if (this.context && this.state.image) {
+      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.context.drawImage(this.state.image, this.state.xoffset, 0, this.state.width, this.state.height);
     }
   }
@@ -164,8 +173,10 @@ class Video extends React.Component {
         className={styles.videocontainer}
         style={{height:this.state.containerheight}}
       >
-        <canvas
+        <canvas 
           className={this.canvasisinview() ? styles.fixed : canvasposition}
+          height={this.state.canvasheight}
+          width={window.innerWidth}
           ref={node => {
             if (node) {
               this.canvas = node;

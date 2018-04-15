@@ -16,6 +16,11 @@
   top: 0px;
 }
 
+.canvas {
+  will-change: transform, height;
+
+}
+
 .relativebottom {
   left:0;
   position: absolute;
