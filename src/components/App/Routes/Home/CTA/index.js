@@ -37,7 +37,8 @@ class CTA extends React.Component {
     };
   }
 
-  handleToggleChange() {
+  handleToggleChange(e) {
+    console.log(e)
     this.setState({showingTeams: !this.state.showingTeams});
   }
 
@@ -56,15 +57,19 @@ class CTA extends React.Component {
         <div className={styles.heading}>
           <h1>BE THE FIRST TO GET REP ONE</h1>
           <h2>Coming later this year.</h2>
-          <div className={styles.center}><Toggle
-                label=""
-                toggled={!this.state.showingTeams}
-                onToggle={this.handleToggleChange.bind(this)}
-                thumbStyle={toggleStyles.thumbOff}
-                trackStyle={toggleStyles.trackOff}
-                thumbSwitchedStyle={toggleStyles.thumbSwitched}
-                trackSwitchedStyle={toggleStyles.trackSwitched}
-              /></div>
+          <div className={styles.center}>
+          
+          
+          
+          <div className={styles.switch}>
+            <input checked={this.state.showingTeams} onChange={this.handleToggleChange.bind(this)} type="radio" className={styles.switchinput} name="view" value="week" id="week"></input>
+            <label className={`${styles.switchlabel} ${styles.switchlabeloff}`}>Teams</label>
+            <input checked={!this.state.showingTeams} onChange={this.handleToggleChange.bind(this)} type="radio" className={styles.switchinput} name="view" value="month" id="month"></input>
+            <label className={`${styles.switchlabel} ${styles.switchlabelon}`}>Individuals</label>
+            <span className={styles.switchselection}></span>
+          </div>
+
+            </div>
           </div>
 
           <div style={toggleStyles.block}>

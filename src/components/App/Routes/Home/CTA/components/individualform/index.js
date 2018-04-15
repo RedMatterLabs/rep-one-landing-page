@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.scss';
+import styles from '../../styles.scss';
 
 class IndividualForm extends React.Component {
 
@@ -68,37 +68,40 @@ class IndividualForm extends React.Component {
 
   render() {
     return (
-      <div id="mc_embed_signup">
+      <div id="mc_embed_signup" className={styles.form}>
         <form action="https://squatsandscience.us12.list-manage.com/subscribe/post?u=a3cf758809f155c2dd9a85297&amp;id=c8b6623f1e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
           <div id="mc_embed_signup_scroll">
-            <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
-            <div className="mc-field-group">
-              <label htmlFor="mce-NAME"><span className="asterisk">*</span></label>
+            <div className={styles.mcfieldgroup}>
+              <label htmlFor="mce-NAME">Name<span className="asterisk">*</span></label>
               <input type="text" value={this.state.name} name="NAME" className="required" id="mce-NAME" placeholder="name" onChange={this.handleNameChange.bind(this)} />
             </div>
-            <div className="mc-field-group">
-              <label htmlFor="mce-EMAIL"><span className="asterisk">*</span></label>
+            <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
+              <label htmlFor="mce-EMAIL">Email<span className="asterisk">*</span></label>
               <input type="email" value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL" placeholder="email" onChange={this.handleEmailChange.bind(this)} />
             </div>
-            <div className="mc-field-group size1of2">
-              <label htmlFor="mce-PHONE"></label>
-              <div className="phonefield phonefield-us">
-                (<span className="phonearea"><input className="phonepart " pattern="[0-9]*" id="mce-PHONE-area" name="PHONE[area]" maxLength="3" size="3" value={this.state.phone1} type="text" onChange={this.handlePhoneChange1.bind(this)} /></span>)
-                <span className="phonedetail1"><input className="phonepart " pattern="[0-9]*" id="mce-PHONE-detail1" name="PHONE[detail1]" maxLength="3" size="3" value={this.state.phone2} type="text" onChange={this.handlePhoneChange2.bind(this)} /></span> - 
-                <span className="phonedetail2"><input className="phonepart " pattern="[0-9]*" id="mce-PHONE-detail2" name="PHONE[detail2]" maxLength="4" size="4" value={this.state.phone3} type="text" onChange={this.handlePhoneChange3.bind(this)} /></span>
-                <span className="small-meta nowrap">(###) ###-####</span>
+            <div className={`${styles.mcfieldgroup} ${styles.size1of2} ${styles.phone}`}>
+              <label className={styles.inputlabel} htmlFor="mce-PHONE">Phone</label>
+              <div className={`phonefield phonefield-us ${styles.width100}`}>
+                <span className={`phonearea ${styles.size1of3}`}><input placeholder="123" className={`${styles.floatleft} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-area" name="PHONE[area]" maxLength="3" size="3" value={this.state.phone1} type="text" onChange={this.handlePhoneChange1.bind(this)} /></span>
+                <span  className={`phonedetail1 ${styles.size1of3}`}><input placeholder="456" className={`phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail1" name="PHONE[detail1]" maxLength="3" size="3" value={this.state.phone2} type="text" onChange={this.handlePhoneChange2.bind(this)} /></span>
+                <span className={`phonedetail2 ${styles.size1of3}`}><input placeholder="7890" className={`${styles.floatright} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail2" name="PHONE[detail2]" maxLength="4" size="4" value={this.state.phone3} type="text" onChange={this.handlePhoneChange3.bind(this)} /></span>
               </div>
             </div>
-            <div className="mc-field-group">
-              <label htmlFor="mce-OTHER"></label>
+            <div className={styles.mcfieldgroup}>
+              <label htmlFor="mce-OTHER">Anything else?</label>
               <input type="text" value={this.state.other} name="OTHER" className="" id="mce-OTHER" placeholder="anything else?" onChange={this.handleOtherChange.bind(this)} />
             </div>
             <div id="mce-responses" className="clear">
               <div className="response" id="mce-error-response" style={{display:'none'}}></div>
               <div className="response" id="mce-success-response" style={{display:'none'}}></div>
             </div>
+            <div className={styles.mcfieldgroup}>
+            <div className={`indicates-required`}><label><span className={`asterisk`}>*</span> indicates required field</label></div>
+            </div>
+            <div className={styles.mcfieldgroup}>
             <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
-              <div className="clear"><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" className="button" /></div>
+              <div className={`clear ${styles.centered}`}><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" className={styles.button} /></div>
+            </div>
             </div>
           </form>
         </div>

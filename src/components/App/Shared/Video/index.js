@@ -18,6 +18,8 @@ class Video extends React.Component {
       top: 0,
       width: 0,
       height: 0,
+      xoffset: 0,
+      containerheight: 0,
     };
 
     this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -65,23 +67,26 @@ class Video extends React.Component {
     }
 
     // draw thumbnail
-    const width = window.innerWidth;
-    const height = window.innerWidth * 0.5625;
+    
+    const width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
+    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+    const xoffset = (width - window.innerWidth) * -0.5;
     if (this.canvas) {
       this.canvas.width = width;
       this.canvas.height = height;
 
       if (window.innerWidth > 600) {
       this.updateinterval = setInterval(() => {
+        this.update();
         this.selectframe();
         this.drawcanvas();
-        this.update();
         }, 32);
       }
 
       // initiate scroll listeners
       if (this.props.scrollable) {
         this.addScrollListener();
+        this.update();
         this.selectframe();
         this.drawcanvas();
       }
@@ -93,10 +98,10 @@ class Video extends React.Component {
   }
 
   update() {
-    const width = window.innerWidth;
-    const height = 0.5625 * width;
-
-    this.setState({width, height});
+    const width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
+    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+    const xoffset = (width - window.innerWidth) * -0.5;
+    this.setState({width, height, xoffset, containerheight: height * 2 + 'px'});
   }
 
   canvasisinview() {
@@ -144,7 +149,7 @@ class Video extends React.Component {
 
   drawcanvas() {
     if (this.context && this.state.image) {
-      this.context.drawImage(this.state.image, 0, 0, this.state.width, this.state.height);
+      this.context.drawImage(this.state.image, this.state.xoffset, 0, this.state.width, this.state.height);
     }
   }
 
@@ -157,6 +162,7 @@ class Video extends React.Component {
           this.container = node;
         }}
         className={styles.videocontainer}
+        style={{height:this.state.containerheight}}
       >
         <canvas
           className={this.canvasisinview() ? styles.fixed : canvasposition}

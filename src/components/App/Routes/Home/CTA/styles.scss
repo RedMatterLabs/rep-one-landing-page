@@ -2,28 +2,30 @@
 @import "src/shared-styles/styles";
 .section {
   background-color: $greylight;
-  height: 100vh;
+  display: block;
 }
 
 .section h1 {
   display: block;
+  margin-top: 50px;
+  color: #A8ACB1;
+  font-size: 1.2em;
 }
 
-.button {
+.form input.button {
   font-weight: 100;
-  color: $greydark;
-  border: 2px solid $greydark;
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   cursor: pointer;
   transition: all .3s;
+  margin-bottom: 50px;
 }
 
 .button:hover {
   color: $white;
-  border: 1px solid $greydark;
   background-color:$greydark;
+  border-color: $greydark;
 }
 
 .main {
@@ -42,7 +44,8 @@
 }
 
 .switch input {
-  display: none;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .slider {
@@ -72,8 +75,8 @@
 }
 
 .center {
-  width: 50px;
-  height: 10px;
+  width: 300px;
+  height: 28px;
   display: block;
   margin: 0 auto;
   letter-spacing: .2em;
@@ -89,20 +92,10 @@
 }
 
 .heading h2 {
-  margin-bottom: 80px;
-}
-
-.center:before {
-  content: "for teams";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-}
-.center:after {
-  content: "for individuals";
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 2.4em;
+  text-transform: none;
 }
 
 input:checked + .slider {
@@ -132,3 +125,214 @@ input 				{
   border-radius: 2px;
 }
 input:focus 		{ outline:none; }
+
+
+.form {
+  max-width: 1024px;
+  height: 700px;
+  font-size: 18px;
+  padding-left: 60px;
+  padding-right: 60px;
+  letter-spacing: .1em;
+  display: block;
+  margin: 0 auto 50px auto;
+}
+
+.form * {
+  display: inline-block;
+  float: left;
+}
+
+
+.form .floatleft {
+  float: left;
+}
+
+.form .floatright {
+  float: right;
+}
+
+.form input {
+  margin-bottom: 20px;
+}
+
+.margin20 {
+  margin:15px 5px;
+}
+
+.form label {
+  float: left;
+  letter-spacing: .2em;
+  font-weight: 100;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 2.2em;
+}
+
+.form label span {
+  color: $red;
+}
+
+.mcfieldgroup {
+  display: block;
+  width: calc(100% - 20px);
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.size1of2 {
+  width: calc(50% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.size1of3 {
+  width: calc(33.33% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form .phonepart{
+  width: 31% !important;
+  float: left;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.centered {
+  position: relative;
+  float: unset;
+  margin: 0 auto;
+  display: block;
+  width: calc(100% - 100px);
+  height: 36px;
+  height: fit-content;
+  margin: 50px;
+}
+
+
+$labelWidth: 150px;
+
+
+.container {
+  margin: 0 auto;
+  padding: 90px 0;
+  width: 400px;
+}
+
+.switch {
+  position: relative;
+  margin: 20px auto;
+  height: 26px;
+  width: $labelWidth * 2 + 4px;
+  background: $greymedium;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.switchlabel {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  float: left;
+  margin-left: -1 * ($labelWidth + 2px);
+  width: $labelWidth;
+  line-height: 30px;
+  font-size: 11px;
+  color: rgba($greylight, .8);
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(black, .45);
+  cursor: pointer;
+
+  &:active { font-weight: bold; }
+}
+
+.switchlabeloff { padding-left: 2px; }
+.switchlabelon { padding-right: 2px; }
+
+.switchinput {
+
+  width: $labelWidth + 2px;
+  float: left;
+  margin: 0;
+  height: 100%;
+
+  &:checked + .switchlabel {
+    font-weight: bold;
+    color: $greylight;
+    text-shadow: 0 1px rgba(white, .25);
+  }
+
+  &:checked + .switchlabelon ~ .switchselection {
+    left: $labelWidth + 2px;
+  }
+}
+
+.switchselection {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: $labelWidth;
+  height: 22px;
+  background: #65bd63;
+  background-image: linear-gradient(to bottom, $greydark, $greydark);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: left 0.15s ease-out;
+  border-radius: 3px;
+  .switchblue & {
+    background: #3aa2d0;
+  }
+
+  .switchyellow & {
+    background: #c4bb61;
+  }
+}
+
+
+
+@media (max-width: 720px) {
+
+.form {
+  margin-left: -10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  .height {
+    height: 700px;
+  }
+  
+  .size1of2 {
+    width: calc(100% - 20px);
+  }
+  
+  .size1of3 {
+    width: calc(100% - 20px);
+  }
+
+  .phone  .size1of3 {
+    width: calc(33.33% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .section h1 {
+    text-transform:uppercase;
+    padding: 0px 20px;
+  }
+
+  .section h2 {
+    font-weight: 100;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    line-height: 1.375em;
+  }
+}
