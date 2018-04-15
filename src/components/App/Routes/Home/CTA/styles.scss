@@ -193,9 +193,20 @@ input:focus 		{ outline:none; }
   margin-right: 10px;
 }
 
+.phonenum {
+  width: calc(33.33% - 30px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .form .phonepart{
   width: 31% !important;
   float: left;
+}
+
+// @GREG IDK IF THIS IS THE RIGHT WAY TO DO THIS
+.phonelabel {
+  padding-top: 8px;
 }
 
 .width100 {
@@ -317,6 +328,12 @@ $labelWidth: 150px;
 
   .phone  .size1of3 {
     width: calc(33.33% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .phone  .phonenum {
+    width: calc(33.33% - 30px);
     margin-left: 10px;
     margin-right: 10px;
   }
