@@ -73,23 +73,26 @@ class IndividualForm extends React.Component {
           <div id="mc_embed_signup_scroll">
             <div className={styles.mcfieldgroup}>
               <label htmlFor="mce-NAME">Name<span className="asterisk">*</span></label>
-              <input type="text" value={this.state.name} name="NAME" className="required" id="mce-NAME" placeholder="name" onChange={this.handleNameChange.bind(this)} />
+              <input type="text" value={this.state.name} name="NAME" className="required" id="mce-NAME" onChange={this.handleNameChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
               <label htmlFor="mce-EMAIL">Email<span className="asterisk">*</span></label>
-              <input type="email" value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL" placeholder="email" onChange={this.handleEmailChange.bind(this)} />
+              <input type="email" value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL" onChange={this.handleEmailChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of2} ${styles.phone}`}>
               <label className={styles.inputlabel} htmlFor="mce-PHONE">Phone</label>
               <div className={`phonefield phonefield-us ${styles.width100}`}>
-                <span className={`phonearea ${styles.size1of3}`}><input placeholder="123" className={`${styles.floatleft} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-area" name="PHONE[area]" maxLength="3" size="3" value={this.state.phone1} type="text" onChange={this.handlePhoneChange1.bind(this)} /></span>
-                <span  className={`phonedetail1 ${styles.size1of3}`}><input placeholder="456" className={`phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail1" name="PHONE[detail1]" maxLength="3" size="3" value={this.state.phone2} type="text" onChange={this.handlePhoneChange2.bind(this)} /></span>
-                <span className={`phonedetail2 ${styles.size1of3}`}><input placeholder="7890" className={`${styles.floatright} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail2" name="PHONE[detail2]" maxLength="4" size="4" value={this.state.phone3} type="text" onChange={this.handlePhoneChange3.bind(this)} /></span>
+                <label className={styles.phonelabel}>(</label>
+                <span className={`phonearea ${styles.phonenum}`}><input className={`${styles.floatleft} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-area" name="PHONE[area]" maxLength="3" size="3" value={this.state.phone1} type="text" onChange={this.handlePhoneChange1.bind(this)} /></span>
+                <label className={styles.phonelabel}>)</label>
+                <span  className={`phonedetail1 ${styles.phonenum}`}><input className={`phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail1" name="PHONE[detail1]" maxLength="3" size="3" value={this.state.phone2} type="text" onChange={this.handlePhoneChange2.bind(this)} /></span>
+                <label className={styles.phonelabel}>-</label>
+                <span className={`phonedetail2 ${styles.phonenum}`}><input className={`${styles.floatright} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail2" name="PHONE[detail2]" maxLength="4" size="4" value={this.state.phone3} type="text" onChange={this.handlePhoneChange3.bind(this)} /></span>
               </div>
             </div>
             <div className={styles.mcfieldgroup}>
               <label htmlFor="mce-OTHER">Anything else?</label>
-              <input type="text" value={this.state.other} name="OTHER" className="" id="mce-OTHER" placeholder="anything else?" onChange={this.handleOtherChange.bind(this)} />
+              <input type="text" value={this.state.other} name="OTHER" className="" id="mce-OTHER" onChange={this.handleOtherChange.bind(this)} />
             </div>
             <div className={styles.mcfieldgroup}>
               <div className={`indicates-required`}><label><span className={`asterisk`}>*</span> indicates required field</label></div>
