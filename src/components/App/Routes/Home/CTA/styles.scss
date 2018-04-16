@@ -369,10 +369,19 @@ input[class*="mce_inline_error"] {
     letter-spacing: 0.1em;
     line-height: 1.375em;
   }
+
+  .form input.button {
+    font-size: 1.0em;
+  }
+
 }
 
 @media (max-width: 350px) {
 
   @include styling($labelWidth: 130px);
+
+  .form input.button {
+    font-size: 0.8em;
+  }
 
 }
