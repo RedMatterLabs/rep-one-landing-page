@@ -180,8 +180,8 @@ input:focus 		{ outline:none; }
   margin-right: 10px;
 }
 
-.mce_inline_error input {
-  background-color: $red;
+input[class*="mce_inline_error"] {
+  background-color: #FFCCCC;
 }
 
 .size1of2 {
