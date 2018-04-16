@@ -2,6 +2,7 @@
 @import "src/shared-styles/styles";
 .section {
   background-color: $greylight;
+  display: block;
 }
 .main {
   max-width: 1024px;
@@ -98,7 +99,7 @@
 
 
 @media (max-width: 860px) {
-  .container{
+  .container {
     display: block;
   }
 
