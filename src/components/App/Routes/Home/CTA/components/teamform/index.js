@@ -92,7 +92,7 @@ class TeamForm extends React.Component {
   render() {
     return (
       <div className={styles.form} id="mc_embed_signup">
-        <form action="https://snsbarbell.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=9537b0d2f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+        <form action="https://reponestrength.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=9537b0d2f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
           <div id="mc_embed_signup_scroll">
             <div className={styles.mcfieldgroup}>
               <label htmlFor="mce-NAME">Name<span className={`${styles.floatright} asterisk`}>*</span></label>
