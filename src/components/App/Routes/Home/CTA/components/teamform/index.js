@@ -10,9 +10,7 @@ class TeamForm extends React.Component {
       name: '',
       job: '',
       email: '',
-      phone1: '',
-      phone2: '',
-      phone3: '',
+      phone: '',
       organization: '',
       teams: '',
       athletes: '',
@@ -59,16 +57,8 @@ class TeamForm extends React.Component {
     this.setState({email: event.target.value});
   }
 
-  handlePhoneChange1(event) {
-    this.setState({phone1: event.target.value});
-  }
-
-  handlePhoneChange2(event) {
-    this.setState({phone2: event.target.value});
-  }
-
-  handlePhoneChange3(event) {
-    this.setState({phone3: event.target.value});
+  handlePhoneChange(event) {
+    this.setState({phone: event.target.value});
   }
 
   handleOrganizationChange(event) {
@@ -94,7 +84,7 @@ class TeamForm extends React.Component {
   render() {
     return (
       <div className={styles.form} id="mc_embed_signup">
-        <form action="https://squatsandscience.us12.list-manage.com/subscribe/post?u=a3cf758809f155c2dd9a85297&amp;id=bc978fccc8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+        <form action="https://snsbarbell.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=9537b0d2f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
           <div id="mc_embed_signup_scroll">
             <div className={styles.mcfieldgroup}>
               <label htmlFor="mce-NAME">Name<span className={`${styles.floatright} asterisk`}>*</span></label>
@@ -106,15 +96,7 @@ class TeamForm extends React.Component {
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of2} ${styles.phone}`}>
               <label className={styles.inputlabel} htmlFor="mce-PHONE">Phone</label>
-
-              <div className={`phonefield phonefield-us ${styles.width100}`}>
-                <label className={styles.phonelabel}>(</label>
-                <span className={`phonearea ${styles.phonenum}`}><input className={`${styles.floatleft} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-area" name="PHONE[area]" maxLength="3" size="3" value={this.state.phone1} type="text" onChange={this.handlePhoneChange1.bind(this)} /></span>
-                <label className={styles.phonelabel}>)</label>
-                <span  className={`phonedetail1 ${styles.phonenum}`}><input className={`phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail1" name="PHONE[detail1]" maxLength="3" size="3" value={this.state.phone2} type="text" onChange={this.handlePhoneChange2.bind(this)} /></span>
-                <label className={styles.phonelabel}>-</label>
-                <span className={`phonedetail2 ${styles.phonenum}`}><input className={`${styles.floatright} phonepart ${styles.width100}`} pattern="[0-9]*" id="mce-PHONE-detail2" name="PHONE[detail2]" maxLength="4" size="4" value={this.state.phone3} type="text" onChange={this.handlePhoneChange3.bind(this)} /></span>
-              </div>
+              <input type="text" name="PHONE" className={styles.width100} value={this.state.phone} id="mce-PHONE" onChange={this.handlePhoneChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
               <label htmlFor="mce-ORGNAME">Organization<span className={`${styles.floatright} asterisk`}>*</span></label>
@@ -133,7 +115,7 @@ class TeamForm extends React.Component {
               <input type="number" name="NUMATHLETE" className="" value={this.state.athletes} id="mce-NUMATHLETE" onChange={this.handleAthletesChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of3}`}>
-              <label  className={styles.inputlabel} htmlFor="mce-NUMSTATION">Number of stations</label>
+              <label  className={styles.inputlabel} htmlFor="mce-NUMSTATION">Number of stations to outfit</label>
               <input type="number" name="NUMSTATION" className="" value={this.state.stations} id="mce-NUMSTATION" onChange={this.handleStationsChange.bind(this)} />
             </div>
             <div className={styles.mcfieldgroup}>
