@@ -319,11 +319,12 @@ input[class*="mce_inline_error"] {
 
   @include styling($labelWidth: 250px);
 
-.form {
-  margin-left: -10px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
+  .form {
+    margin-left: -10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
   .height {
     height: 700px;
   }
@@ -347,6 +348,16 @@ input[class*="mce_inline_error"] {
 
   @include styling($labelWidth: 150px);
 
+  .mcfieldgroup {
+    width: calc(100vw - 40px);
+  }
+
+  .form {
+    margin-left: -10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .section h1 {
     text-transform:uppercase;
     padding: 0px 20px;
@@ -358,4 +369,10 @@ input[class*="mce_inline_error"] {
     letter-spacing: 0.1em;
     line-height: 1.375em;
   }
+}
+
+@media (max-width: 350px) {
+
+  @include styling($labelWidth: 130px);
+
 }
