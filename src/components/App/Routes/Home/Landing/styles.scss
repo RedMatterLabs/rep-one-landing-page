@@ -144,7 +144,12 @@
     display: block;
   }
 
-
 }
 
+@media (max-width: 350px) {
 
+  .section .main h1 {
+    font-size: 1.8em;
+  }
+
+}
