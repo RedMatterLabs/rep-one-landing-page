@@ -180,6 +180,10 @@ input:focus 		{ outline:none; }
   margin-right: 10px;
 }
 
+.mce_inline_error input {
+  background-color: $red;
+}
+
 .size1of2 {
   width: calc(50% - 20px);
   margin-left: 10px;
