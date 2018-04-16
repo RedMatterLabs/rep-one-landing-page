@@ -107,15 +107,15 @@ class TeamForm extends React.Component {
               <input type="text" value={this.state.job} name="JOBTITLE" className="" id="mce-JOBTITLE" onChange={this.handleJobChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of3}`}>
-              <label className={styles.inputlabel} htmlFor="mce-NUMTEAMS">Number of teams</label>
+              <label className={styles.inputlabel} htmlFor="mce-NUMTEAMS"># teams</label>
               <input type="number" name="NUMTEAMS" className="" value={this.state.teams} id="mce-NUMTEAMS" onChange={this.handleTeamsChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of3}`}>
-              <label className={styles.inputlabel} htmlFor="mce-NUMATHLETE">Number of athletes</label>
+              <label className={styles.inputlabel} htmlFor="mce-NUMATHLETE"># athletes</label>
               <input type="number" name="NUMATHLETE" className="" value={this.state.athletes} id="mce-NUMATHLETE" onChange={this.handleAthletesChange.bind(this)} />
             </div>
             <div className={`${styles.mcfieldgroup} ${styles.size1of3}`}>
-              <label  className={styles.inputlabel} htmlFor="mce-NUMSTATION">Number of stations to outfit</label>
+              <label  className={styles.inputlabel} htmlFor="mce-NUMSTATION"># stations to outfit</label>
               <input type="number" name="NUMSTATION" className="" value={this.state.stations} id="mce-NUMSTATION" onChange={this.handleStationsChange.bind(this)} />
             </div>
             <div className={styles.mcfieldgroup}>
