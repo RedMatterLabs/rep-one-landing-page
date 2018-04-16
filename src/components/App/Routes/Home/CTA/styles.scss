@@ -28,6 +28,14 @@
   border-color: $greydark;
 }
 
+@media (hover: none) {
+  .button:hover {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
+  }
+}
+
 .main {
   max-width: none;
 }
