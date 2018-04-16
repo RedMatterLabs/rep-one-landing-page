@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
+import ReactGA from 'react-ga';
 
 class Header extends React.Component {
   constructor(props) {
@@ -21,6 +22,14 @@ class Header extends React.Component {
   componentDidMount() {
     window.onscroll = this.scrollFunction.bind(this);
   }
+
+  handleClick (e) {
+    ReactGA.event({
+      category: 'cta',
+      action: 'scroll to form'
+    });
+  }
+
   render() {
     return (
       <div
@@ -32,7 +41,7 @@ class Header extends React.Component {
           <h1>
             <img className={styles.logo} src='https://assets.reponestrength.com/logo.png' />
           </h1>
-          <a href="#cta" className={styles.button}>
+          <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>
             Get in touch
           </a>
         </div>

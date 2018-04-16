@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles.scss';
+import ReactGA from 'react-ga';
 
 class IndividualForm extends React.Component {
 
@@ -56,6 +57,13 @@ class IndividualForm extends React.Component {
     this.setState({other: event.target.value});
   }
 
+  submit(event) {
+    ReactGA.event({
+      category: 'cta',
+      action: 'individual signup'
+    });
+  }
+
   render() {
     return (
       <div id="mc_embed_signup" className={styles.form}>
@@ -86,7 +94,7 @@ class IndividualForm extends React.Component {
             </div>
             <div className={styles.mcfieldgroup}>
             <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
-              <div className={`clear ${styles.centered}`}><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" className={styles.button} /></div>
+              <div className={`clear ${styles.centered}`}><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" className={styles.button} onClick={this.submit.bind(this)} /></div>
             </div>
             </div>
           </form>

@@ -6,7 +6,7 @@ import Root from './Root';
 import "react-hot-loader/patch";
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-117495949-1');
+ReactGA.initialize('UA-117495949-1', { titleCase: false });
 const root = document.querySelector('#root');
 
 const mount = RootComponent => {
