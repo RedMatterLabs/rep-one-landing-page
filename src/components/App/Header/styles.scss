@@ -80,3 +80,13 @@
     padding: 0;
   }
 }
+
+@media (max-width: 350px) {
+  .button {
+    font-size: 0.7em;
+  }
+
+  .header .button {
+    margin-right: 0;
+  }
+}
