@@ -320,7 +320,6 @@ input[class*="mce_inline_error"] {
   @include styling($labelWidth: 250px);
 
   .form {
-    margin-left: -10px;
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -350,10 +349,11 @@ input[class*="mce_inline_error"] {
 
   .mcfieldgroup {
     width: calc(100vw - 40px);
+    margin-left: unset;
+    margin-right: unset;
   }
 
   .form {
-    margin-left: -10px;
     padding-left: 0px;
     padding-right: 0px;
   }
