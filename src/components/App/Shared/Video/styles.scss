@@ -20,6 +20,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .relativebottom {
@@ -36,6 +37,11 @@
 
 .sticky {
   position: sticky;
+}
+
+.scrollcontainer {
+  will-change: transform;
+  transition: transform;
 }
 
 @media (max-width:600px) {
