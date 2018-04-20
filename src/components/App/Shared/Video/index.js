@@ -86,7 +86,7 @@ class Video extends React.Component {
 
     frame = frame > this.images.length - 1 ? this.images.length - 1 : frame;
     frame = frame < 0 ? 0 : frame;
-    this.setState({frame});
+    // this.setState({frame});
     }
   }
 
