@@ -6,6 +6,10 @@ class Video extends React.Component {
   constructor(props) {
     super(props);
 
+    this.canvases = [];
+    this.images = [];
+    this.contexts = [];
+
     this.state = {
       image: 0,
       duration: props.duration - 1,
@@ -13,6 +17,7 @@ class Video extends React.Component {
       location: 0,
       scrollable: props.scrollable,
       scrolled: 0,
+      needsdraw: true,
       direction: 0,
       top: 0,
       width: 0,
@@ -28,36 +33,10 @@ class Video extends React.Component {
     this.keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
   }
 
-  scrollHandler(e) {
-    e = e || window.event;
-    const newscrollposition = this.state.scrolled + e.deltaY;
-    const direction = e.deltaY;
-    this.setState({ scrolled: newscrollposition, direction });
-  }
 
-  keyHandler(e) {
-    if (this.keys[e.keyCode]) {
-      this.scrollHandler(e);
-    }
-
-    return true;
-  }
-
-  addScrollListener() {
-    if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', this.scrollHandler.bind(this), false);
-    }
-
-    window.onwheel = this.scrollHandler.bind(this); // modern standard
-    window.onmousewheel = this.scrollHandler.bind(this);
-    document.onmousewheel = this.scrollHandler.bind(this); // older browsers, IE
-    window.ontouchmove = this.scrollHandler.bind(this); // mobile
-    document.onkeydown = this.keyHandler.bind(this);
-  }
 
   componentDidMount() {
     // preload images.
-    this.images = [];
 
     for (let i = 0; i < this.props.duration; i++) {
       const filename = `${i}.jpg`;
@@ -69,33 +48,36 @@ class Video extends React.Component {
       this.images.push(image);
     }
 
+     
+
+
+
     // draw thumbnail
     
-    if (this.canvas) {
 
       if (window.innerWidth > 600) {
       this.updateinterval = setInterval(() => {
-        this.update();
-        this.selectframe();
-        this.drawcanvas();
-        }, 16);
+        if (this.container) {
+
+          this.update();
+          this.selectframe();
+        }
+        }, 33);
       }
 
       // initiate scroll listeners
       if (this.props.scrollable) {
-        this.addScrollListener();
         this.update();
         this.selectframe();
-        this.drawcanvas();
       }
     }
-  }
 
   componentWillUnmount() {
     clearInterval(this.updateinterval);
   }
 
   update() {
+
     const rect = this.container.getBoundingClientRect();
 
     const canvaswidth = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
@@ -106,11 +88,23 @@ class Video extends React.Component {
     
     let yoffset = rect.top < 0 ? Math.abs(rect.top) : 0;
     yoffset = yoffset + canvasheight > rect.height  ? rect.height - canvasheight : yoffset;
-    this.yoffset = yoffset;
-    
+
     const xoffset = (width - window.innerWidth) * -0.5;
-    
-    this.setState({width, height, xoffset, containerheight: height * 2 + 'px', canvaswidth, canvasheight});
+
+
+    if(!this.drawn){
+      this.images.map((image,i) => {
+        if (image && this.contexts[i]) {
+          this.drawn = true;
+          var ctx = this.contexts[i];
+          console.log(image, canvaswidth, canvasheight);
+          ctx.drawImage(image,xoffset, 0, canvaswidth, canvasheight)
+          console.log(image);
+        }
+      })
+    }
+
+    this.setState({width, height, xoffset, yoffset, containerheight: height * 2 + 'px', canvaswidth, canvasheight});
   }
 
   canvasisinview() {
@@ -149,41 +143,45 @@ class Video extends React.Component {
     const remaining = this.state.duration - image;
 
     this.setState({
-      image: this.images[image],
+      image,
       timeremaing: remaining,
       location,
     });
   }
 
-  drawcanvas() {
-    if (this.context && this.state.image) {
-      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      this.context.drawImage(this.state.image, this.state.xoffset, 0, this.state.width, this.state.height);
-    }
-  }
-
   render() {
-    const canvasposition = this.canvasposition();
+    this.canvases = this.images.map((image, i) => {
+      let element_style = {zIndex:i};
+
+      if (this.state.image === i) {
+        element_style.display = 'block';
+      } else {
+        element_style.display = this.drawn ? 'none' : 'block';
+      }
+      return (
+        <canvas 
+        width={window.innerWidth}
+        height={this.state.canvasheight}
+        className={styles.canvas}
+        key={i}
+        ref={(node) => {
+            if(node) this.contexts.push(node.getContext('2d'));
+          }
+        }
+        style={element_style}
+        />
+      )
+    })
+    
     if (window.innerWidth > 600) {
     return (
-      <div
-        ref={node => {
-          this.container = node;
-        }}
+      <div ref={node => { this.container = node; }}
         className={styles.videocontainer}
         style={{height:this.state.containerheight}}
       >
-        <canvas 
-          className={this.canvasisinview() ? styles.fixed : canvasposition}
-          height={this.state.canvasheight}
-          width={window.innerWidth}
-          ref={node => {
-            if (node) {
-              this.canvas = node;
-              this.context = node.getContext('2d');
-            }
-          }}
-        />
+        <div style={{transform:'translate3d(0,' + this.state.yoffset + 'px, 0)'}}>
+          {this.canvases}
+        </div>
       </div>
     );
   } else {
