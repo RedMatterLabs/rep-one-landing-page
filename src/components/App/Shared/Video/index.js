@@ -37,14 +37,19 @@ class Video extends React.Component {
     }
 
     if (window.innerWidth > 600) {
-      this.animate()
+      requestAnimationFrame(this.animate.bind(this));
+      requestAnimationFrame(this.updateframes.bind(this));
     }
   }
 
   animate() {
     this.scroll();
-    this.selectframe();
     requestAnimationFrame(this.animate.bind(this));
+  }
+
+  updateframes() {
+    this.selectframe();
+    requestAnimationFrame(this.updateframes.bind(this));
   }
 
   scroll() {
@@ -81,27 +86,24 @@ class Video extends React.Component {
 
     const rect = this.container.getBoundingClientRect();
     const location = rect.top < 0 ? Math.abs(rect.top) : 0;
-    const mod = (this.container.offsetHeight - height) / this.images.length;
+    const mod = (this.container.clientHeight - height) / this.images.length;
     let frame = Math.round(location / mod);
 
     frame = frame > this.images.length - 1 ? this.images.length - 1 : frame;
     frame = frame < 0 ? 0 : frame;
-    // this.setState({frame});
+    this.setState({frame});
     }
   }
-
+ 
   rendercanvas( ) {
     this.canvases = this.images.map((image, i) => {
       let element_style = {zIndex:i};
-      if (this.state.frame === i) {
-        element_style.display = 'block';
-      }
-
+      
       return (
         <canvas
         width={this.state.width}
         height={this.state.height}
-        className={styles.canvas}
+        className={this.state.frame === i ? styles.currentframe : styles.canvas}
         key={i}
         ref={(node) => {
             if(node) this.contexts.push(node.getContext('2d'));
