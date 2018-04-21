@@ -57,8 +57,9 @@ class Video extends React.Component {
       const rect = this.container.getBoundingClientRect();
       
       let width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
-      let height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
-      
+      width = width > 720 ? 720 : width;
+      let height = width * 0.5625;
+        
       if(this.state.width !== width || this.state.height !== height){
         this.setState({width, height});
       }
@@ -72,7 +73,8 @@ class Video extends React.Component {
  
   drawcanvases(image, i){
     let width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
-    let height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+    width = width > 720 ? 720 : width;
+    let height = width * 0.5625;
 
     const xoffset = (width - window.innerWidth) * -0.5;
     var ctx = this.contexts[i];
@@ -82,7 +84,9 @@ class Video extends React.Component {
 
   selectframe() {
     if (this.container) {
-    const height = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth * 0.5625 : window.innerHeight;
+      let width = window.innerWidth * 0.5625 > window.innerHeight ? window.innerWidth : window.innerHeight / 0.5625;
+      width = width > 720 ? 720 : width;
+      let height = width * 0.5625;
 
     const rect = this.container.getBoundingClientRect();
     const location = rect.top < 0 ? Math.abs(rect.top) : 0;
@@ -119,7 +123,7 @@ class Video extends React.Component {
     return (
       <div ref={node => { this.container = node; }}
         className={styles.videocontainer}
-        style={{height:2*this.state.height}}
+        style={{height:1.5*this.state.height}}
       >
         <div className={styles.scrollcontainer} style={{height:this.state.height,width:this.state.width}} ref={node => {this.scrollcontainer = node}}>
           {this.canvases}
