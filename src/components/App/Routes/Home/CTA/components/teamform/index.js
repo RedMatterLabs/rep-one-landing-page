@@ -17,6 +17,7 @@ class TeamForm extends React.Component {
       athletes: '',
       stations: '',
       other: '',
+      submitted: false,
     };
   };
 
@@ -87,9 +88,50 @@ class TeamForm extends React.Component {
       category: 'cta',
       action: 'team signup'
     });
+  
+    this.setState({submitted:true});
   }
 
-  render() {
+  _renderfields (submitted) {
+    const fields = submitted ?  this._allfields() : this._initialfields();
+    return fields;
+  }
+
+  _initialfields () {
+    return (
+      <div className={styles.form} id="mc_embed_signup">
+        <form action="https://reponestrength.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=9537b0d2f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+          <div id="mc_embed_signup_scroll">
+            <div className={styles.mcfieldgroup}>
+              <label htmlFor="mce-NAME">Name<span className={`${styles.floatright} asterisk`}>*</span></label>
+              <input type="text" value={this.state.name} name="NAME" className="required" id="mce-NAME" onChange={this.handleNameChange.bind(this)} />
+            </div>
+            <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
+              <label className={styles.inputlabel} htmlFor="mce-EMAIL">Email<span className={`${styles.floatright} asterisk`}>*</span></label>
+              <input type="email" value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL" onChange={this.handleEmailChange.bind(this)} />
+            </div>
+            <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
+              <label htmlFor="mce-ORGNAME">Organization<span className={`${styles.floatright} asterisk`}>*</span></label>
+              <input type="text" value={this.state.organization} name="ORGNAME" className="required" id="mce-ORGNAME" onChange={this.handleOrganizationChange.bind(this)} />
+            </div>
+            <div className={styles.mcfieldgroup}>
+              <div className={`indicates-required`}><label><span className={`asterisk`}>*</span> indicates required field</label></div>
+            </div>
+            <div id="mce-responses" className="clear">
+              <div className="response" id="mce-error-response" style={{display:'none'}}></div>
+              <div className="response" id="mce-success-response" style={{display:'none'}}></div>
+            </div>
+            <div className={styles.mcfieldgroup}>
+            <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
+            <div className={`clear ${styles.centered}`}><input type="submit" value="Get in touch" name="subscribe" id="mc-embedded-subscribe" className={styles.button} onClick={this.submit.bind(this)} /></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
+  _allfields () {
     return (
       <div className={styles.form} id="mc_embed_signup">
         <form action="https://reponestrength.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=9537b0d2f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
@@ -145,6 +187,10 @@ class TeamForm extends React.Component {
         </form>
       </div>
     );
+  }
+
+  render() {
+    return(this._renderfields(this.state.submitted))
   }
 }
 

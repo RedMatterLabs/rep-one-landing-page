@@ -12,6 +12,7 @@ class IndividualForm extends React.Component {
       email: '',
       phone: '',
       other: '',
+      submitted: false,
     };
   };
 
@@ -62,9 +63,38 @@ class IndividualForm extends React.Component {
       category: 'cta',
       action: 'individual signup'
     });
+
+    this.setState({submitted:true});
   }
 
-  render() {
+  _renderfields (submitted) {
+    return submitted ? this._allfields() : this._initialfields();
+  }
+
+  _initialfields () {
+    return (
+      <div id="mc_embed_signup" className={styles.form}>
+        <form action="https://reponestrength.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=7fdf2a1f6e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+          <div id="mc_embed_signup_scroll">
+            <div className={styles.mcfieldgroup}>
+              <label htmlFor="mce-NAME">Name<span className="asterisk">*</span></label>
+              <input type="text" value={this.state.name} name="NAME" className="required" id="mce-NAME" onChange={this.handleNameChange.bind(this)} />
+            </div>
+            <div className={`${styles.mcfieldgroup} ${styles.size1of2}`}>
+              <label htmlFor="mce-EMAIL">Email<span className="asterisk">*</span></label>
+              <input type="email" value={this.state.email} name="EMAIL" className="required email" id="mce-EMAIL" onChange={this.handleEmailChange.bind(this)} />
+            </div>
+            <div className={styles.mcfieldgroup}>
+            <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
+              <div className={`clear ${styles.centered}`}><input type="submit" value="Join waitlist" name="subscribe" id="mc-embedded-subscribe" className={styles.button} onClick={this.submit.bind(this)} /></div>
+            </div>
+            </div>
+          </form>
+        </div>
+    );
+  }
+
+  _allfields () {
     return (
       <div id="mc_embed_signup" className={styles.form}>
         <form action="https://reponestrength.us15.list-manage.com/subscribe/post?u=078ce319da053f89d04c3128b&amp;id=7fdf2a1f6e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
@@ -100,6 +130,10 @@ class IndividualForm extends React.Component {
           </form>
         </div>
     );
+  }
+
+  render() {
+    return this._renderfields(this.state.submitted);
   }
 }
 
