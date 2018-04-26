@@ -40,6 +40,10 @@
   max-width: none;
 }
 
+.main h2 {
+  max-width: 1024px;
+}
+
 .main > div {
   max-width: 100% !important;
 }
@@ -138,8 +142,8 @@ input:focus 		{ outline:none; }
   max-width: 1024px;
   height: 700px;
   font-size: 18px;
-  padding-left: 60px;
-  padding-right: 60px;
+  // padding-left: 60px;
+  // padding-right: 60px;
   letter-spacing: .1em;
   display: block;
   margin: 0 auto 50px auto;
