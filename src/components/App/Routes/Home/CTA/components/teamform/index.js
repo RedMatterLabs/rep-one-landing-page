@@ -87,6 +87,7 @@ class TeamForm extends React.Component {
       category: 'cta',
       action: 'team signup'
     });
+    window.fbq('track', 'Lead');
   }
 
   render() {
