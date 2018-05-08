@@ -62,6 +62,7 @@ class IndividualForm extends React.Component {
       category: 'cta',
       action: 'individual signup'
     });
+    window.fbq('track', 'Lead');
   }
 
   render() {
