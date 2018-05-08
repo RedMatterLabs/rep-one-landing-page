@@ -25,13 +25,16 @@
 }
 
 .modal h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 80px auto;
+  position: relative;
+  margin-bottom: 10px;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: $greydark;
+  font-family: "Helvetica Neue LT Std", sans-serif;
 }
+
 
 .modal p {
   display: inline-block;

@@ -16,9 +16,7 @@ class Modal extends React.Component {
     return (
       <div className={styles.modalcontainer}>
       <div className={styles.modal}>
-        <h1>{this.props.title}</h1>
-        <p>{this.props.message}</p>
-        <a href={this.props.link}>{this.props.linktext}</a>
+        {this.props.children}
       </div>
       </div>
     );
