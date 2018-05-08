@@ -17,8 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.resetIdle();
-    const listeners = ['mousemove', 'keydown'];
-    this.checkhashes();
+    const listeners = ['mousemove', 'keydown', 'scroll'];
     listeners.forEach(event => document.addEventListener(event, this.resetIdle.bind(this)));
   }
 
