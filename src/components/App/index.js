@@ -62,13 +62,26 @@ class App extends React.Component {
 
     onClick = onClick.bind(this);
 
+    function closeModal() {
+      this.setState({idle: false});
+      this.resetIdle();
+    }
+
+    closeModal = closeModal.bind(this);
+
     if (this.state.idle) {
       return (
       <Modal>
-        <p>Since you're here, you're already a step ahead of 95% of strength coaches. Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</p>
+        <div className={styles.section}>
+        <div className={styles.main}>
+        <a className={`${styles.closebutton} ${styles.button}`} onClick={closeModal}>X</a>
+        <h1>Since you're here...</h1>
+        <h2>You're already a step ahead of 95% of strength coaches. Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</h2>
         <a onClick={onClick} className={styles.button}>
           Get in touch
         </a>
+        </div>
+        </div>
       </Modal>)
     } else { return null }
   }
