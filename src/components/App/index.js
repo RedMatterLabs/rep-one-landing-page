@@ -17,8 +17,9 @@ class App extends React.Component {
 
   componentDidMount() {
     this.resetIdle();
-    const listeners = ['mouseleave'];
-    listeners.forEach(event => document.body.addEventListener(event, this.resetIdle.bind(this)));
+    const listeners = ['mousemove', 'keydown', 'scroll'];
+    document.body.addEventListener('mouseleave', this.setIdle.bind(this));
+    listeners.forEach(event => document.addEventListener(event, this.resetIdle.bind(this)));
   }
 
   componentWillUnmount() {
@@ -30,6 +31,14 @@ class App extends React.Component {
   }
 
   resetIdle() {
+    this.clearIdle();
+    this.idletime =    this.idletime = setTimeout(() => {
+      this.setState({idle: true});
+    }, 600000)
+
+  }
+
+  setIdle() {
     this.clearIdle();
     this.idletime =    this.idletime = setTimeout(() => {
       this.setState({idle: true});
