@@ -18,6 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     this.resetIdle();
     const listeners = ['mousemove', 'keydown', 'scroll'];
+    document.body.addEventListener('mouseleave', this.setIdle.bind(this));
     listeners.forEach(event => document.addEventListener(event, this.resetIdle.bind(this)));
   }
 
@@ -33,7 +34,15 @@ class App extends React.Component {
     this.clearIdle();
     this.idletime =    this.idletime = setTimeout(() => {
       this.setState({idle: true});
-    }, 300000)
+    }, 10000)
+
+  }
+
+  setIdle() {
+    this.clearIdle();
+    this.idletime =    this.idletime = setTimeout(() => {
+      this.setState({idle: true});
+    }, 1000)
 
   }
 
