@@ -11,7 +11,8 @@
 .section img {
   display: block;
   position: relative;
-  width: 100vw;  
+  width: 100vw;
+  max-width: 1500px;
   transform: translate3d(0,0,0);
   margin:0 auto;
 }
