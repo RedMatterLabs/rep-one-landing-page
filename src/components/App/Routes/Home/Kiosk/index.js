@@ -6,7 +6,7 @@ class Kiosk extends React.Component {
 
   render() {
     return (
-      <div className={styles.section}>
+      <div className={styles.section} id="kiosk">
         <div className={styles.main}>
         <h1>THE REPONE ATHLETE KIOSK APP</h1>
         <h2>Connect and automate your entire weight room.</h2>
