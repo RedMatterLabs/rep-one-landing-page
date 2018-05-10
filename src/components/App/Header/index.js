@@ -41,9 +41,14 @@ class Header extends React.Component {
           <h1>
             <img className={styles.logo} />
           </h1>
-          <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>
-            Get in touch
-          </a>
+          <div className={styles.menu}>
+            <a href="http://blog.reponestrength.com" className={styles.link} onClick={this.handleClick.bind(this)}>
+              Blog
+            </a>
+            <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>
+              Get in touch
+            </a>
+          </div>
         </div>
       </div>
     );
