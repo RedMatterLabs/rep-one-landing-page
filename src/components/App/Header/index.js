@@ -39,7 +39,7 @@ class Header extends React.Component {
       >
         <div className={styles.main}>
           <h1>
-            <img className={styles.logo} src='https://assets.reponestrength.com/logo.png' />
+            <img className={styles.logo} />
           </h1>
           <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>
             Get in touch

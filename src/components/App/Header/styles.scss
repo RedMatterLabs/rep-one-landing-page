@@ -81,12 +81,17 @@
 
 .logo {
   height: 1.2em;
+  content: url('https://assets.reponestrength.com/logo.png');
 }
 
 
 @media (max-width:600px) {
   .main {
     padding: 0;
+  }
+
+  .logo {
+    content: url('https://assets.reponestrength.com/logo-no-text.png');
   }
 }
 
