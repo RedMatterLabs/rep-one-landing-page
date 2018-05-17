@@ -4,86 +4,30 @@ import Header from './Header/index.js'
 import Footer from './Footer/index.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import Modal from 'components/App/Routes/Home/Modal/index.js';
+import MouseModal from 'components/App/Shared/MouseModal/index.js';
+import Device from 'components/App/Shared/DetectDevice/index.js';
+import TouchModal from 'components/App/Shared/TouchModal/index.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.appcontainer = null;
     this.state = {
-      idle: false
+      device: 'mouse'
+    };
+
+    this.device = new Device(this.updateDevice.bind(this));
+  }
+
+  updateDevice(device) {
+    this.setState({device: device})
+  }
+
+  renderModal(device) {
+    if (device === 'mouse') {
+      return (<MouseModal/>)
+    } else if (device === 'touch') {
+      return (<TouchModal/>)
     }
-  }
-
-  componentDidMount() {
-    this.resetIdle();
-    const listeners = ['mousemove', 'keydown', 'scroll'];
-    document.body.addEventListener('mouseleave', this.setIdle.bind(this));
-    listeners.forEach(event => document.addEventListener(event, this.resetIdle.bind(this)));
-  }
-
-  componentWillUnmount() {
-    this.clearIdle();
-  }
-
-  clearIdle() {
-    if (this.idletime) clearInterval(this.idletime);
-  }
-
-  resetIdle() {
-    this.clearIdle();
-    this.idletime =    this.idletime = setTimeout(() => {
-      this.setState({idle: true});
-    }, 600000)
-
-  }
-
-  setIdle() {
-    this.clearIdle();
-    this.idletime =    this.idletime = setTimeout(() => {
-      this.setState({idle: true});
-    }, 10000)
-
-  }
-  
-  scrollToTag(tag) {
-    if (tag) {
-      let element = document.querySelector(tag) || document.getElementById(tag);
-      window.scroll({top: element.offsetTop});
-    }
-  }
-
-  renderModal() {
-    function onClick() {
-      this.setState({idle: false});
-      this.scrollToTag('#cta');
-      return true;
-    }
-
-    onClick = onClick.bind(this);
-
-    function closeModal() {
-      this.setState({idle: false});
-      this.resetIdle();
-    }
-
-    closeModal = closeModal.bind(this);
-
-    if (this.state.idle) {
-      return (
-      <Modal>
-        <div className={styles.section}>
-        <div className={styles.main}>
-        <a className={`${styles.closebutton} ${styles.button}`} onClick={closeModal}>X</a>
-        <h1>Since you're here...</h1>
-        <h2>You're already a step ahead of 95% of strength coaches. Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</h2>
-        <a onClick={onClick} className={styles.button}>
-          Get in touch
-        </a>
-        </div>
-        </div>
-      </Modal>)
-    } else { return null }
   }
 
   render() { 
@@ -91,7 +35,7 @@ class App extends React.Component {
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div>
           <Header/>
-          {this.renderModal()}
+          {this.renderModal(this.state.device)}
           <div className={styles.content}>
             {this.props.children}
           </div>
