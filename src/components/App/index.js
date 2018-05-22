@@ -4,25 +4,29 @@ import Header from './Header/index.js'
 import Footer from './Footer/index.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MouseModal from 'components/App/Shared/MouseModal/index.js';
-import Device from 'components/App/Shared/DetectDevice/index.js';
-import TouchModal from 'components/App/Shared/TouchModal/index.js';
+import MouseModal from 'components/App/Shared/MouseModalController/index.js';
+import {Device as detectDevice} from 'components/App/Shared/DetectDevice/index.js';
+import TouchModal from 'components/App/Shared/TouchModalController/index.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      device: 'mouse'
-    };
+      device: null
+    }
 
-    this.device = new Device(this.updateDevice.bind(this));
+    let updateDevice = this._updateDevice.bind(this);
+
+    detectDevice().then((device) => {
+      updateDevice(device);
+    })
   }
 
-  updateDevice(device) {
+  _updateDevice(device) {
     this.setState({device: device})
   }
 
-  renderModal(device) {
+  _renderModal(device) {
     if (device === 'mouse') {
       return (<MouseModal/>)
     } else if (device === 'touch') {
@@ -35,7 +39,7 @@ class App extends React.Component {
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div>
           <Header/>
-          {this.renderModal(this.state.device)}
+          {this._renderModal(this.state.device) }}
           <div className={styles.content}>
             {this.props.children}
           </div>

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from './styles.scss';
 
-class Modal extends React.Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,11 +12,11 @@ class Modal extends React.Component {
   };
 
   render() {
-    let open = {display: 'none'};
-    if (this.props.open) open['display'] = 'flex';
+
+    let style = (this.props.open) ? {display: 'flex'} : {display: 'none'};
     
     return (
-      <div onClick={this.props.closeModal} className={styles.modalcontainer} style={open} >
+      <div onClick={this.props.closeModal} className={styles.modalcontainer} style={style} >
         <div className={styles.modal}>
           <a className={`${styles.closebutton} ${styles.button}`} onClick={this.props.closeModal}>X</a>
           {this.props.children}

@@ -11,7 +11,6 @@ class Header extends React.Component {
   }
 
   scrollFunction() {
-    console.log(window.screenY);
     if (window.scrollY > 0) {
       this.setState({ scrolled: true });
     } else {
