@@ -12,5 +12,5 @@ export function Device(){
       resolve('mouse');
     });
 
-})
+  })
 };
