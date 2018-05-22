@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from './styles.scss';
 import Header from './Header/index.js'
 import Footer from './Footer/index.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MouseModal from 'components/App/Shared/MouseModalController/index.js';
+import MouseIdle from 'components/App/Shared/MouseIdle/index.js';
 import {Device as detectDevice} from 'components/App/Shared/DetectDevice/index.js';
-import TouchModal from 'components/App/Shared/TouchModalController/index.js';
+import TouchIdle from 'components/App/Shared/TouchIdle/index.js';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,9 +28,9 @@ class App extends React.Component {
 
   _renderModal(device) {
     if (device === 'mouse') {
-      return (<MouseModal/>)
+      return (<MouseIdle/>)
     } else if (device === 'touch') {
-      return (<TouchModal/>)
+      return (<TouchIdle/>)
     }
   }
 
