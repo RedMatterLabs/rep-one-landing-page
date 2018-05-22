@@ -14,12 +14,12 @@ class App extends React.Component {
     this.state = {
       device: null
     }
+  }
 
-    let updateDevice = this._updateDevice.bind(this);
-
+  componentDidMount() {
     detectDevice().then((device) => {
-      updateDevice(device);
-    })
+      this._updateDevice(device);
+    })   
   }
 
   _updateDevice(device) {
