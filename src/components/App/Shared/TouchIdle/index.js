@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.scss';
 import ModalController from 'components/App/Shared/ModalController/index.js';
 
-class TouchModal extends React.Component {
+class TouchIdle extends React.Component {
 
   constructor(props) {
     super(props);
@@ -46,4 +46,4 @@ class TouchModal extends React.Component {
   }
 }
 
-export default TouchModal;
+export default TouchIdle;

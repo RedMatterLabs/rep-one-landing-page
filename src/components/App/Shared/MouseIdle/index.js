@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.scss';
 import ModalController from 'components/App/Shared/ModalController/index.js';
 
-class MouseModal extends React.Component {
+class MouseIdle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,4 +40,4 @@ class MouseModal extends React.Component {
   }
 }
 
-export default MouseModal;
+export default MouseIdle;
