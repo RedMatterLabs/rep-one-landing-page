@@ -33,9 +33,7 @@ class MouseIdle extends React.Component {
 
   render() { 
     return (
-        <div>
-          <ModalController idle={this.state.idle}/>)
-        </div>
+      <ModalController idle={this.state.idle}/>
     );
   }
 }
