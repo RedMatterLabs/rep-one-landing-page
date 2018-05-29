@@ -4,13 +4,21 @@
 export function Device(){
   return new Promise((resolve, reject) => {
 
-    window.addEventListener('touchstart', function() {
+    var touchCallback = function() {
       resolve('touch');
-    });
+      window.removeEventListener('touchstart', touchCallback);
+      window.removeEventListener('mousemove', mouseCallback);
+    }
 
-    window.addEventListener('mousemove', function() {
+    var mouseCallback = function() {
       resolve('mouse');
-    });
+      window.removeEventListener('touchstart', touchCallback);
+      window.removeEventListener('mousemove', mouseCallback);
+    }
+
+    window.addEventListener('touchstart', touchCallback);
+
+    window.addEventListener('mousemove', mouseCallback);
 
   })
 };
