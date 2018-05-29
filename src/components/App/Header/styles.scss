@@ -67,9 +67,9 @@
   text-decoration: none;
   display: block;
   text-transform: uppercase;
-  font-weight: 100;
-  color: $greydark;
-  border: 1px solid $greydark;
+  font-weight: 500;
+  color: $darkred;
+  border: 2px solid $darkred;
   display: inline-block;
   position: relative;
   padding: .5em 1em .5em 1em;
@@ -85,9 +85,9 @@
 
 .button:hover {
   opacity:1;
-  background-color: $greydark;
+  background-color: $darkred;
   color: $white;
-  border: 1px solid greydark;
+  border: 2px solid $darkred;
 }
 
 @media (hover: none) {
