@@ -41,7 +41,7 @@ class ModalController extends React.Component {
 
   renderModal() {
       return (
-      <Modal open={this.state.idle} closeModal={this._closeModal.bind(this)}>
+      <Modal open={true} closeModal={this._closeModal.bind(this)}>
         <div className={styles.section}>
           <div className={styles.main}>
           <h1>You're already a step ahead of 95% of strength coaches</h1>

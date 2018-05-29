@@ -16,7 +16,7 @@
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
   padding: 20px;
   background-color: #fff;
-  margin: calc(20px + 1em);
+  margin: calc(10px + 1em);
 }
 
 .main h1 {
@@ -45,7 +45,7 @@
   text-transform: uppercase;
   font-weight: 500;
   color: $darkred;
-  border: 1px solid $darkred;
+  border: 2px solid $darkred;
   display: inline-block;
   position: relative;
   padding: .5em 1em .5em 1em;
@@ -61,20 +61,22 @@
 
 .button:hover {
   opacity:1;
-  background-color: $greydark;
+  background-color: $darkred;
   color: $white;
-  border: 1px solid greydark;
+  border: 2px solid darkred;
 }
 
 @media (max-width:600px) {
 
 .section h1 {
-  font-size: 18px;
+  font-size: 0.9em;
   text-transform:uppercase;
 }
 .section h2 {
-  font-size: 22px;
+  font-size: 0.9em;
   letter-spacing: 0.1em;
   line-height: 1.375em;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 }
