@@ -58,7 +58,7 @@ class ModalController extends React.Component {
     return (
         <div>
           {this.renderModal()}
-          </div>
+        </div>
     );
   }
 }
