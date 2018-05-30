@@ -68,7 +68,7 @@
   display: block;
   text-transform: uppercase;
   font-weight: 500;
-  color: $darkred;
+  color: $white;
   border: 2px solid $darkred;
   display: inline-block;
   position: relative;
@@ -76,7 +76,7 @@
   border-radius: 2px;
   font-size: 0.75em;
   letter-spacing: 0.20em;
-  background-color: $white;
+  background-color: $darkred;
   box-shadow: none;
   transition: all 0.3s;
   cursor: pointer;
