@@ -6,7 +6,7 @@ function Insights() {
     <div className={styles.section} id="device">
       <div className={styles.main}>
         <h1>REPONE INSIGHTS</h1>
-        <h2>Industry-leading 3D sensing makes the invisible, visible.</h2>
+        <h2>The only platform Strength Coaches can use to enable Motion Based Training.</h2>
         <div className={styles.diagram}>
           <div className={styles.diagramcontainer}>
             <img src='https://assets.reponestrength.com/deadlift_guy.jpg' />
