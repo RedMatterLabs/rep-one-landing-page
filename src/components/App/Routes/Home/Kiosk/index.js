@@ -8,11 +8,14 @@ class Kiosk extends React.Component {
     return (
       <div className={styles.section} id="kiosk">
         <div className={styles.main}>
-        <h1>THE REPONE ATHLETE KIOSK APP</h1>
-        <h2>Connect and automate your entire weight room.</h2>
+          <h1>THE REPONE ATHLETE KIOSK APP</h1>
+          <h2>Connect and automate your entire weight room.</h2>
         </div>
         <div className={styles.imagecontainer}>
-        <img src='https://assets.reponestrength.com/kiosk.png' alt='RepOne Kiosk'/>
+          <img src='https://assets.reponestrength.com/kiosk.png' alt='RepOne Kiosk'/>
+        </div>
+        <div className={styles.buttonContainer}>
+          <a href="#cta" className={styles.button}>GET IN TOUCH</a>
         </div>
       </div>
     );
