@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styles from './styles.scss';
 import Video from 'components/App/Shared/Video/index.js';
 import ReactGA from 'react-ga';
 
-class Kiosk extends React.Component {
+class Kiosk extends Component {
 
   handleClick (e) {
     ReactGA.event({

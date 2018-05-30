@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styles from './styles.scss';
+import ReactGA from 'react-ga';
 
-class Platform extends React.Component {
+class Platform extends Component {
+
+  handleClick (e) {
+    ReactGA.event({
+      category: 'cta',
+      action: 'scroll to form'
+    });
+  }
+
   render() {
     return (
       <div className={styles.section} id="platform">
@@ -56,6 +65,8 @@ class Platform extends React.Component {
               </div>
             </div>
           </div>
+
+          <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>GET IN TOUCH</a>
         </div>
       </div>
     );

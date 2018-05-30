@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styles from './styles.scss';
 import ReactGA from 'react-ga';
 
-class Price extends React.Component {
+class Price extends Component {
 
   handleClick (e) {
     ReactGA.event({
