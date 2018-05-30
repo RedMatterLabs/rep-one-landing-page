@@ -56,7 +56,7 @@ class CTA extends React.Component {
         <div className={styles.main}>
         <div className={styles.heading}>
           <h1>PRE-ORDERS COMING SOON</h1>
-          <h2>Do you have questions about implementing RepOne with your organization? Sign up now to speak to the team behind RepOne.</h2>
+          <h2>Have questions about implementing RepOne with your organization? Sign up now to speak to the team behind RepOne.</h2>
           <div className={styles.center}>
           
           
