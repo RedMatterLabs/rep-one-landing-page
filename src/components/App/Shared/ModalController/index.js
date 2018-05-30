@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.scss';
 import Modal from 'components/App/Shared/Modal/index.js';
+import ReactGA from 'react-ga';
 
 class ModalController extends React.Component {
   constructor(props) {
@@ -32,6 +33,10 @@ class ModalController extends React.Component {
   _onClick() {
     this.setState({idle: false});
     this._scrollToTag('#cta');
+    ReactGA.event({
+      category: 'cta',
+      action: 'scroll to form'
+    });
     return true;  
   }
 
