@@ -1,8 +1,16 @@
 import React from 'react';
 import styles from './styles.scss';
 import Video from 'components/App/Shared/Video/index.js';
+import ReactGA from 'react-ga';
 
 class Kiosk extends React.Component {
+
+  handleClick (e) {
+    ReactGA.event({
+      category: 'cta',
+      action: 'scroll to form'
+    });
+  }
 
   render() {
     return (
@@ -15,7 +23,7 @@ class Kiosk extends React.Component {
           <img src='https://assets.reponestrength.com/kiosk.png' alt='RepOne Kiosk'/>
         </div>
         <div className={styles.buttonContainer}>
-          <a href="#cta" className={styles.button}>GET IN TOUCH</a>
+          <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>GET IN TOUCH</a>
         </div>
       </div>
     );
