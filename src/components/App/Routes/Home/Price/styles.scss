@@ -52,3 +52,27 @@
   background-color: $white;
   text-decoration: none;
 }
+
+@media (max-width: 1000px) {
+
+  .button {
+    font-size: 1.3em;
+  }
+  
+}
+
+@media (max-width: 800px) {
+
+  .button {
+    font-size: 1.2em;
+  }
+  
+}
+
+@media (max-width: 600px) {
+
+  .button {
+    font-size: 1em;
+  }
+
+}
