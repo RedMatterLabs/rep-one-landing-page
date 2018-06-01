@@ -14,8 +14,8 @@ function Insights() {
         </div>
 
         <div className={styles.description}>Our unique 3D-sensing technology makes the invisible, visible. RepOne tracks everything from velocity to skill adaptation — even trends in motion that indicate fatigue and injury. Gain access to unmatched analysis of all your athletes’ movements and make your team stronger than ever.</div>
-        <a href="http://blog.reponestrength.com/" className={styles.button}>Learn more about Motion Based Training</a>
-      </div>
+          <a href="http://blog.reponestrength.com/2018/05/07/the-emergence-of-motion-based-training/" className={styles.button}>Learn more about Motion Based Training</a>
+        </div>
     </div>
   );
 }
