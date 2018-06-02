@@ -49,11 +49,14 @@ class ModalController extends React.Component {
       <Modal open={this.state.idle} closeModal={this._closeModal.bind(this)}>
         <div className={styles.section}>
           <div className={styles.main}>
-          <h1>You're already a step ahead of 95% of strength coaches</h1>
-          <h2>Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</h2>
-          <a onClick={this._onClick.bind(this)} className={styles.button}>
-            Get in touch
-          </a>
+            <h1>You're already a step ahead of 95% of strength coaches</h1>
+            <h2>Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</h2>
+            <a onClick={this._onClick.bind(this)} className={styles.button}>
+              Get in touch
+            </a>
+            <a onClick={this._closeModal.bind(this)} className={styles.closeButton}>
+              Take a step back
+            </a>
           </div>
         </div>
       </Modal>)
