@@ -8,7 +8,7 @@ export default function sketch(p) {
     var y1 = 310;
   
     p.setup = () => {
-      createCanvas(1000, 500);
+      p.createCanvas(1000, 500);
       particle = new Particle(p.mouseX, p.mouseY);
       repOne = p.loadImage("https://assets.reponestrength.com/repone.png", "png");
       hook = p.loadImage("https://assets.reponestrength.com/hook.png", "png");
@@ -98,4 +98,3 @@ export default function sketch(p) {
     }
   
   };
-  
