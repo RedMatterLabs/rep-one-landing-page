@@ -10,8 +10,12 @@ export default function sketch(p) {
     p.setup = () => {
       p.createCanvas(1000, 500);
       particle = new Particle(p.mouseX, p.mouseY);
-      repOne = p.loadImage("https://assets.reponestrength.com/repone.png", "png");
-      hook = p.loadImage("https://assets.reponestrength.com/hook.png", "png");
+
+      // TODO: use the repone urls
+      repOne = p.loadImage("https://s3.us-east-2.amazonaws.com/reponestrength/repone.png", "png");
+      hook = p.loadImage("https://s3.us-east-2.amazonaws.com/reponestrength/hook.png", "png");
+      // repOne = p.loadImage("https://assets.reponestrength.com/repone.png", "png");
+      // hook = p.loadImage("https://assets.reponestrength.com/hook.png", "png");
     }
   
     p.draw = () => {

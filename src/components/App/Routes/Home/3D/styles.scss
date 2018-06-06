@@ -2,6 +2,12 @@
 @import "src/shared-styles/styles";
 
 .main {
-    max-width: none;
     padding: 0;
+    width: 1000px;
+    height: 500px;
+}
+
+.section {
+    background-color: $red;
+    padding: 100px;
 }
