@@ -11,7 +11,7 @@ const words= ["on the field",
 "on the road",
 "on the slope",
 "on the field",
-"in the games",
+"in the Games",
 "in the ring"];
 
 class Landing extends React.Component {
