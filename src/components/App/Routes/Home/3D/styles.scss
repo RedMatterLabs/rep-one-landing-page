@@ -2,12 +2,12 @@
 @import "src/shared-styles/styles";
 
 .main {
-    padding: 0;
-    width: 1000px;
-    height: 500px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .section {
     background-color: $red;
-    padding: 100px;
-}
+    margin: 0px;
+    padding: 0px;
+  }

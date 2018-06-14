@@ -5,17 +5,21 @@ export default function sketch(p) {
   var curX, curY, initX, initY = 0;
   var repOne, hook;
   var xsize = 1;
+  var divW, divH;
 
   p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    divW = document.getElementById("defaultCanvas0").parentNode.parentElement.clientWidth;
+    divH = divW * 0.5;
+    p.createCanvas(divW, divH);
     particle = new Particle(p.mouseX, p.mouseY);
 
     repOne = p.loadImage("https://assets.reponestrength.com/repone.png", "png");
     hook = p.loadImage("https://assets.reponestrength.com/hook.png", "png");
+    
   }
 
   p.draw = () => {
-    p.background("#0ff");
+    p.background("#ff0034");
     
     // maxX = 860;
     // maxY = 490;  
@@ -37,31 +41,32 @@ export default function sketch(p) {
     if (mult < 0.25) {mult = 0.25}
     
     p.imageMode(p.CORNER);
-    // p.image(repOne, 0, p.windowHeight - repOne.height*mult, repOne.width*mult, repOne.height*mult);
-    p.image(repOne, 0, 0, repOne.width*mult, repOne.height*mult);
+    p.image(repOne, 0, divH - repOne.height*mult, repOne.width*mult, repOne.height*mult);
 
     particle.update(p);
     particle.show(p);
 
-    var rot = p.map(curX, minX, maxX, -0.5, 0.8);
-    var size = p.map(curX, minX, maxX, 1, 0.2);
+    var rot = p.map(curX, 0, divW, -0.5, 0.8);
+    var size = p.map(curX, 0, divW, 1, 0.7);
+    var heightadjust = p.map(curX, 0, divW, 0, 0.2);
 
     p.stroke(255);
     p.strokeWeight(5 * size);
-    // p.line(0.75*(repOne.width*mult), p.windowHeight - 0.5*(repOne.height*mult), curX, curY);
-    p.line(0.8*(repOne.width*mult), 0.38*(repOne.height*mult), curX, curY);
+    p.line(0.8*(repOne.width*mult), divH - 0.62*(repOne.height*mult), curX, curY);
     
     p.push();
     p.translate(curX, curY);
     p.rotate(rot);
     p.imageMode(p.CENTER);
-    // p.image(hook, (0 + hook.width - hook.width*size*1.2), ((hook.height - hook.height*size*1.05)/2 - (hook.height/2 - 8)), mult *hook.width * size, mult *hook.height * size);
-    p.image(hook, hook.width/2, -hook.height/2, hook.width * size * mult , hook.height * size * mult);
+    p.image(hook, 0, - (hook.height/2)*mult + hook.height*mult*heightadjust, hook.width * size * mult , hook.height * size * mult);
     p.pop();
+
   }
 
-  function windowResized() {
-    // p.resizeCanvas(p.windowWidth, p.windowHeight);
+  p.windowResized = () => {
+    divW = document.getElementById("defaultCanvas0").parentNode.parentElement.clientWidth;
+    divH = divW * 0.5;
+    p.resizeCanvas(divW, divH);
   }
 
   function Particle(x, y) {
