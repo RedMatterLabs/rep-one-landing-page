@@ -54,7 +54,7 @@ export default function sketch(p) {
     if (p.mouseY > maxY){ curY = maxY; }
     else { curY = p.mouseY; }
 
-    var mult = p.map(p.windowWidth, 0, 1920, 0.25, 1);
+    var mult = p.map(divW, 0, 1920, 0.25, 1);
     if (mult > 1){mult = 1}
     if (mult < 0.25) {mult = 0.25}
     
