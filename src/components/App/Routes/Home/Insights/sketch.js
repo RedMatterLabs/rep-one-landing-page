@@ -6,22 +6,21 @@ export default function sketch(p) {
   var repOne, hook;
   var xsize = 1;
   var divW, divH;
-  var padding;
 
   function setDivH() {
-    if (divW < 600) {
-      divH = divW;
-    } else if (divW < 700) {
-      divH = divW * 0.88;
-    } else if (divW < 800) {
-      divH = divW * 0.75;
-    } else if (divW < 900) {
-      divH = divW * 0.6;
-    } else {
-      divH = divW * 0.5;
-    }
+    // if (divW < 600) {
+    //   divH = divW;
+    // } else if (divW < 700) {
+    //   divH = divW * 0.88;
+    // } else if (divW < 800) {
+    //   divH = divW * 0.75;
+    // } else if (divW < 900) {
+    //   divH = divW * 0.6;
+    // } else {
+    //   divH = divW * 0.5;
+    // }
 
-    divH = (((1024-divW)/1024) + 0.5) * divW;
+    divH = (((1024-divW)/1024) + 0.55) * divW;
   }
 
   p.setup = () => {
@@ -50,7 +49,7 @@ export default function sketch(p) {
     else if (p.mouseX < minX){ curX = minX; }
     else { curX = p.mouseX; }
 
-    var padding = 0;
+    var padding = 50;
 
     if (p.mouseY > maxY){ curY = maxY; }
     else { curY = p.mouseY; }
@@ -60,7 +59,7 @@ export default function sketch(p) {
     if (mult < 0.25) {mult = 0.25}
     
     p.imageMode(p.CORNER);
-    p.image(repOne, padding, divH - repOne.height*mult - padding, repOne.width*mult, repOne.height*mult);
+    p.image(repOne, padding, divH - repOne.height*mult, repOne.width*mult, repOne.height*mult);
 
     particle.update(p);
     particle.show(p);
@@ -71,7 +70,7 @@ export default function sketch(p) {
 
     p.stroke(255);
     p.strokeWeight(5 * size);
-    p.line(0.8*(repOne.width*mult), divH - 0.62*(repOne.height*mult), curX, curY);
+    p.line((0.8*(repOne.width*mult)) + padding, (divH - 0.62*(repOne.height*mult)), curX, curY);
     
     p.push();
     p.translate(curX, curY);
