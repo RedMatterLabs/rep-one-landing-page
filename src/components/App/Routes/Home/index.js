@@ -20,7 +20,6 @@ function Home() {
       <Kiosk />
       <Platform />
       <Insights />
-      <ThreeDee />
       <Exploded />
       <Teams />
       <Price />
