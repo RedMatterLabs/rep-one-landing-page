@@ -23,23 +23,14 @@
 .diagramcontainer {
   width: 100%;
   position: relative;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 0;
 }
 
 .diagramcontainer > img {
-  margin: 100px auto;
   max-width: 100%;
-}
-
-.video {
-  max-width: 100%;
-  padding-top: 5em;
-  margin: 0 auto;
-  max-height: 70em;
-}
-
-.video button {
-  display: none;
 }
 
 .diagram {
@@ -53,15 +44,27 @@
   font-size: 2em;
 }
 
-.explodedvid {
-  width: 100%;
-}
-
 .description {
   color: $white;
+  margin-left: 15px;
+  margin-right: 15px;
   font-weight: 100;
   font-size: 1.5em;
   line-height: 1.3em;
+}
+
+.mbtoverlay {
+  position: absolute;
+  top: 50px;
+}
+
+.mbt {
+  margin-top: 0px;
+  margin-bottom: 70px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 .button {
@@ -80,6 +83,17 @@
   color: $red;
   background-color: $white;
   text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .description {
+    font-size: 1.2em;
+    line-height: 1.35em;
+  }
+
+  .button {
+    font-size: 1.1em;
+  }
 }
 
 @media (max-width:600px) {

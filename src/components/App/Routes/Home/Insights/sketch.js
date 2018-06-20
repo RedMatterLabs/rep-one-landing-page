@@ -6,10 +6,27 @@ export default function sketch(p) {
   var repOne, hook;
   var xsize = 1;
   var divW, divH;
+  var padding;
+
+  function setDivH() {
+    if (divW < 600) {
+      divH = divW;
+    } else if (divW < 700) {
+      divH = divW * 0.88;
+    } else if (divW < 800) {
+      divH = divW * 0.75;
+    } else if (divW < 900) {
+      divH = divW * 0.6;
+    } else {
+      divH = divW * 0.5;
+    }
+
+    divH = (((1024-divW)/1024) + 0.5) * divW;
+  }
 
   p.setup = () => {
     divW = document.getElementById("defaultCanvas0").parentNode.parentElement.clientWidth;
-    divH = divW * 0.5;
+    setDivH();
     p.createCanvas(divW, divH);
     particle = new Particle(p.mouseX, p.mouseY);
 
@@ -21,27 +38,29 @@ export default function sketch(p) {
   p.draw = () => {
     p.background("#ff0034");
     
-    // maxX = 860;
-    // maxY = 490;  
-    // minX = 150;
-    // minY = hook.height-10;
-    
-    // if (p.mouseX > maxX){ curX = maxX; }
-    // else if (p.mouseX < minX){ curX = minX; }
-    // else { curX = p.mouseX; }
+    maxX = divW-hook.width-10;
+    maxY = divH;
+    minX = hook.width;
+    minY = hook.height-10;
 
     curX = p.mouseX;
     curY = p.mouseY;
+    
+    if (p.mouseX > maxX){ curX = maxX; }
+    else if (p.mouseX < minX){ curX = minX; }
+    else { curX = p.mouseX; }
 
-    // if (p.mouseY > maxY){ curY = maxY; }
-    // else { curY = p.mouseY; }
+    var padding = 0;
+
+    if (p.mouseY > maxY){ curY = maxY; }
+    else { curY = p.mouseY; }
 
     var mult = p.map(p.windowWidth, 0, 1920, 0.25, 1);
     if (mult > 1){mult = 1}
     if (mult < 0.25) {mult = 0.25}
     
     p.imageMode(p.CORNER);
-    p.image(repOne, 0, divH - repOne.height*mult, repOne.width*mult, repOne.height*mult);
+    p.image(repOne, padding, divH - repOne.height*mult - padding, repOne.width*mult, repOne.height*mult);
 
     particle.update(p);
     particle.show(p);
@@ -65,7 +84,7 @@ export default function sketch(p) {
 
   p.windowResized = () => {
     divW = document.getElementById("defaultCanvas0").parentNode.parentElement.clientWidth;
-    divH = divW * 0.5;
+    setDivH();
     p.resizeCanvas(divW, divH);
   }
 
