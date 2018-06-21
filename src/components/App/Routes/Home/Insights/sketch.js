@@ -45,18 +45,20 @@ export default function sketch(p) {
     minX = hook.width;
     minY = hook.height-10;
 
-    curX = p.mouseX;
-    curY = p.mouseY;
-    
-    // mobile default position
-    if (curX === 0 && curY === 0) {
+    if (p.mouseY <= 0) {
+      // default position for mobile
       curX = maxX * 0.9;
       curY = maxY * 0.8;
-    } else {
+      particle.history = [];
+    } else if (p.mouseY > 0) {
+      // if y is within range
+
+      // x
       if (p.mouseX > maxX){ curX = maxX; }
       else if (p.mouseX < minX){ curX = minX; }
       else { curX = p.mouseX; }
       
+      // y
       if (p.mouseY > maxY){ curY = maxY; }
       else { curY = p.mouseY; }
     }
