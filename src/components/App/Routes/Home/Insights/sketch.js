@@ -48,14 +48,21 @@ export default function sketch(p) {
     curX = p.mouseX;
     curY = p.mouseY;
     
-    if (p.mouseX > maxX){ curX = maxX; }
-    else if (p.mouseX < minX){ curX = minX; }
-    else { curX = p.mouseX; }
+    // mobile default position
+    if (curX === 0 && curY === 0) {
+      curX = maxX * 0.9;
+      curY = maxY * 0.8;
+    } else {
+      if (p.mouseX > maxX){ curX = maxX; }
+      else if (p.mouseX < minX){ curX = minX; }
+      else { curX = p.mouseX; }
+      
+      if (p.mouseY > maxY){ curY = maxY; }
+      else { curY = p.mouseY; }
+    }
 
     var padding = 50;
 
-    if (p.mouseY > maxY){ curY = maxY; }
-    else { curY = p.mouseY; }
 
     var mult = p.map(divW, 0, 1920, 0.25, 1);
     if (mult > 1){mult = 1}
