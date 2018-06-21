@@ -32,8 +32,8 @@ export default function sketch(p) {
     p.createCanvas(divW, divH);
     particle = new Particle(p.mouseX, p.mouseY);
 
-    repOne = p.loadImage("https://assets.reponestrength.com/repone.png", "png");
-    hook = p.loadImage("https://assets.reponestrength.com/hook.png", "png");
+    repOne = p.loadImage("repone.png", "png");
+    hook = p.loadImage("hook.png", "png");
     
   }
 
