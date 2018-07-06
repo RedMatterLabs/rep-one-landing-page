@@ -20,7 +20,7 @@
   letter-spacing: 0.25em;
   cursor: pointer;
   transition: all .3s;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -242,6 +242,12 @@ input[class*="mce_inline_error"] {
   margin: 50px;
 }
 
+.actionSubtitle {
+  float: unset;
+  font-size: 20px;
+  font-weight: 200;
+  color: $greydark;
+}
 
 @mixin styling($labelWidth) {
 

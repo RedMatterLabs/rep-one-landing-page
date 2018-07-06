@@ -140,7 +140,10 @@ class TeamForm extends React.Component {
             </div>
             <div className={styles.mcfieldgroup}>
             <div style={{position: 'absolute', left: -5000}} aria-hidden="true"><input type="text" name="b_a3cf758809f155c2dd9a85297_bc978fccc8" tabIndex="-1" value="" /></div>
-            <div className={`clear ${styles.centered}`}><input type="submit" value="Get in touch" name="subscribe" id="mc-embedded-subscribe" className={styles.button} onClick={this.submit.bind(this)} /></div>
+            <div className={`clear ${styles.centered}`}>
+              <input type="submit" value="Get in touch" name="subscribe" id="mc-embedded-subscribe" className={styles.button} onClick={this.submit.bind(this)} />
+              <div className={styles.actionSubtitle}>And receive our free Building Context white paper</div>
+            </div>
             </div>
           </div>
         </form>

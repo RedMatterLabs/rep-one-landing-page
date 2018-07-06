@@ -67,6 +67,7 @@ class Platform extends Component {
           </div>
 
           <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>GET IN TOUCH</a>
+          <div className={styles.actionSubtitle}>And receive our free Building Context white paper</div>
         </div>
       </div>
     );
