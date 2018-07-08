@@ -1,75 +1,90 @@
 @import "src/shared-styles/variables";
 @import "src/shared-styles/styles";
 
-.content {
-  width: $content-width;
-  margin: 0;
-}
-
-
-.section, .main {
-  width: 100%;
-}
-
-.main{
+.grid {
+  display: grid;
+  grid-template-columns: 300px 300px;
   border-radius: 5px;
+  overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-  padding: 20px;
+  padding: 0px;
   background-color: #fff;
   margin: calc(10px + 1em);
 }
 
-.main h1 {
+.popupLeft {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -10px; /* hack because idk why it's adding that padding */
+}
+
+.popupLeft img {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.popupRight {
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.popupTitle {
   margin-top: 50px;
   color: $greydark;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.3em;
   margin-bottom: 40px;
 }
 
-.main h2 {
+ul.popupSubtitle {
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: none;
   margin-bottom: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-  line-height: 1.75em;
+  line-height: 1.5em;
+  list-style-type: circle;
+  list-style-position: inside;
 }
 
-.button {
-  margin-top: 20px;
-  margin-bottom: 40px;
+.popupSubtitle li {
+  display:list-item;
+}
+
+.popupButton {
+  margin-top: 10px;
+  margin-bottom: 30px;
   height: 2.5em;
   text-decoration: none;
   display: block;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: $darkred;
-  border: 2px solid $darkred;
+  font-weight: 600;
+  color: $white;
+  border: 2px solid $red;
   display: inline-block;
   position: relative;
-  padding: .5em 1em .5em 1em;
+  padding: 1em 1.5em 1.75em 1.5em;
   border-radius: 2px;
   font-size: 1em;
-  letter-spacing: 0.25em;
-  background-color: $white;
+  background-color: $red;
   box-shadow: none;
   transition: all 0.3s;
   cursor: pointer;
   opacity: 1;
 }
 
-.button:hover {
+.popupButton:hover {
   opacity:1;
-  background-color: $darkred;
+  background-color: $white;
   color: $white;
-  border: 2px solid $darkred;
+  color: $red;
 }
 
 .closeButton {
   display: block;
   margin-bottom: 10px;
-  color: $greydark;
+  color: $greymedium;
   text-decoration: underline;
   cursor: pointer;
   font-weight: 100;
@@ -79,18 +94,15 @@
   color: $darkred;
 }
 
-@media (max-width:600px) {
+@media (max-width:615px) {
 
-  .section h1 {
-    font-size: 0.9em;
-    text-transform:uppercase;
+  .grid {
+    display: grid;
+    grid-template-columns: 300px;
   }
-  .section h2 {
-    font-size: 0.9em;
-    letter-spacing: 0.1em;
-    line-height: 1.375em;
-    margin-left: 6px;
-    margin-right: 6px;
+
+  .popupLeft {
+    display: none;
   }
 
 }

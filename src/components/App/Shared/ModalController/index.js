@@ -47,18 +47,24 @@ class ModalController extends React.Component {
   renderModal() {
       return (
       <Modal open={this.state.idle} closeModal={this._closeModal.bind(this)}>
-        <div className={styles.section}>
-          <div className={styles.main}>
-            <h1>You're already a step ahead of 95% of strength coaches</h1>
-            <h2>Strength in team sports has a problem - modern training is sprinting ahead without it. Sign up for updates about RepOne, a leap forward in strength coaching, and leave other teams behind.</h2>
-            <a onClick={this._onClick.bind(this)} className={styles.button}>
-              Get in touch
-            </a>
-            <a onClick={this._closeModal.bind(this)} className={styles.closeButton}>
-              Take a step back
-            </a>
+          <div className={styles.grid}>
+            <div className={styles.popupLeft}><img src="http://assets.reponestrength.com/popup_left.png" /></div>
+            <div className={styles.popupRight}>
+              <div className={styles.popupTitle}>Learn How We Build Our Athlete Models</div>
+              <ul className={styles.popupSubtitle}>
+                <li>Build individualized athlete tables</li>
+                <li>Use our aggregate tables</li>
+                <li>Learn from our example data</li>
+                <li>Make your athletes stronger</li>
+              </ul>
+              <a onClick={this._onClick.bind(this)} className={styles.popupButton}>
+                Send Me the White Paper!
+              </a>
+              <a onClick={this._closeModal.bind(this)} className={styles.closeButton}>
+                No thanks, I don't want the free white paper. I'll let my competition read it instead.
+              </a>
+            </div>
           </div>
-        </div>
       </Modal>)
   }
 
