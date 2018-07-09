@@ -50,7 +50,7 @@ class ModalController extends React.Component {
           <div className={styles.grid}>
             <div className={styles.popupLeft}><img src="http://assets.reponestrength.com/popup_left.png" /></div>
             <div className={styles.popupRight}>
-              <div className={styles.popupTitle}>Learn How We Build Our Athlete Models</div>
+              <div className={styles.popupTitle}>Download our free Building Context for VBT White Paper</div>
               <ul className={styles.popupSubtitle}>
                 <li>Build individualized athlete tables</li>
                 <li>Use our aggregate tables</li>
