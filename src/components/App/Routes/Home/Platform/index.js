@@ -26,8 +26,8 @@ class Platform extends Component {
                 <h2>INDIVIDUALIZED TRAINING</h2>
                 <ul>
                   <li>
-                    Our data science helps you make individualized coaching logistically possible. You're in control. Easily create programs for a team, then drag and drop changes
-                    for groups or individuals. Work around injuries and reduce recovery time.</li>
+                    Easily create workout programs for your entire team, or drag and drop changes for groups or individuals.
+                  </li>
                 </ul>
               </div>
             </div>

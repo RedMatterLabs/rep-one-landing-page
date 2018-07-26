@@ -16,7 +16,7 @@ class Analytics extends React.Component {
                 <div className={styles.textcontainer}>
                   <div>
                     <h2>Athlete Kiosk App</h2>
-                    <p>Athlete identification and individualized training for your whole team.</p>
+                    <p>Replace workout cards and individualize training for your whole team.</p>
                   </div>
                 </div>
             </a>
