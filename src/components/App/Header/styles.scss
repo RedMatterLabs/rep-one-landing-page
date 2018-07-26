@@ -126,8 +126,7 @@
   content: url('https://assets.reponestrength.com/logo.png');
 }
 
-
-@media (max-width:600px) {
+@media (max-width:725px) {
   .main {
     padding: 0;
   }
@@ -135,7 +134,9 @@
   .logo {
     content: url('https://assets.reponestrength.com/logo-no-text.png');
   }
+}
 
+@media (max-width:600px) {
   .navActionButton {
     display: none;
   }
@@ -146,12 +147,6 @@
 
   .actionButton {
     display: block;
-  }
-}
-
-@media (max-width: 350px) {
-  .button {
-    font-size: 0.7em;
   }
 
   .header .menu {

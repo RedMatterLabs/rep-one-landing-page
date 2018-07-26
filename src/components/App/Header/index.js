@@ -43,7 +43,7 @@ class Header extends React.Component {
             </h1>
             <div className={styles.menu}>
               <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.link}>
-                Jobs
+                We're Hiring!
               </a>
               <a href="http://blog.reponestrength.com" className={styles.link}>
                 Blog
