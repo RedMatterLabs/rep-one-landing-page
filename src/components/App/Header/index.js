@@ -31,27 +31,32 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div
-        className={`${styles.header}  ${this.state.scrolled
-          ? styles.scrolled
-          : styles.notscrolled}`}
-      >
-        <div className={styles.main}>
-          <h1>
-            <img className={styles.logo} />
-          </h1>
-          <div className={styles.menu}>
-            <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.link}>
-              Jobs
-            </a>
-            <a href="http://blog.reponestrength.com" className={styles.link}>
-              Blog
-            </a>
-            <a href="#cta" className={styles.navActionButton} onClick={this.handleClick.bind(this)}>
-              Get in touch
-            </a>
+      <div>
+        <div
+          className={`${styles.header}  ${this.state.scrolled
+            ? styles.scrolled
+            : styles.notscrolled}`}
+        >
+          <div className={styles.main}>
+            <h1>
+              <img className={styles.logo} />
+            </h1>
+            <div className={styles.menu}>
+              <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.link}>
+                Jobs
+              </a>
+              <a href="http://blog.reponestrength.com" className={styles.link}>
+                Blog
+              </a>
+              <a href="#cta" className={styles.navActionButton} onClick={this.handleClick.bind(this)}>
+                Get in touch
+              </a>
+            </div>
           </div>
         </div>
+        <a href="#cta" className={styles.actionButton} onClick={this.handleClick.bind(this)}>
+          GET IN TOUCH
+        </a>
       </div>
     );
   }

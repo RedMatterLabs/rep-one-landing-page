@@ -10,7 +10,6 @@
   line-height: 24px;
   font-weight: 100;
   font-size: 14px;
-  
 }
 
 .main {
@@ -104,5 +103,10 @@ a:hover {
 @media (max-width:600px) {
   .footer li {
     font-size: .8em;
-  }  
+  }
+
+  .footer {
+    padding-bottom: 8em;
+  }
+
 }
