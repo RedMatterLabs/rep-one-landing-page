@@ -62,10 +62,6 @@
   opacity: 1;
 }
 
-.jobslink {
-  @extend .link
-}
-
 .button {
   height: 2.5em;
   text-decoration: none;
@@ -94,6 +90,10 @@
   border: 2px solid $darkred;
 }
 
+.navActionButton {
+  @extend .button;
+}
+
 @media (hover: none) {
   .button:hover {
     color: inherit;
@@ -118,8 +118,12 @@
     content: url('https://assets.reponestrength.com/logo-no-text.png');
   }
 
-  .jobslink {
+  .navActionButton {
     display: none;
+  }
+
+  .link {
+    margin-top: 0.5em;
   }
 }
 

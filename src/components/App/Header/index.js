@@ -41,13 +41,13 @@ class Header extends React.Component {
             <img className={styles.logo} />
           </h1>
           <div className={styles.menu}>
-            <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.jobslink}>
+            <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.link}>
               Jobs
             </a>
             <a href="http://blog.reponestrength.com" className={styles.link}>
               Blog
             </a>
-            <a href="#cta" className={styles.button} onClick={this.handleClick.bind(this)}>
+            <a href="#cta" className={styles.navActionButton} onClick={this.handleClick.bind(this)}>
               Get in touch
             </a>
           </div>
