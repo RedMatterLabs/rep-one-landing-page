@@ -50,7 +50,7 @@ class ModalController extends React.Component {
           <div className={styles.grid}>
             <div className={styles.popupLeft}><img src="http://assets.reponestrength.com/popup_left.png" /></div>
             <div className={styles.popupRight}>
-              <div className={styles.popupTitle}>Download our free Building Context for VBT White Paper</div>
+              <div className={styles.popupTitle}>Download our free Velocity Based Training White Papers</div>
               <ul className={styles.popupSubtitle}>
                 <li>Build individualized athlete tables</li>
                 <li>Use our aggregate tables</li>
@@ -58,10 +58,10 @@ class ModalController extends React.Component {
                 <li>Make your athletes stronger</li>
               </ul>
               <a onClick={this._onClick.bind(this)} className={styles.popupButton}>
-                Send Me the White Paper!
+                Send Me the White Papers!
               </a>
               <a onClick={this._closeModal.bind(this)} className={styles.closeButton}>
-                No thanks, I don't want the free white paper. I'll let my competition read it instead.
+                No thanks, I don't want the free white papers. I'll let my competition read them instead.
               </a>
             </div>
           </div>

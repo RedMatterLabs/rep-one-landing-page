@@ -7,7 +7,7 @@ class Analytics extends React.Component {
       <div className={styles.section} id="analytics">
         <div className={styles.main}>
           <h1>The RepOne Platform</h1>
-          <h2>Full weight room analytics for sports teams.</h2>
+          <h2>Powerful system for managing and analyzing your team.</h2>
           <div className={styles.subcontainer}>
             <a href="#kiosk" className={styles.subsection}>
                 <div className={styles.placeholder}>
