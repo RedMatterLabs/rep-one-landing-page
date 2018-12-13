@@ -117,7 +117,7 @@ class Landing extends React.Component {
           <img className={styles.heroimg} src='https://assets.reponestrength.com/hero_mobile_full_screen.jpg' />
         </div>
         <div className={styles.main}>
-          <h1>
+          <h1 className={styles.heroHeader}>
             Win in the weightroom<br />
             <div className={styles.rolotext}>
               <div>
