@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.scss';
-import Video from 'components/App/Shared/Video/index.js';
 
 const words= ["on the field",
 "on the court",
@@ -24,7 +23,8 @@ class Landing extends React.Component {
       transitionstate: 0,
       currenttext: words[0],
       nexttext: words[1],
-      animationiter: 0
+      animationiter: 0,
+      displayvideo: false
     }
   ;}
 
@@ -32,16 +32,27 @@ class Landing extends React.Component {
     this.animateinterval = setInterval(() => {
         this.animate();
     }, 1000 );
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions.bind(this));  
   }
 
   componentWillUnmount() {
     clearInterval(this.animateinterval);
+    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
   }
 
   animate () {
-    this.updatewords()
-    this.updatetextposition()
+    this.updatewords();
+    this.updatetextposition();
   }
+
+  updateWindowDimensions() {
+    if (window.innerWidth >= 720) {
+      this.setState({displayvideo: true});
+    } else {
+      this.setState({displayvideo: false});
+    }
+  }  
 
   updatewords() {
     const maxindex = words.length - 1;
@@ -86,13 +97,23 @@ class Landing extends React.Component {
     }
   }
 
+  _renderVideo() {
+    if (this.state.displayvideo) {
+      return (
+        <video autoPlay="true" muted="true" loop="true" className={styles.herovid}>
+            <source src="https://assets.reponestrength.com/hero_movie_no_sound.mp4" type="video/mp4" />
+          </video>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     return (
       <div className={styles.section}>
         <div className={styles.bg}>
-          <video autoPlay="true" muted="true" loop="true" className={styles.herovid}>
-            <source src="https://assets.reponestrength.com/hero_movie_no_sound.m4v" type="video/mp4" />
-          </video>
+          {this._renderVideo()}
           <img className={styles.heroimg} src='https://assets.reponestrength.com/hero_mobile_full_screen.jpg' />
         </div>
         <div className={styles.main}>
