@@ -21,7 +21,7 @@ class Video extends React.Component {
       yoffset: 0,
       containerheight: 0,
       canvaswidth: 0,
-      canvasheight: 0
+      canvasheight: 0,
     };
 
     this.yoffset = 0;
@@ -56,44 +56,57 @@ class Video extends React.Component {
   }
 
   componentDidMount() {
-    // preload images.
-    this.images = [];
-
-    for (let i = 0; i < this.props.duration; i++) {
-      const filename = `${i}.jpg`;
-      const imageurl = `https://assets.reponestrength.com/repone_large${i > 9
-        ? '00'
-        : '000'}${filename}`;
-      const image = new Image();
-      image.src = imageurl;
-      this.images.push(image);
-    }
-
-    // draw thumbnail
-    
-    if (this.canvas) {
-
-      if (window.innerWidth > 600) {
-      this.updateinterval = setInterval(() => {
-        this.update();
-        this.selectframe();
-        this.drawcanvas();
-        }, 16);
-      }
-
-      // initiate scroll listeners
-      if (this.props.scrollable) {
-        this.addScrollListener();
-        this.update();
-        this.selectframe();
-        this.drawcanvas();
-      }
-    }
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions.bind(this));  
   }
 
   componentWillUnmount() {
     clearInterval(this.updateinterval);
+    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
   }
+
+  updateWindowDimensions() {
+    if (window.innerWidth < 600) {
+      return;
+    }
+
+    if (!this.images) {
+      // preload images.
+      this.images = [];
+
+      for (let i = 0; i < this.props.duration; i++) {
+        const filename = `${i}.jpg`;
+        const imageurl = `https://assets.reponestrength.com/repone_large${i > 9
+          ? '00'
+          : '000'}${filename}`;
+        const image = new Image();
+        image.src = imageurl;
+        this.images.push(image);
+      }
+
+      // draw thumbnail
+      
+      if (this.canvas) {
+
+        if (window.innerWidth > 600) {
+        this.updateinterval = setInterval(() => {
+          this.update();
+          this.selectframe();
+          this.drawcanvas();
+          }, 16);
+        }
+
+        // initiate scroll listeners
+        if (this.props.scrollable) {
+          this.addScrollListener();
+          this.update();
+          this.selectframe();
+          this.drawcanvas();
+        }
+      }
+      this.forceUpdate();
+    }
+  }  
 
   update() {
     const rect = this.container.getBoundingClientRect();
@@ -121,6 +134,9 @@ class Video extends React.Component {
   }
 
   hasframes() {
+    if (!this.canvas) {
+      return;
+    }
     const rect = this.container.getBoundingClientRect();
     const location = rect.top < 0 ? Math.abs(rect.top) : 0;
     const mod = (this.container.offsetHeight - this.canvas.offsetHeight) / this.images.length;
