@@ -118,7 +118,7 @@ class Landing extends React.Component {
         </div>
         <div className={styles.main}>
           <h1>
-            Win in the weight room<br />
+            Win in the weightroom<br />
             <div className={styles.rolotext}>
               <div>
                 <p ref={(node) => {this.currentnode = node}} className={`${styles.middle} `}>{'Win ' + this.state.currenttext}</p>
