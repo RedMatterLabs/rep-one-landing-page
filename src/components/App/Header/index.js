@@ -39,7 +39,7 @@ class Header extends React.Component {
         >
           <div className={styles.main}>
             <h1>
-              <img className={styles.logo} />
+              <div className={styles.logo} />
             </h1>
             <div className={styles.menu}>
               <a href="https://angel.co/repone-strength/jobs?al_content=experience-module-view-jobs" className={styles.link}>
