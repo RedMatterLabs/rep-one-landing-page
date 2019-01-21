@@ -48,7 +48,7 @@ class ModalController extends React.Component {
       return (
       <Modal open={this.state.idle} closeModal={this._closeModal.bind(this)}>
           <div className={styles.grid}>
-            <div className={styles.popupLeft}><img src="http://assets.reponestrength.com/popup_left.png" /></div>
+            <div className={styles.popupLeft}><img src="https://assets.reponestrength.com/popup_left.png" /></div>
             <div className={styles.popupRight}>
               <div className={styles.popupTitle}>Download our free Velocity Based Training White Papers</div>
               <ul className={styles.popupSubtitle}>
