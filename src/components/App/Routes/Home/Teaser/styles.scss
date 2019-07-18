@@ -1,0 +1,31 @@
+@import "src/shared-styles/variables";
+@import "src/shared-styles/styles";
+
+.container {
+    padding: 4em 2em;
+    margin-top: 3em;
+    background: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container > * {
+    vertical-align: middle;
+}
+
+.img {
+    display: inline-block;
+}
+
+.text {
+    display: inline-block;
+}
+
+.text > * {
+    color: white;
+}
+
+.text h2 {
+    font-size: 1.4em;
+    padding: 0.4em 0;
+}

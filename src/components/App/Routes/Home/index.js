@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
+import Teaser from 'components/App/Routes/Home/Teaser/index.js';
 import Landing from 'components/App/Routes/Home/Landing/index.js';
 import Analytics from 'components/App/Routes/Home/Analytics/index.js';
 import Platform from 'components/App/Routes/Home/Platform/index.js';
@@ -14,6 +15,7 @@ function Home() {
   return (
     <div className={styles.container}>
       {/* <Modal link='https://www.youtube.com/watch?v=uWIAo2XFcX4' linktext='Check out this tech demonstration for our new 3D sensing.' title='Hi there!' message="This page is a work in progress, it`ll be going live soon. If you`re seeing this message, then there`s still work left to do." /> */}
+      <Teaser />      
       <Landing />
       <Analytics />
       <Kiosk />

@@ -39,7 +39,7 @@ class App extends Component {
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div>
           <Header/>
-          {this._renderModal(this.state.device) }}
+          {/* {this._renderModal(this.state.device) }} */}
           <div className={styles.content}>
             {this.props.children}
           </div>
