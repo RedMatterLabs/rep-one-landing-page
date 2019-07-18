@@ -16,8 +16,8 @@ class Teaser extends React.Component {
             <a href="#cta" className={styles.container} onClick={this.handleClick.bind(this)}>
                 <img className={styles.img} src="https://reponestrength.s3.us-east-2.amazonaws.com/moon_render_3.png" />
                 <div className={styles.text}>
-                    <h2>Get ready, RepOne preorders are coming.</h2>
-                    <p>Sign up for the mailing list to be first in line when they're released.</p>
+                    <h2>One giant rep for mankind.</h2>
+                    <p>RepOne preorders are coming soon, join the waitlist to be first in line.</p>
                 </div>
             </a>
         );
